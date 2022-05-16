@@ -1,0 +1,29 @@
+.ubication-description{
+    background-color:hsl(207deg, 100%, 27%);
+    border-radius: .6rem;
+    margin:10px;
+
+    h3{
+        padding:1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+
+    }
+    p{
+        padding:.5rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 12px;
+
+    }
+}
+
+.ubication-map{
+    text-align: center;
+
+    iframe{
+        width: 23.2rem;
+        height: 20rem;
+        border-radius: .6rem;
+        
+    }
+}   

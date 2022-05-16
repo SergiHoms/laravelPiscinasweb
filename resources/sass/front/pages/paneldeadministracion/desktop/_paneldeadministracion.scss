@@ -1,0 +1,142 @@
+.information{
+    ul{
+        li{
+            color:hsl(207, 100%, 27%);
+            font-size: 1.2rem;
+        }
+        padding: 1rem;
+    }
+    background-color: white;
+    border-radius: .6rem;
+    display: flex;
+
+    .svgs{
+        margin-top: 2rem;
+        color:hsl(207, 100%, 27%);
+        cursor: pointer;
+    }
+
+}
+
+.down-list{
+    height: 5rem;
+
+    .list-down{
+        
+        display: flex;
+        justify-content: space-evenly;
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+}
+
+.list-navigation{
+
+    .navigation-list{
+        display: flex;
+        justify-content: space-evenly;
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+    
+}
+.column-right{
+    border: solid 4px white;
+    border-radius: .6rem;
+}
+
+.box-content-first-buttons{
+    background-color: grey;
+    display: flex;
+    
+    
+    ul{
+        display: flex;
+        background-color: hsl(207, 100%, 27%);
+        border-radius: .6rem;
+        
+        
+        
+        li{
+            color: hsl(207, 100%, 27%);
+            margin: 1rem;
+            cursor: pointer;
+            color: white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+            
+            
+
+        }
+    }
+
+    .svg-box{
+        
+        svg{
+            width: 3rem;
+            margin-top:1rem;
+            cursor: pointer;
+            
+            path{
+                color: hsl(207, 100%, 27%);;
+
+            }
+        }
+    }
+
+    .button-box{
+        button{
+            margin-top:2rem;
+            background-color:hsl(207, 100%, 27%);
+            border-radius: .6rem;
+            border:solid 1px white;
+            cursor: pointer;
+
+            span{
+                color:white;
+
+            }
+        }
+    }
+}
+
+.box-content-second{
+    background-color: green;
+    justify-content: space-between;
+    
+    
+    
+    
+    label{
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        
+        
+    
+        
+        
+    }
+    input{
+        display: flex;
+        
+        
+    }
+    
+
+}
+
+.box-button{
+    background-color: grey;
+    button{
+        background-color:hsl(207, 100%, 27%);
+        border:none;
+        color:white;
+        padding:1
+
+    }
+}
+.box-content-last{
+    background-color: violet;
+}

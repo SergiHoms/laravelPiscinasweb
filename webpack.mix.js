@@ -11,7 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix.js('resources/js/front/desktop/app.js', 'public/front/desktop/js').version()
+.js('resources/js/front/mobile/app-mobile.js', 'public/front/mobile/js').version()
+.sass('resources/sass/front/app.scss', 'public/front/desktop/css').version()
+.sass('resources/sass/front/app-mobile.scss', 'public/front/mobile/css').version();

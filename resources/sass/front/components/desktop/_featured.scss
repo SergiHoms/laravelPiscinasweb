@@ -1,0 +1,43 @@
+.featured{
+    background-color:hsl(195, 100%, 38%) ;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+.featured .desktop-three-columns{
+    align-items: flex-end;
+}
+
+.featured .featured-element{
+    min-height: 20vh;
+
+}
+
+.featured .featured-element .featured-element-title{
+    margin-bottom: 0.5rem;
+}
+
+.featured .featured-element .featured-element-title h2{
+    color:hsl(0, 0%, 100%);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.featured .featured-element .featured-element-description{
+    margin-bottom: 1rem;
+    width: 20rem;
+}
+
+.featured .featured-element .featured-element-description p{
+    color:hsl(0, 0%, 100%);
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+
+.featured .featured-element .featured-element-image{
+    border: solid 2px hsl(0, 0%, 100%);
+    border-bottom: solid 6px hsl(207, 100%, 27%);
+    border-radius: 0.6rem;
+}

@@ -1,0 +1,91 @@
+.products{
+    margin: 2rem 0;
+
+    .products-category{
+
+        .products-category-title{
+            background-color:hsl(207deg, 100%, 27%) ;
+            border-radius: .6rem;
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+        
+            h2{
+                text-align: center;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+        }
+    
+        .products-category-menu{
+            background-color:hsl(207deg, 100%, 27%) ;
+            border-radius: .6rem;
+            padding: 1rem 0;
+
+            ul li{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: white;
+                margin-bottom: 2rem;
+                text-align: center; 
+            }
+        }
+    }
+}
+
+
+.products-menu{
+    margin-bottom: 1rem;
+
+    .products-searcher{
+    
+        margin-left: auto;
+        width: max-content;
+    
+        form input{
+            border-radius: .6rem;
+        }
+    }
+    
+}
+
+.products-gallery{
+    .product{
+        margin-bottom: 1rem;
+
+        .product-image img{
+            border: solid 4px white;
+        }     
+        
+        .product-title{
+            background-color: hsl(207deg, 100%, 27%) ;
+            border-radius: .6rem;
+
+            margin: 1rem 0;
+
+            h3{
+                text-align: center;
+                padding: .5rem;
+            }
+        }
+
+        .product-offer{
+            padding: 1rem;
+            margin-bottom:2rem;
+
+            button{
+                border-radius: .6rem;
+                padding:.5rem;
+                margin-left: 2rem;
+                 
+                
+                p{
+                    color:hsl(207deg, 100%, 27%);
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    font-weight: 600;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+  
+  

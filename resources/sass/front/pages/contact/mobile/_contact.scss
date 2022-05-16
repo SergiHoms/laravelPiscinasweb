@@ -1,0 +1,63 @@
+.contact-title{
+    background-color: hsl(207, 100%, 27%);
+    border-radius: .6rem;
+    h1{
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+.column-options{
+    
+    
+    ul{
+        margin: 2rem;
+        
+        
+        li{ color:white;
+            text-align: center;
+            margin-top: 2rem;
+            svg{
+                path{
+                    color:hsl(207, 100%, 27%);
+                    
+                }
+            }
+            span{
+                text-align: center;
+            }
+
+        }
+    }
+}
+.form-element{
+    margin: .5rem;
+}
+.form-element-label{
+    text-align: center;
+    label{
+        color:white;
+        text-align: center;
+        justify-content: center;
+
+    }
+}
+.form-element-input{
+    text-align: center;
+    
+    input{
+        text-align: center;
+
+    }
+}
+.form-send-button{
+    text-align: center;
+    
+    button{
+        color:white;
+        margin:1rem;
+        background-color: hsl(207, 100%, 27%);
+
+    }
+}
+

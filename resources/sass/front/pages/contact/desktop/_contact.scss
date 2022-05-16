@@ -1,0 +1,85 @@
+.contact{
+
+    min-height: 80vh;
+
+    .contact-title{
+
+        padding: 3rem;
+
+        h1{
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    }
+
+    .contact-options{
+        
+        ul li{
+            margin-bottom: 1rem;
+        }
+
+        ul li span{
+            color:white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1.5rem;
+        }
+
+        ul li svg{
+
+            margin-right: 0.5rem;
+        
+            path{
+                fill:hsl(207deg, 100%, 27%);
+            }
+        }
+    }
+
+    .contact-form{
+
+        .form-element{
+
+            margin-bottom: 1rem;
+            
+            .form-element-label{
+                
+                margin-bottom: 0.5rem;
+
+                label{
+                    color: white;
+                    font-weight: 600;
+                }
+            }
+
+            .form-element-input{
+                
+                input{
+                    padding: 0.2rem 5%;
+                    width: 90%;
+                }
+
+                textarea{
+                    height: 20vh;
+                    padding: 0.2rem 2%;
+                    width: 96%;
+                    min-height: auto;
+                }
+            }
+        }
+
+        .form-send-button{
+            
+            margin-left: auto;
+
+            button{
+                border-radius: .6rem;
+                background-color:hsl(207deg, 100%, 27%);
+                color:white;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                padding: 0.5rem 2rem;
+            }
+        }
+    }
+    .ck.ck-editor__editable_inline{
+        color:black;
+    }
+}

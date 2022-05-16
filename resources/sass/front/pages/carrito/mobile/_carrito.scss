@@ -1,0 +1,97 @@
+.title-cart{
+    text-align: center;
+    h2{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+    
+}
+.cart-menu{
+    
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        li{
+            color:white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            
+        }
+    }
+    
+}
+.items-menu{
+    display: flex;
+    justify-content: space-evenly;
+
+    .item-name{
+        
+        span{
+            margin-left: .4rem;
+            color:white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    }
+    .item-price{
+        span{
+            color:white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+        }
+    }
+
+    .plus-minus-button{
+        display: flex;
+        form{
+            input{
+                width: 5rem;
+            }
+        }
+    }
+
+}
+
+.mobile-two-columns-box{
+    border-radius: .6rem;
+    display: flex;
+    width: auto;
+    background-color:hsl(207deg, 100%, 27%) ;
+    border:solid 2px white;
+    
+    ul{
+        
+        li{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:white;
+            font-weight: 600;
+            font-size: 1rem;
+
+        }
+        
+    }
+    
+}
+.mobile-two-columns-box-bottom{
+    
+    display: flex;
+    justify-content: space-evenly;
+
+    li{
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.5rem;
+    }
+}
+.cart-buttons{
+    text-align: center;
+margin: 1rem;
+button{
+    border-radius: .6rem;
+        background-color:hsl(207deg, 100%, 27%);
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 0.5rem 2rem;      
+}
+}
+
+
+

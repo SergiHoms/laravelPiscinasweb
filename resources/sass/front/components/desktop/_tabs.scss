@@ -1,0 +1,59 @@
+.tabs-container{
+
+    .tabs{
+        display: flex;
+        justify-content: space-evenly;
+        background-color:hsl(207deg, 100%, 27%);
+        padding: 1rem;
+        border-top-left-radius:.6rem;
+        border-top-right-radius:.6rem;
+        border:solid 2px white;
+        
+        .tab{
+
+            button{
+                cursor: pointer;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 1.5rem;
+                background-color:hsl(207deg, 100%, 27%);
+                border: none;
+                color:white;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+                .hover{
+                    filter: brightness(80%);
+                    transition: filter .25;
+                    
+                }
+            }
+
+            button.active{
+                background-color:white;
+                color:hsl(207deg, 100%, 27%);
+                border-radius: .6rem;
+            }
+
+           
+                
+        }
+    }
+    
+    .tab-display {
+        background-color: white;
+        border-bottom-right-radius: 1rem;
+        border-bottom-left-radius: 1rem;
+        display: none;
+        margin-bottom: 1rem;
+        padding: 1rem;
+    }
+
+    .tab-display.active {
+        display: block;
+    }
+      
+    .tab-display p {
+        color:hsl(207deg, 100%, 27%);
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.3rem;
+    }
+}

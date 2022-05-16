@@ -1,0 +1,96 @@
+.content-title{
+    background-color: hsl(207, 100%, 27%);
+    border-radius: .6rem;
+    
+    h2{
+        margin:1rem;
+        text-align: center;
+        padding: 1rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+}
+
+.content-list{
+    padding: 1rem;
+
+    .lists-contents{
+
+    }
+    
+    
+
+    .list{
+        background-color: hsl(207, 100%, 27%);
+        width: 49%;
+        padding: .5rem;
+        border-radius: .2rem;
+        border: solid 1px white;
+        display: flex;
+        justify-content: space-between;
+        :hover {
+            color: lightblue;
+            filter: brightness(80%);
+                    transition: filter .75;
+        }
+        cursor: pointer;
+
+        svg{
+            color:white;
+            width: 2rem;
+            
+        }
+        
+        h3{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            
+        }
+    }
+    .list.active{
+    }
+    .content{
+        background-color: white;
+        width: 50%;
+        border:solid 2px hsl(207, 100%, 27%) ;
+        display: none;
+        border-bottom-left-radius: .6rem;
+        border-bottom-right-radius: .6rem;
+        
+        span{
+            display: block;    
+            color:hsl(207, 100%, 27%);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 1rem;
+            
+    
+        }
+        svg{
+            color:white;
+            transform: rotate(90deg);
+            
+        }
+    }
+    .content.active{
+        background-color: white;
+        width: 50%;
+        border:solid 2px hsl(207, 100%, 27%) ;
+        transition:.75;
+        display: block;
+        svg{
+            color:white;
+            transform: rotate(90deg);
+        }
+        span{
+            display: block;    
+            color:hsl(207, 100%, 27%);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding: 1rem;
+            
+    
+        }
+    }
+    
+    
+
+    
+}
+

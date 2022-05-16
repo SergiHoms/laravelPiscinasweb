@@ -14,5 +14,51 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+   return view('welcome');
+}); 
+
+Route::get('/productos', function () {
+    return view('front.pages.products.desktop.products');
 });
+
+
+Route::get('/producto', function () {
+    return view('front.pages.product.desktop.product');
+});
+
+
+Route::get('/admin', function () {
+    return view('front.pages.paneldeadministracion.desktop.paneldeadministracion');
+});
+
+
+Route::get('/home', function () {
+    return view('front.pages.home.desktop.home');
+});
+
+
+Route::get('/faqs', function () {
+    return view('front.pages.faqs.desktop.faqs');
+});
+
+
+Route::get('/faqs', function () {
+    return view('front.pages.faqs.desktop.faqs');
+});
+
+
+Route::get('/contacto', function () {
+    return view('front.pages.contact.desktop.contact');
+});
+
+
+Route::get('/checkout', function () {
+    return view('front.pages.checkout.desktop.checkout');
+});
+
+
+Route::get('/carrito', function () {
+    return view('front.pages.carrito.desktop.carrito');
+});
+
+

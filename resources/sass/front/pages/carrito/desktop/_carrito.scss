@@ -1,0 +1,151 @@
+.cart{
+    .title-cart{
+        margin-top: 1rem;
+        
+    
+        h2{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+            font-weight: 600;
+            
+        }
+    
+    }
+    .cart-menu{
+
+        ul{
+            display: flex;
+            justify-content: space-evenly;
+            background-color:hsl(207deg, 100%, 27%) ;
+            border-radius: .6rem;
+            
+        }
+        li{
+            
+            color:white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 600;
+            font-size: 2rem;
+            
+        }
+
+
+    }
+    .items-menu{
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+
+        span{
+            color:white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: 600;
+            
+        }
+        
+        .item-image{
+            margin-bottom: 2rem;
+
+            img{
+                width: 5rem;
+            }
+           
+
+        }
+        .product-form{
+            
+            margin-bottom: 2rem;
+            display: flex;
+            
+
+            button{
+                border-radius: .6rem;
+                width: 2rem;
+                height: 3vh;
+            }
+            input{
+                border-radius: .6rem;
+                width: 10rem;
+                
+            }
+            label{
+                color:white;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: 600;
+            }
+            .plus-minus-button{
+                display: flex;
+            }    
+        }
+    }
+    .desktop-one-column{
+        width: 13rem;
+        
+        border-radius: .6rem;
+        margin-bottom: 1rem;
+        right:100%;
+        
+        .desktop-two-columns{
+            border-radius: .6rem;
+            display: flex;
+            justify-content: space-evenly;
+            background-color:white ;
+            border:solid 1px white;
+            
+           
+            ul{display: flex;
+                justify-content: space-evenly;
+                
+                li{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    color:hsl(207deg, 100%, 27%)
+
+                }
+            }  
+        }
+
+        .top-box{
+            background-color: white;
+            border-radius: .6rem;
+            h3{
+                color:hsl(207deg, 100%, 27%);
+                border: solid 1px white;
+                border-radius: .6rem;
+            }
+        }
+
+        .desktop-two-columns-box{
+            width: 20rem;
+            border-radius: .6rem;
+            display: flex;
+            justify-content: space-evenly;
+            width: 13rem;
+            background-color:hsl(207deg, 100%, 27%) ;
+            border:solid 2px white;
+            
+            ul{
+                
+                li{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    color:white;
+                    font-weight: 600;
+                    font-size: 1rem;
+
+                }
+                
+            }
+            
+        }
+        
+    }
+    .cart-buttons{
+        margin-bottom: 1rem;
+        button{
+            border-radius: .6rem;
+                background-color:hsl(207deg, 100%, 27%);
+                color:white;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                padding: 0.5rem 2rem;      
+        }
+    }
+    
+
+}

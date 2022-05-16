@@ -1,0 +1,1272 @@
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1, h2, h3, h4, h5, h6, p, a {
+  margin: 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+form {
+  margin: 0;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+[type=button],
+[type=reset],
+[type=submit] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type=search] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none;
+}
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+/* List
+==============================================================================*/
+ol, ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 0.6rem;
+}
+
+video {
+  max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, a, p {
+  color: hsl(0deg, 0%, 100%);
+}
+
+h1, h2, h3, h4 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+h5, h6 {
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
+a, td, th, p, button, span, label, select, input, textarea, li {
+  font-family: "Ubuntu", sans-serif;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+h4 {
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a {
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 300ms;
+}
+a:hover, a:focus {
+  outline: none;
+  text-decoration: none;
+  outline-offset: 0;
+}
+
+body {
+  background-color: hsl(199deg, 91%, 64%);
+}
+
+main {
+  margin: 0 auto;
+  width: 90%;
+}
+
+.desktop-only {
+  display: revert;
+}
+
+.mobile-only {
+  display: none;
+}
+
+header {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+.header {
+  padding: 1% 5%;
+  width: 90%;
+  background-color: hsl(0deg, 0%, 100%);
+  border-bottom: solid 5px hsl(195deg, 100%, 38%);
+}
+
+.header h1 {
+  color: hsl(207deg, 100%, 27%);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.header .header-navigation {
+  margin-left: auto;
+  width: 60%;
+}
+
+.header .header-navigation ul {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 3%;
+  color: hsl(207deg, 100%, 27%);
+}
+
+.header .header-navigation ul li:not(:last-child)::after {
+  content: "|";
+  padding: 1rem;
+  color: hsl(0deg, 0%, 67%);
+  font-weight: 600;
+}
+
+.footer {
+  background-color: hsl(207deg, 100%, 27%);
+  padding-bottom: 1rem;
+}
+
+.footer-title h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2rem;
+  color: hsl(0deg, 0%, 100%);
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 0.3rem;
+}
+
+.footer-names ul {
+  display: flex;
+  justify-content: space-evenly;
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(207deg, 100%, 27%);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.2rem;
+}
+
+.footer-names ul li:not(:last-child)::after {
+  content: "|";
+  padding: 1.9rem;
+  color: hsl(0deg, 0%, 67%);
+  background-color: hsl(207deg, 100%, 27%);
+}
+
+.desktop-five-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.desktop-five-columns > .column {
+  width: 18%;
+}
+
+.desktop-four-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.desktop-four-columns > .column {
+  width: 22%;
+}
+
+.desktop-three-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.desktop-three-columns > .column {
+  width: 30%;
+}
+
+.desktop-two-columns {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.desktop-two-columns > .column {
+  width: 48%;
+}
+
+.desktop-two-columns-aside {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.desktop-two-columns-aside > .column-aside {
+  width: 20%;
+}
+.desktop-two-columns-aside > .column-main {
+  width: 75%;
+}
+
+.desktop-one-column {
+  width: 100%;
+}
+.desktop-one-column > .column {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.content-title {
+  background-color: hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
+}
+.content-title h2 {
+  margin: 1rem;
+  text-align: center;
+  padding: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.content-list {
+  padding: 1rem;
+}
+.content-list .list {
+  background-color: hsl(207deg, 100%, 27%);
+  width: 49%;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: solid 1px white;
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.content-list .list :hover {
+  color: lightblue;
+  filter: brightness(80%);
+  transition: filter 0.75;
+}
+.content-list .list svg {
+  color: white;
+  width: 2rem;
+}
+.content-list .list h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.content-list .content {
+  background-color: white;
+  width: 50%;
+  border: solid 2px hsl(207deg, 100%, 27%);
+  display: none;
+  border-bottom-left-radius: 0.6rem;
+  border-bottom-right-radius: 0.6rem;
+}
+.content-list .content span {
+  display: block;
+  color: hsl(207deg, 100%, 27%);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 1rem;
+}
+.content-list .content svg {
+  color: white;
+  transform: rotate(90deg);
+}
+.content-list .content.active {
+  background-color: white;
+  width: 50%;
+  border: solid 2px hsl(207deg, 100%, 27%);
+  transition: 0.75;
+  display: block;
+}
+.content-list .content.active svg {
+  color: white;
+  transform: rotate(90deg);
+}
+.content-list .content.active span {
+  display: block;
+  color: hsl(207deg, 100%, 27%);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 1rem;
+}
+
+.featured {
+  background-color: hsl(195deg, 100%, 38%);
+  border-radius: 0.6rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.featured .desktop-three-columns {
+  align-items: flex-end;
+}
+
+.featured .featured-element {
+  min-height: 20vh;
+}
+
+.featured .featured-element .featured-element-title {
+  margin-bottom: 0.5rem;
+}
+
+.featured .featured-element .featured-element-title h2 {
+  color: hsl(0deg, 0%, 100%);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+.featured .featured-element .featured-element-description {
+  margin-bottom: 1rem;
+  width: 20rem;
+}
+
+.featured .featured-element .featured-element-description p {
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.featured .featured-element .featured-element-image {
+  border: solid 2px hsl(0deg, 0%, 100%);
+  border-bottom: solid 6px hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
+}
+
+.slider-image {
+  z-index: -1;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: solid 2px hsl(0deg, 0%, 100%);
+  border-bottom: solid 6px hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
+}
+
+.slider-title {
+  position: absolute;
+  z-index: 1;
+  top: 30%;
+  left: 24%;
+}
+
+.slider-title h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 4rem;
+  color: hsl(208deg, 100%, 97%);
+}
+
+.slider-button {
+  position: absolute;
+  z-index: 1;
+  top: 40%;
+  left: 40%;
+  width: 20%;
+}
+
+.slider-button button {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 100%;
+}
+
+.ubication-description {
+  background-color: hsl(195deg, 100%, 38%);
+  border-radius: 0.6rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-top: 1rem;
+}
+
+.ubication-description h3 {
+  color: white;
+  padding-bottom: 0.7rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 30px;
+}
+
+.ubication-description p {
+  color: hsl(0deg, 0%, 100%);
+}
+
+.ubication-map iframe {
+  width: 100%;
+  border-radius: 0.6rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.tabs-container .tabs {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: hsl(207deg, 100%, 27%);
+  padding: 1rem;
+  border-top-left-radius: 0.6rem;
+  border-top-right-radius: 0.6rem;
+  border: solid 2px white;
+}
+.tabs-container .tabs .tab button {
+  cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5rem;
+  background-color: hsl(207deg, 100%, 27%);
+  border: none;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+}
+.tabs-container .tabs .tab button .hover {
+  filter: brightness(80%);
+  transition: filter 0.25;
+}
+.tabs-container .tabs .tab button.active {
+  background-color: white;
+  color: hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
+}
+.tabs-container .tab-display {
+  background-color: white;
+  border-bottom-right-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  display: none;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+.tabs-container .tab-display.active {
+  display: block;
+}
+.tabs-container .tab-display p {
+  color: hsl(207deg, 100%, 27%);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.3rem;
+}
+
+.contact {
+  min-height: 80vh;
+}
+.contact .contact-title {
+  padding: 3rem;
+}
+.contact .contact-title h1 {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.contact .contact-options ul li {
+  margin-bottom: 1rem;
+}
+.contact .contact-options ul li span {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.5rem;
+}
+.contact .contact-options ul li svg {
+  margin-right: 0.5rem;
+}
+.contact .contact-options ul li svg path {
+  fill: hsl(207deg, 100%, 27%);
+}
+.contact .contact-form .form-element {
+  margin-bottom: 1rem;
+}
+.contact .contact-form .form-element .form-element-label {
+  margin-bottom: 0.5rem;
+}
+.contact .contact-form .form-element .form-element-label label {
+  color: white;
+  font-weight: 600;
+}
+.contact .contact-form .form-element .form-element-input input {
+  padding: 0.2rem 5%;
+  width: 90%;
+}
+.contact .contact-form .form-element .form-element-input textarea {
+  height: 20vh;
+  padding: 0.2rem 2%;
+  width: 96%;
+  min-height: auto;
+}
+.contact .contact-form .form-send-button {
+  margin-left: auto;
+}
+.contact .contact-form .form-send-button button {
+  border-radius: 0.6rem;
+  background-color: hsl(207deg, 100%, 27%);
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 0.5rem 2rem;
+}
+.contact .ck.ck-editor__editable_inline {
+  color: black;
+}
+
+.products {
+  margin: 2rem 0;
+}
+.products .products-category .products-category-title {
+  background-color: hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+}
+.products .products-category .products-category-title h2 {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.products .products-category .products-category-menu {
+  background-color: hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
+  padding: 1rem 0;
+}
+.products .products-category .products-category-menu ul li {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.products-menu {
+  margin-bottom: 1rem;
+}
+.products-menu .products-searcher {
+  margin-left: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+.products-menu .products-searcher form input {
+  border-radius: 0.6rem;
+}
+
+.products-gallery .product {
+  margin-bottom: 1rem;
+}
+.products-gallery .product .product-image img {
+  border: solid 4px white;
+}
+.products-gallery .product .product-title {
+  background-color: hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
+  margin: 1rem 0;
+}
+.products-gallery .product .product-title h3 {
+  text-align: center;
+  padding: 0.5rem;
+}
+.products-gallery .product .product-offer {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+.products-gallery .product .product-offer button {
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  margin-left: 2rem;
+}
+.products-gallery .product .product-offer button p {
+  color: hsl(207deg, 100%, 27%);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.product {
+  margin: 2rem 0;
+  margin-bottom: 6.9rem;
+}
+.product .product-gallery .product-main-image {
+  width: 32rem;
+}
+.product .product-gallery .product-main-image img {
+  border: solid white;
+}
+.product .product-info-article {
+  padding-left: 6rem;
+}
+.product .product-info-article .product-title {
+  background-color: hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
+  margin-bottom: 1rem;
+}
+.product .product-info-article .product-title h2 {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.product .product-info-article .product-form {
+  margin-bottom: 2rem;
+  display: flex;
+}
+.product .product-info-article .product-form button {
+  border-radius: 0.6rem;
+}
+.product .product-info-article .product-form form label {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.product .product-info-article .product-form form input {
+  border-radius: 0.6rem;
+}
+.product .product-info-article .product-button button {
+  background-color: hsl(207deg, 100%, 27%);
+  color: white;
+  border-radius: 0.6rem;
+  cursor: pointer;
+}
+.product .product-price h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.product .product-price .product-article-title h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.product .product-article {
+  background-color: hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
+  margin-bottom: 2rem;
+}
+.product .product-article p {
+  padding: 1rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.product .notification {
+  background-color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 2rem;
+  opacity: 0;
+  position: fixed;
+  bottom: 15vh;
+  right: 5%;
+  transition: opacity 1s;
+}
+.product .notification.active {
+  opacity: 1;
+}
+
+.cart .title-cart {
+  margin-top: 1rem;
+}
+.cart .title-cart h2 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  font-weight: 600;
+}
+.cart .cart-menu ul {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
+}
+.cart .cart-menu li {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+}
+.cart .items-menu {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+.cart .items-menu span {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+}
+.cart .items-menu .item-image {
+  margin-bottom: 2rem;
+}
+.cart .items-menu .item-image img {
+  width: 5rem;
+}
+.cart .items-menu .product-form {
+  margin-bottom: 2rem;
+  display: flex;
+}
+.cart .items-menu .product-form button {
+  border-radius: 0.6rem;
+  width: 2rem;
+  height: 3vh;
+}
+.cart .items-menu .product-form input {
+  border-radius: 0.6rem;
+  width: 10rem;
+}
+.cart .items-menu .product-form label {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+}
+.cart .items-menu .product-form .plus-minus-button {
+  display: flex;
+}
+.cart .desktop-one-column {
+  width: 13rem;
+  border-radius: 0.6rem;
+  margin-bottom: 1rem;
+  right: 100%;
+}
+.cart .desktop-one-column .desktop-two-columns {
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: white;
+  border: solid 1px white;
+}
+.cart .desktop-one-column .desktop-two-columns ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+.cart .desktop-one-column .desktop-two-columns ul li {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: hsl(207deg, 100%, 27%);
+}
+.cart .desktop-one-column .top-box {
+  background-color: white;
+  border-radius: 0.6rem;
+}
+.cart .desktop-one-column .top-box h3 {
+  color: hsl(207deg, 100%, 27%);
+  border: solid 1px white;
+  border-radius: 0.6rem;
+}
+.cart .desktop-one-column .desktop-two-columns-box {
+  width: 20rem;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: space-evenly;
+  width: 13rem;
+  background-color: hsl(207deg, 100%, 27%);
+  border: solid 2px white;
+}
+.cart .desktop-one-column .desktop-two-columns-box ul li {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.cart .cart-buttons {
+  margin-bottom: 1rem;
+}
+.cart .cart-buttons button {
+  border-radius: 0.6rem;
+  background-color: hsl(207deg, 100%, 27%);
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 0.5rem 2rem;
+}
+
+.checkout .title-checkout {
+  padding: 1rem;
+}
+.checkout .title-checkout h2 {
+  text-align: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 3rem;
+}
+.checkout .checkout-form form .form-element-label label {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.checkout .checkout-form form .form-element-label-direction label {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.checkout .checkout-form form .form-element-input-direction input {
+  padding: 0.1rem 0%;
+  width: 88%;
+}
+.checkout .checkout-end .column-box {
+  width: 25rem;
+  margin-bottom: 2rem;
+}
+.checkout .checkout-end .column-box .top-box {
+  background-color: white;
+  border-radius: 0.6rem;
+}
+.checkout .checkout-end .column-box .top-box h3 {
+  text-align: center;
+  color: hsl(207deg, 100%, 27%);
+}
+.checkout .checkout-end .desktop-two-columns-box {
+  border: solid 2px white;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: space-evenly;
+  width: 25rem;
+  background-color: hsl(207deg, 100%, 27%);
+}
+.checkout .checkout-end .desktop-two-columns-box ul li {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.checkout .input-form {
+  margin-bottom: 2rem;
+}
+.checkout .input-form form label {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.checkout .input-button {
+  margin-bottom: 1rem;
+}
+.checkout .input-button button {
+  border-radius: 0.6rem;
+  background-color: hsl(207deg, 100%, 27%);
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  padding: 0.5rem 2rem;
+}
+
+.information {
+  background-color: white;
+  border-radius: 0.6rem;
+  display: flex;
+}
+.information ul {
+  padding: 1rem;
+}
+.information ul li {
+  color: hsl(207deg, 100%, 27%);
+  font-size: 1.2rem;
+}
+.information .svgs {
+  margin-top: 2rem;
+  color: hsl(207deg, 100%, 27%);
+  cursor: pointer;
+}
+
+.down-list {
+  height: 5rem;
+}
+.down-list .list-down {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.list-navigation .navigation-list {
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.column-right {
+  border: solid 4px white;
+  border-radius: 0.6rem;
+}
+
+.box-content-first-buttons {
+  background-color: grey;
+  display: flex;
+}
+.box-content-first-buttons ul {
+  display: flex;
+  background-color: hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
+}
+.box-content-first-buttons ul li {
+  color: hsl(207deg, 100%, 27%);
+  margin: 1rem;
+  cursor: pointer;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.box-content-first-buttons .svg-box svg {
+  width: 3rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.box-content-first-buttons .svg-box svg path {
+  color: hsl(207deg, 100%, 27%);
+}
+.box-content-first-buttons .button-box button {
+  margin-top: 2rem;
+  background-color: hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
+  border: solid 1px white;
+  cursor: pointer;
+}
+.box-content-first-buttons .button-box button span {
+  color: white;
+}
+
+.box-content-second {
+  background-color: green;
+  justify-content: space-between;
+}
+.box-content-second label {
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.box-content-second input {
+  display: flex;
+}
+
+.box-button {
+  background-color: grey;
+}
+.box-button button {
+  background-color: hsl(207deg, 100%, 27%);
+  border: none;
+  color: white;
+  padding: 1;
+}
+
+.box-content-last {
+  background-color: violet;
+}

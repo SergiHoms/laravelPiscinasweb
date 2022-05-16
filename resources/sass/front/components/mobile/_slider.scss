@@ -1,0 +1,30 @@
+.slider{
+    .slider-button{
+        button{
+        border-radius: .6rem;
+        background-color:hsl(207deg, 100%, 27%);
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 0.5rem 2rem;
+        margin-left: 10rem;
+        position: absolute;
+        top:30%;
+        right: 33%;
+        }
+    }
+    .slider-title{
+        h2{
+            color:white;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            z-index:2;
+            position: absolute;
+            top:20%;
+            left:5%;
+            z-index: 1;
+        }
+    }
+    .slider-image{
+        border:solid 2px white;
+    }
+}
