@@ -13,17 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('front.pages.home.desktop.home');
+Route::get('/home', function () {
+    return view('front.pages.home.index');
 });
 
 Route::get('/productos', function () {
-    return view('front.pages.products.desktop.products');
+    return view('front.pages.products.');
 });
 
 
 Route::get('/producto', function () {
-    return view('front.pages.product.desktop.product');
+    return view('front.pages.product.index');
 });
 
 
@@ -37,22 +37,22 @@ Route::get('/faqs', function () {
 
 
 Route::get('/faqs', function () {
-    return view('front.pages.faqs.desktop.faqs');
+    return view('front.pages.faqs.index');
 });
 
 
 Route::get('/contacto', function () {
-    return view('front.pages.contact.desktop.contact');
+    return view('front.pages.contact.index');
 });
 
 
 Route::get('/checkout', function () {
-    return view('front.pages.checkout.desktop.checkout');
+    return view('front.pages.checkout.index');
 });
 
 
 Route::get('/carrito', function () {
-    return view('front.pages.carrito.desktop.carrito');
+    return view('front.pages.carrito.index');
 });
 
 

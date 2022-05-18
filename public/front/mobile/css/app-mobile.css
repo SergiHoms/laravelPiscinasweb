@@ -728,7 +728,7 @@ header .hamburger-menu-button.active .hamburger-menu-button-svg .bar:nth-of-type
   padding: 1rem;
 }
 
-.tabs-container .tabs {
+.selects-container .selects {
   display: flex;
   justify-content: space-evenly;
   background-color: hsl(207deg, 100%, 27%);
@@ -737,26 +737,28 @@ header .hamburger-menu-button.active .hamburger-menu-button-svg .bar:nth-of-type
   border-top-right-radius: 0.6rem;
   border: solid 2px white;
 }
-.tabs-container .tabs .tab button {
-  cursor: pointer;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-size: 1.5rem;
+.selects-container .selects select {
   background-color: hsl(207deg, 100%, 27%);
   border: none;
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.selects-container .selects select option {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
 }
-.tabs-container .tabs .tab button .hover {
+.selects-container .selects select option .hover {
   filter: brightness(80%);
   transition: filter 0.25;
 }
-.tabs-container .tabs .tab button.active {
+.selects-container .selects select select.active {
   background-color: white;
   color: hsl(207deg, 100%, 27%);
   border-radius: 0.6rem;
 }
-.tabs-container .tab-display {
+.selects-container .selects-related {
   background-color: white;
   border-bottom-right-radius: 1rem;
   border-bottom-left-radius: 1rem;
@@ -764,10 +766,10 @@ header .hamburger-menu-button.active .hamburger-menu-button-svg .bar:nth-of-type
   margin-bottom: 1rem;
   padding: 1rem;
 }
-.tabs-container .tab-display.active {
+.selects-container .selects-related.active {
   display: block;
 }
-.tabs-container .tab-display p {
+.selects-container .selects-related p {
   color: hsl(207deg, 100%, 27%);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 1.3rem;
