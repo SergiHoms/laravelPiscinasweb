@@ -28,7 +28,7 @@ Route::get('/producto', function () {
 
 
 Route::get('/admin', function () {
-    return view('front.pages.paneldeadministracion.desktop.paneldeadministracion');
+    return view('admin.pages.paneldeadministracion.desktop.paneldeadministracion');
 });
 
 Route::get('/faqs', function () {

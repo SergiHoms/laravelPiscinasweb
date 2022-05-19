@@ -9,12 +9,12 @@
 		<meta name="description" content="descripción de la web, se recomienda 90 caracteres">
         <meta name="keywords" 	 content="palabras clave, separadas, por comas">
 
-        @include('front.layout.partials.style')
+        @include('admin.layout.partials.style')
         
 </head>
 <body>
 
-    @include('front.layout.partials.header')
+    @include('admin.layout.partials.header')
     
     <main>
         <div class="admin">
@@ -117,11 +117,10 @@
         </div>                  
     </main>
 
-    @include('front.layout.partials.footer')    
+    @include('admin.layout.partials.footer')    
     
-    @include('front.layout.partials.js')
+    @include('admin.layout.partials.js')
 
 </body>
 
 </html>
- 
