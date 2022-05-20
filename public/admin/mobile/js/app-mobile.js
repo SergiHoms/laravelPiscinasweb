@@ -18,43 +18,10 @@ function(t,e){ true?module.exports=e():0}(self,(()=>(()=>{"use strict";var t={30
 
 /***/ }),
 
-/***/ "./resources/js/front/desktop/app.js":
-/*!*******************************************!*\
-  !*** ./resources/js/front/desktop/app.js ***!
-  \*******************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _tabs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabs.js */ "./resources/js/front/desktop/tabs.js");
-/* harmony import */ var _menu_button_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu-button.js */ "./resources/js/front/desktop/menu-button.js");
-/* harmony import */ var _plus_minus_button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./plus-minus-button.js */ "./resources/js/front/desktop/plus-minus-button.js");
-/* harmony import */ var _product_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./product.js */ "./resources/js/front/desktop/product.js");
-/* harmony import */ var _ckeditor_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ckeditor.js */ "./resources/js/front/desktop/ckeditor.js");
-/* harmony import */ var _faqs_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./faqs.js */ "./resources/js/front/desktop/faqs.js");
-/* harmony import */ var _selects_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./selects.js */ "./resources/js/front/desktop/selects.js");
-/* harmony import */ var _selects_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_selects_js__WEBPACK_IMPORTED_MODULE_6__);
-
-
-
-
-
-
-
-(0,_menu_button_js__WEBPACK_IMPORTED_MODULE_1__.renderMenuButton)();
-(0,_tabs_js__WEBPACK_IMPORTED_MODULE_0__.renderTabs)();
-(0,_plus_minus_button_js__WEBPACK_IMPORTED_MODULE_2__.renderPlusMinusButton)();
-(0,_product_js__WEBPACK_IMPORTED_MODULE_3__.renderProduct)();
-(0,_ckeditor_js__WEBPACK_IMPORTED_MODULE_4__.renderCkeditor)();
-(0,_faqs_js__WEBPACK_IMPORTED_MODULE_5__.renderFaqs)();
-(0,_selects_js__WEBPACK_IMPORTED_MODULE_6__.renderSelects)();
-
-/***/ }),
-
-/***/ "./resources/js/front/desktop/ckeditor.js":
-/*!************************************************!*\
-  !*** ./resources/js/front/desktop/ckeditor.js ***!
-  \************************************************/
+/***/ "./resources/js/admin/mobile/ckeditor.js":
+/*!***********************************************!*\
+  !*** ./resources/js/admin/mobile/ckeditor.js ***!
+  \***********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -78,10 +45,10 @@ var renderCkeditor = function renderCkeditor() {
 
 /***/ }),
 
-/***/ "./resources/js/front/desktop/faqs.js":
-/*!********************************************!*\
-  !*** ./resources/js/front/desktop/faqs.js ***!
-  \********************************************/
+/***/ "./resources/js/admin/mobile/faqs.js":
+/*!*******************************************!*\
+  !*** ./resources/js/admin/mobile/faqs.js ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -111,10 +78,10 @@ var renderFaqs = function renderFaqs() {
 
 /***/ }),
 
-/***/ "./resources/js/front/desktop/menu-button.js":
-/*!***************************************************!*\
-  !*** ./resources/js/front/desktop/menu-button.js ***!
-  \***************************************************/
+/***/ "./resources/js/admin/mobile/menu-button.js":
+/*!**************************************************!*\
+  !*** ./resources/js/admin/mobile/menu-button.js ***!
+  \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -136,10 +103,10 @@ var renderMenuButton = function renderMenuButton() {
 
 /***/ }),
 
-/***/ "./resources/js/front/desktop/notification.js":
-/*!****************************************************!*\
-  !*** ./resources/js/front/desktop/notification.js ***!
-  \****************************************************/
+/***/ "./resources/js/admin/mobile/notification.js":
+/*!***************************************************!*\
+  !*** ./resources/js/admin/mobile/notification.js ***!
+  \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -159,10 +126,10 @@ var renderNotification = function renderNotification(message, type) {
 
 /***/ }),
 
-/***/ "./resources/js/front/desktop/plus-minus-button.js":
-/*!*********************************************************!*\
-  !*** ./resources/js/front/desktop/plus-minus-button.js ***!
-  \*********************************************************/
+/***/ "./resources/js/admin/mobile/plus-minus-button.js":
+/*!********************************************************!*\
+  !*** ./resources/js/admin/mobile/plus-minus-button.js ***!
+  \********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -192,10 +159,10 @@ var renderPlusMinusButton = function renderPlusMinusButton() {
 
 /***/ }),
 
-/***/ "./resources/js/front/desktop/product.js":
-/*!***********************************************!*\
-  !*** ./resources/js/front/desktop/product.js ***!
-  \***********************************************/
+/***/ "./resources/js/admin/mobile/product.js":
+/*!**********************************************!*\
+  !*** ./resources/js/admin/mobile/product.js ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -203,7 +170,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "renderProduct": () => (/* binding */ renderProduct)
 /* harmony export */ });
-/* harmony import */ var _notification_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./notification.js */ "./resources/js/front/desktop/notification.js");
+/* harmony import */ var _notification_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./notification.js */ "./resources/js/admin/mobile/notification.js");
 
 var renderProduct = function renderProduct() {
   var addButton = document.querySelector(".product-button");
@@ -217,20 +184,10 @@ var renderProduct = function renderProduct() {
 
 /***/ }),
 
-/***/ "./resources/js/front/desktop/selects.js":
-/*!***********************************************!*\
-  !*** ./resources/js/front/desktop/selects.js ***!
-  \***********************************************/
-/***/ (() => {
-
-
-
-/***/ }),
-
-/***/ "./resources/js/front/desktop/tabs.js":
-/*!********************************************!*\
-  !*** ./resources/js/front/desktop/tabs.js ***!
-  \********************************************/
+/***/ "./resources/js/admin/mobile/tabs.js":
+/*!*******************************************!*\
+  !*** ./resources/js/admin/mobile/tabs.js ***!
+  \*******************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -257,45 +214,6 @@ var renderTabs = function renderTabs() {
     });
   });
 };
-
-/***/ }),
-
-/***/ "./resources/sass/front/app.scss":
-/*!***************************************!*\
-  !*** ./resources/sass/front/app.scss ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./resources/sass/front/app-mobile.scss":
-/*!**********************************************!*\
-  !*** ./resources/sass/front/app-mobile.scss ***!
-  \**********************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "./resources/sass/admin/app.scss":
-/*!***************************************!*\
-  !*** ./resources/sass/admin/app.scss ***!
-  \***************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-// extracted by mini-css-extract-plugin
-
 
 /***/ })
 
@@ -328,42 +246,7 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		return module.exports;
 /******/ 	}
 /******/ 	
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = __webpack_modules__;
-/******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/chunk loaded */
-/******/ 	(() => {
-/******/ 		var deferred = [];
-/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
-/******/ 			if(chunkIds) {
-/******/ 				priority = priority || 0;
-/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
-/******/ 				deferred[i] = [chunkIds, fn, priority];
-/******/ 				return;
-/******/ 			}
-/******/ 			var notFulfilled = Infinity;
-/******/ 			for (var i = 0; i < deferred.length; i++) {
-/******/ 				var [chunkIds, fn, priority] = deferred[i];
-/******/ 				var fulfilled = true;
-/******/ 				for (var j = 0; j < chunkIds.length; j++) {
-/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
-/******/ 						chunkIds.splice(j--, 1);
-/******/ 					} else {
-/******/ 						fulfilled = false;
-/******/ 						if(priority < notFulfilled) notFulfilled = priority;
-/******/ 					}
-/******/ 				}
-/******/ 				if(fulfilled) {
-/******/ 					deferred.splice(i--, 1)
-/******/ 					var r = fn();
-/******/ 					if (r !== undefined) result = r;
-/******/ 				}
-/******/ 			}
-/******/ 			return result;
-/******/ 		};
-/******/ 	})();
-/******/ 	
 /******/ 	/* webpack/runtime/compat get default export */
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
@@ -425,72 +308,34 @@ __webpack_require__.r(__webpack_exports__);
 /******/ 		};
 /******/ 	})();
 /******/ 	
-/******/ 	/* webpack/runtime/jsonp chunk loading */
-/******/ 	(() => {
-/******/ 		// no baseURI
-/******/ 		
-/******/ 		// object to store loaded and loading chunks
-/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
-/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
-/******/ 		var installedChunks = {
-/******/ 			"/front/desktop/js/app": 0,
-/******/ 			"admin/desktop/css/app": 0,
-/******/ 			"front/mobile/css/app-mobile": 0,
-/******/ 			"front/desktop/css/app": 0
-/******/ 		};
-/******/ 		
-/******/ 		// no chunk on demand loading
-/******/ 		
-/******/ 		// no prefetching
-/******/ 		
-/******/ 		// no preloaded
-/******/ 		
-/******/ 		// no HMR
-/******/ 		
-/******/ 		// no HMR manifest
-/******/ 		
-/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
-/******/ 		
-/******/ 		// install a JSONP callback for chunk loading
-/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
-/******/ 			var [chunkIds, moreModules, runtime] = data;
-/******/ 			// add "moreModules" to the modules object,
-/******/ 			// then flag all "chunkIds" as loaded and fire callback
-/******/ 			var moduleId, chunkId, i = 0;
-/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
-/******/ 				for(moduleId in moreModules) {
-/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 					}
-/******/ 				}
-/******/ 				if(runtime) var result = runtime(__webpack_require__);
-/******/ 			}
-/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
-/******/ 			for(;i < chunkIds.length; i++) {
-/******/ 				chunkId = chunkIds[i];
-/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
-/******/ 					installedChunks[chunkId][0]();
-/******/ 				}
-/******/ 				installedChunks[chunkId] = 0;
-/******/ 			}
-/******/ 			return __webpack_require__.O(result);
-/******/ 		}
-/******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
-/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
-/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
-/******/ 	})();
-/******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
-/******/ 	__webpack_require__.O(undefined, ["admin/desktop/css/app","front/mobile/css/app-mobile","front/desktop/css/app"], () => (__webpack_require__("./resources/js/front/desktop/app.js")))
-/******/ 	__webpack_require__.O(undefined, ["admin/desktop/css/app","front/mobile/css/app-mobile","front/desktop/css/app"], () => (__webpack_require__("./resources/sass/front/app.scss")))
-/******/ 	__webpack_require__.O(undefined, ["admin/desktop/css/app","front/mobile/css/app-mobile","front/desktop/css/app"], () => (__webpack_require__("./resources/sass/front/app-mobile.scss")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["admin/desktop/css/app","front/mobile/css/app-mobile","front/desktop/css/app"], () => (__webpack_require__("./resources/sass/admin/app.scss")))
-/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+/*!*************************************************!*\
+  !*** ./resources/js/admin/mobile/app-mobile.js ***!
+  \*************************************************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _tabs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabs.js */ "./resources/js/admin/mobile/tabs.js");
+/* harmony import */ var _menu_button_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu-button.js */ "./resources/js/admin/mobile/menu-button.js");
+/* harmony import */ var _plus_minus_button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./plus-minus-button.js */ "./resources/js/admin/mobile/plus-minus-button.js");
+/* harmony import */ var _product_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./product.js */ "./resources/js/admin/mobile/product.js");
+/* harmony import */ var _ckeditor_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ckeditor.js */ "./resources/js/admin/mobile/ckeditor.js");
+/* harmony import */ var _faqs_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./faqs.js */ "./resources/js/admin/mobile/faqs.js");
+
+
+
+
+
+
+(0,_menu_button_js__WEBPACK_IMPORTED_MODULE_1__.renderMenuButton)();
+(0,_tabs_js__WEBPACK_IMPORTED_MODULE_0__.renderTabs)();
+(0,_plus_minus_button_js__WEBPACK_IMPORTED_MODULE_2__.renderPlusMinusButton)();
+(0,_product_js__WEBPACK_IMPORTED_MODULE_3__.renderProduct)();
+(0,_ckeditor_js__WEBPACK_IMPORTED_MODULE_4__.renderCkeditor)();
+(0,_faqs_js__WEBPACK_IMPORTED_MODULE_5__.renderFaqs)();
+})();
+
 /******/ })()
 ;

@@ -1,0 +1,16 @@
+body{
+    background-color: hsl(199, 91%, 64%);
+}
+
+main{
+    margin: 0 auto;
+    width: 90%;
+}
+
+.desktop-only{
+    display: revert;
+}
+
+.mobile-only{
+    display: none;
+}

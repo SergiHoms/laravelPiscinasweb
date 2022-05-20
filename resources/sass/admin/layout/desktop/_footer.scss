@@ -1,0 +1,40 @@
+.footer{
+    background-color:hsl(207, 100%, 27%);
+    padding-bottom: 1rem;
+    
+}
+
+.footer-title{
+    
+    
+}
+
+.footer-title h2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2rem;
+    color:hsl(0, 0%, 100%);
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: .3rem;
+}
+.footer-names ul{
+    display: flex;
+    justify-content: space-evenly;
+    color: hsl(0, 0%, 100%);
+    background-color:hsl(207, 100%, 27%);
+    
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.2rem;
+    
+}
+
+.footer-names ul li:not(:last-child)::after{
+    content: "|";
+    padding: 1.9rem;
+    color: hsl(0, 0%, 67%);
+    background-color:hsl(207, 100%, 27%);
+}
+
+
+    
+   

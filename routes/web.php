@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/admin/faqs', function () {
+    return view('admin.pages.faqs.index');
+});
+
 Route::get('/home', function () {
     return view('front.pages.home.index');
 });
@@ -26,10 +30,6 @@ Route::get('/producto', function () {
     return view('front.pages.product.index');
 });
 
-
-Route::get('/admin', function () {
-    return view('admin.pages.paneldeadministracion.desktop.paneldeadministracion');
-});
 
 Route::get('/faqs', function () {
     return view('front.pages.faqs.desktop.faqs');

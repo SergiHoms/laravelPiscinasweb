@@ -1,0 +1,266 @@
+.table{
+    
+    .table-items{
+
+        margin-bottom: 10rem;
+        margin-top: 5rem;
+        background-color: white;
+        border-radius: .6rem;
+        display: flex;
+    
+        .table-item{
+            display: flex;      
+            .table-item-info{
+                padding-left: .5rem;
+                color:hsl(207, 100%, 27%);
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                span{
+                    color:hsl(207, 100%, 27%);
+                    font-weight: 600;
+                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                }   
+            }   
+            .table-item-buttons {
+                color:hsl(207, 100%, 27%);
+                cursor: pointer;
+                
+                display: flex;
+                margin-left: 2rem;       
+                
+                svg{
+                    margin-top: 1rem;
+                    width: 1.5rem;
+                    height: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+.pagination{
+      
+    padding: .5rem;
+    margin-bottom: 2rem;
+ 
+    .pagination-info{
+
+        ul{
+            display: flex;
+            justify-content:space-between;
+            
+            
+            li{
+                display: flex;
+                color:hsl(207, 100%, 27%);
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-weight: 600;
+                font-size: 1rem;
+                
+            }
+        }
+    }
+    
+    .pagination-navigation{
+
+        margin-top: 2rem;
+        
+        ul{
+            display: flex;
+            color:white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            justify-content: space-between;
+            font-weight: 600;
+        }
+    }
+}
+
+.form-container{
+    margin-top:5rem;
+    margin-bottom: 13.5rem; 
+    margin-left:1rem;
+    margin-right:1rem;
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
+    border-bottom-left-radius: .4rem;
+    border-bottom-right-radius: .4rem;
+    background-color: white;
+}
+
+.form-container-tabs{
+    background-color: hsl(206, 48%, 57%);
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
+
+    .form-container-buttons{
+
+        .svg-box{
+            
+            display: flex;
+        
+            svg{
+                
+                
+                cursor: pointer;
+                justify-content: space-between;
+                width: 2.9rem;
+                display: flex;
+                justify-content: space-between;
+             
+                path{
+                    color: white;
+                }
+            }   
+        }
+
+    }
+    .switch {
+        display: inline-block;
+        position: relative;
+        width: 3rem;
+        height: 1.5rem;
+        border-radius: 20px;
+        background: #dfd9ea;
+        transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+        vertical-align: middle;
+        cursor: pointer;
+        border:solid 2px white;
+        margin-top: .5rem;
+        margin-right: .5rem;
+    }
+    .switch::before {
+        content: '';
+        position: absolute;
+        top: 1px;
+        left: 2px;
+        width: 22px;
+        height: 22px;
+        background: hsl(207, 100%, 27%);
+        border-radius: 50%;
+        transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .switch:active::before {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(128,128,128,0.1);
+    }
+    input:checked + .switch {
+        background: #72da67;
+    }
+    input:checked + .switch::before {
+        left: 27px;
+        background: #fff;
+    }
+    input:checked + .switch:active::before {
+        box-shadow: 0 2px 8px rgba(0,0,0,0.28), 0 0 0 20px rgba(0,150,136,0.2);
+    }
+    
+    
+}
+
+.box-content-first-buttons{
+    
+    display: flex;
+    border-top-left-radius: .4rem;
+    border-top-right-radius: .4rem;
+    
+    button{
+        background-color:hsl(207, 100%, 27%);
+        padding:.8rem;
+        
+        cursor: pointer;
+        border:solid 1px white;
+        
+        span{
+            color:white;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    }
+
+    
+}
+    
+
+
+.form-content{
+
+    background-color:white;
+    justify-content: space-between;
+    display: flex;
+
+    .form-element{
+
+        margin: .5rem;
+
+        label{
+            color:hsl(207, 100%, 27%);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            display: flex;
+            margin: .5rem;     
+        }
+
+        input{
+            border-radius: .5rem;
+            width: 46.8rem;
+            
+                   
+        }
+        .form-element-input-ckeditor{
+            width: 47.4rem;
+
+        }
+    }
+}
+
+// .box-button{
+//     background-color: hsl(206, 48%, 57%);
+//     margin-left:1rem;
+//     margin-right:1rem;
+//     button{
+//         background-color:hsl(207, 100%, 27%);
+//         color:white;
+//         padding:1rem;
+//         border:solid 1px white;
+//         cursor: pointer;
+
+//     }
+// }
+
+// .box-content-last{
+//     background-color: white;
+//     display: block;
+//     margin-left:1rem;
+//     margin-right:1rem;
+
+//     .lastbox{
+
+//         label{
+//             display: block;
+//             color:hsl(207, 100%, 27%);
+//             padding: .7rem;
+//             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+//         }
+//         input{
+//             border-radius: .5rem;
+//             margin: .5rem;
+            
+//         }
+
+//     }
+
+//     .lastbox-ckeditor{
+
+//         label{
+//             color:hsl(207, 100%, 27%);
+//             padding: .7rem;
+//             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;         
+//         }
+        
+//         input{
+//             width: 2rem;
+             
+//         }
+
+//     }
+// }
