@@ -22,7 +22,7 @@
             @yield('content')
         </main>
         
-        @include('admin.layout.partials.footer')
+        {{-- @include('admin.layout.partials.footer') --}}
 
         @include('admin.layout.partials.js')
 

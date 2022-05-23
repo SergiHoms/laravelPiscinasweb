@@ -43,18 +43,120 @@
 @endsection
             
 @section('form')
+
+<div class="tabs-container desktop-only">
+    <div class="tabs">
+        <div class="tab description-drop">
+            <button class="tab-button active" data-tab="description">Contenido</button>
+        </div>
+        <div class="tab caracterist-drop">
+            <button class="tab-button" data-tab="specifications">Imagenes</button>        
+        </div>
+        <div class="form-container-buttons">
+            <div class="svg-box">
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M15,9H5V5H15M12,19A3,3 0 0,1 9,16A3,3 0 0,1 12,13A3,3 0 0,1 15,16A3,3 0 0,1 12,19M17,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7L17,3Z" />
+                </svg>
+                <svg viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M19.36,2.72L20.78,4.14L15.06,9.85C16.13,11.39 16.28,13.24 15.38,14.44L9.06,8.12C10.26,7.22 12.11,7.37 13.65,8.44L19.36,2.72M5.93,17.57C3.92,15.56 2.69,13.16 2.35,10.92L7.23,8.83L14.67,16.27L12.58,21.15C10.34,20.81 7.94,19.58 5.93,17.57Z" />
+                </svg>                        
+            </div>                                                                 
+        </div>
+        <div class="form-swithch-button">
+            <div>
+                <input type="checkbox" hidden="hidden" id="username">
+                <label class="switch" for="username"></label>
+            </div>         
+        </div>
+    </div>
+
+    <div class="tab-displays desktop-only">
+        <div class="tab-display active" data-display="description">
+            <div class="form-content active"data-display="content">
+                <form>
+                    <div class="desktop-one-column">
+                        <div class="column">
+                            <div class="form-element">
+                                <div class="form-element-label">
+                                    <label>Nombre:</label>
+                                </div>
+                                <div class="form-element-input">
+                                    <input type="text" name="name" placeholder="Escribe aquí tu Nombre" aria-invalid="false">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desktop-one-column">
+                        <div class="column">
+                            <div class="form-element">
+                                <div class="form-element-label">
+                                    <label>Título:</label>
+                                </div>
+                                <div class="form-element-input">
+                                    <input type="text" name="title" placeholder="Escribe aquí tu Título" aria-invalid="false">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desktop-one-column">
+                        <div class="column">
+                            <div class="form-element">
+                                <div class="form-element-label">
+                                    <label>Descripción:</label>
+                                </div>
+                                <div class="form-element-input-ckeditor">
+                                    <textarea class="ckeditor" name="description"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>            
+            </div>
+        </div>
+        <div class="tab-display" data-display="specifications">
+            <div class="form-content active"data-display="content">
+                <form>
+                    <div class="desktop-one-column">
+                        <div class="column">
+                            <div class="form-element">
+                                <div class="form-element-label">
+                                    <label>Introduce Imagenes:</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desktop-one-column">
+                        <div class="column">
+                            <div class="form-element">
+                                <div class="form-element-label">
+                                    <label>Descripción:</label>
+                                </div>
+                                <div class="form-element-input-ckeditor">
+                                    <textarea class="ckeditor" name="description"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>            
+            </div>
+        </div>
+            
+        </div>
+        
+    </div>
+</div>
       
-<div class="form-container">
+{{-- <div class="form-container">
 
     <div class="form-container-tabs">
         <div class="box-content-first-buttons">
             <div class="form-content-button">
-                <button>
+                <button data-tab="content">
                     <span>Contenido</span>
                 </button>
             </div>
             <div class="form-image button">
-                <button>
+                <button data-tab="image">
                     <span>Imágenes</span>
                 </button>
             </div>           
@@ -77,7 +179,7 @@
         </div> 
     </div>
 
-    <div class="form-content">
+    <div class="form-content active"data-display="content">
         <form>
             <div class="desktop-one-column">
                 <div class="column">
@@ -116,7 +218,24 @@
                 </div>
             </div>
         </form>            
-    </div>
+    </div> --}}
+
+    {{-- <div class="form-content active"data-display="image">
+        <form>
+            <div class="desktop-one-column">
+                <div class="column">
+                    <div class="form-element">
+                        <div class="form-element-label">
+                            <label>Descripción:</label>
+                        </div>
+                        <div class="form-element-input-ckeditor">
+                            <textarea class="ckeditor" name="description"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>            
+    </div> --}}
 </div>                    
 
 @endsection

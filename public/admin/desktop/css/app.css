@@ -487,17 +487,22 @@ header .header .header-title h1 {
   font-size: 2.3rem;
   margin-left: 2rem;
 }
-header .hamburger-menu-button {
-  position: absolute;
-  right: 50%;
+header .header-hamburguer {
+  cursor: pointer;
 }
-header .hamburger-menu-button svg {
+header .header-hamburguer svg {
   width: 5rem;
   margin-top: 1rem;
+  margin-left: 38rem;
+}
+header .header-hamburguer svg g {
+  fill: hsl(207deg, 100%, 27%);
+}
+header .hamburger-menu-button {
+  justify-content: center;
 }
 header .hamburger-menu-button-svg {
   pointer-events: all;
-  cursor: pointer;
 }
 header .hamburger-menu-button-svg .bar {
   transform: rotate(0) translateY(0) translateX(0);
@@ -636,6 +641,57 @@ header .hamburger-menu-button.active .hamburger-menu-button-svg .bar:nth-of-type
   color: hsl(207deg, 100%, 27%);
   border-radius: 0.6rem;
 }
+.tabs-container .switch {
+  display: inline-block;
+  position: relative;
+  width: 3rem;
+  height: 1.5rem;
+  border-radius: 20px;
+  background: #dfd9ea;
+  transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+  vertical-align: middle;
+  cursor: pointer;
+  border: solid 2px white;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+}
+.tabs-container .switch::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  background: hsl(207deg, 100%, 27%);
+  border-radius: 50%;
+  transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.tabs-container .switch:active::before {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(128, 128, 128, 0.1);
+}
+.tabs-container input:checked + .switch {
+  background: hsl(114deg, 61%, 63%);
+}
+.tabs-container input:checked + .switch::before {
+  left: 27px;
+  background: #fff;
+}
+.tabs-container input:checked + .switch:active::before {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
+}
+.tabs-container .form-container-buttons .svg-box {
+  display: flex;
+}
+.tabs-container .form-container-buttons .svg-box svg {
+  cursor: pointer;
+  justify-content: space-between;
+  width: 2.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+.tabs-container .form-container-buttons .svg-box svg path {
+  color: white;
+}
 .tabs-container .tab-display {
   background-color: white;
   border-bottom-right-radius: 1rem;
@@ -732,6 +788,9 @@ header .hamburger-menu-button.active .hamburger-menu-button-svg .bar:nth-of-type
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
 }
+.form-container-tabs .form-container-buttons {
+  color: #fff;
+}
 .form-container-tabs .form-container-buttons .svg-box {
   display: flex;
 }
@@ -745,44 +804,6 @@ header .hamburger-menu-button.active .hamburger-menu-button-svg .bar:nth-of-type
 .form-container-tabs .form-container-buttons .svg-box svg path {
   color: white;
 }
-.form-container-tabs .switch {
-  display: inline-block;
-  position: relative;
-  width: 3rem;
-  height: 1.5rem;
-  border-radius: 20px;
-  background: #dfd9ea;
-  transition: background 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-  vertical-align: middle;
-  cursor: pointer;
-  border: solid 2px white;
-  margin-top: 0.5rem;
-  margin-right: 0.5rem;
-}
-.form-container-tabs .switch::before {
-  content: "";
-  position: absolute;
-  top: 1px;
-  left: 2px;
-  width: 22px;
-  height: 22px;
-  background: hsl(207deg, 100%, 27%);
-  border-radius: 50%;
-  transition: left 0.28s cubic-bezier(0.4, 0, 0.2, 1), background 0.28s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.form-container-tabs .switch:active::before {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(128, 128, 128, 0.1);
-}
-.form-container-tabs input:checked + .switch {
-  background: #72da67;
-}
-.form-container-tabs input:checked + .switch::before {
-  left: 27px;
-  background: #fff;
-}
-.form-container-tabs input:checked + .switch:active::before {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.28), 0 0 0 20px rgba(0, 150, 136, 0.2);
-}
 
 .box-content-first-buttons {
   display: flex;
@@ -795,29 +816,43 @@ header .hamburger-menu-button.active .hamburger-menu-button-svg .bar:nth-of-type
   cursor: pointer;
   border: solid 1px white;
 }
+.box-content-first-buttons button :hover {
+  background-color: hsl(114deg, 61%, 63%);
+  border-radius: 0.6rem;
+}
 .box-content-first-buttons button span {
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+.box-content-first-buttons button.active {
+  background-color: white;
+  color: hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
+}
 
-.form-content {
+.form-content.active {
+  display: block;
   background-color: white;
   justify-content: space-between;
   display: flex;
 }
-.form-content .form-element {
+.form-content.active .form-element {
   margin: 0.5rem;
 }
-.form-content .form-element label {
+.form-content.active .form-element label {
   color: hsl(207deg, 100%, 27%);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   display: flex;
   margin: 0.5rem;
 }
-.form-content .form-element input {
+.form-content.active .form-element input {
   border-radius: 0.5rem;
   width: 46.8rem;
 }
-.form-content .form-element .form-element-input-ckeditor {
+.form-content.active .form-element .form-element-input-ckeditor {
   width: 47.4rem;
+}
+.form-content.active .form-element .form-element-input-ckeditor label {
+  color: white;
+  height: 0.1rem;
 }

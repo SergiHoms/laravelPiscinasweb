@@ -56,29 +56,38 @@ header{
             }
         }
     }
-
-    .hamburger-menu-button{
-
-
-        position: absolute;
-        right: 50%;
+    .header-hamburguer{
+        
+        
+        cursor:pointer;
         .bar{
             
-        }
-        
-
+            
+        }       
         svg{
             
+            g{
+                fill:hsl(207, 100%, 27%) ;
+            }
             width: 5rem;
             margin-top: 1rem;
+            margin-left: 38rem;
             
         }
+
+    }
+
+    .hamburger-menu-button{
+        justify-content: center;
+
+
+        
     }
 
     .hamburger-menu-button-svg {
         
         pointer-events:all; //needs to be there so the hover works
-        cursor:pointer;
+        
         .bar {
            
             -webkit-transform:rotate(0) translateY(0) translateX(0);

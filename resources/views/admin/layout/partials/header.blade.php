@@ -1,6 +1,6 @@
 <header>
     <div class="header">
-        <div class="column">
+        <div class="header-hamburguer">
             <div class="hamburger-menu-button" id="hamburger">
                 <svg  viewBox="0 0 32 22.5">
                     <g class="hamburger-menu-button-svg" >
