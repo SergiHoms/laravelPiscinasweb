@@ -6,10 +6,11 @@
         margin-top: 5rem;
         background-color: white;
         border-radius: .6rem;
-        display: flex;
     
         .table-item{
-            display: flex;      
+
+            display: flex;  
+
             .table-item-info{
                 padding-left: .5rem;
                 color:hsl(207, 100%, 27%);
@@ -100,20 +101,18 @@
         color: #fff;
 
         .svg-box{
-            
             display: flex;
-        
-            svg{
-                
-                
+            svg{  
                 cursor: pointer;
                 justify-content: space-between;
                 width: 2.9rem;
                 display: flex;
                 justify-content: space-between;
+                
              
                 path{
                     color: white;
+                    
                 }
             }   
         }
@@ -178,7 +177,8 @@
             color:hsl(207, 100%, 27%);
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             display: flex;
-            margin: .5rem;     
+            margin: .5rem;
+            font-weight: 600;     
         }
 
         input{
@@ -189,8 +189,7 @@
         }
         .form-element-input-ckeditor{
             label{
-                color:white;
-                height: .1rem;
+                display: none;
             }
             width: 47.4rem;
 

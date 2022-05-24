@@ -4,13 +4,6 @@ header{
     z-index: 2;
 
     .header-navigation-mobile{
-        ul{
-            li{
-                padding-bottom: 1rem;
-                padding-left: 1rem;
-            }
-        }
-
         background-color: hsl(207, 100%, 27%);
         height: 55vh;
         left: 0;
@@ -20,7 +13,12 @@ header{
         width: 100%;
         color:white;
         border-radius: .6rem;
-
+        ul{
+            li{
+                padding-bottom: 1rem;
+                padding-left: 1rem;
+            }
+        }
         &.active{
             top: 0;
             transition: top 0.5s;
@@ -56,77 +54,72 @@ header{
             }
         }
     }
-    .header-hamburguer{
+ 
+}
+
+.header-hamburguer{
+    
+    cursor:pointer;
+    margin-left: auto;
+     
+    svg{
         
-        
-        cursor:pointer;
-        .bar{
-            
-            
-        }       
-        svg{
-            
-            g{
-                fill:hsl(207, 100%, 27%) ;
-            }
-            width: 5rem;
-            margin-top: 1rem;
-            margin-left: 38rem;
-            
+        g{
+            fill:hsl(207, 100%, 27%) ;
         }
 
-    }
-
-    .hamburger-menu-button{
-        justify-content: center;
-
-
+        width: 5rem;
         
     }
 
-    .hamburger-menu-button-svg {
-        
-        pointer-events:all; //needs to be there so the hover works
-        
-        .bar {
-           
-            -webkit-transform:rotate(0) translateY(0) translateX(0);
-            transform:rotate(0) translateY(0) translateX(0);
-            opacity:1;
-            -webkit-transform-origin: 20px 10px;
-            transform-origin: 20px 10px;
-            -webkit-transition: -webkit-transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
-            transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
-        }
+}
 
-        .bar:nth-of-type(1) {
-            -webkit-transform-origin: 20px 10px;
-            transform-origin: 20px 10px;
-        }
-        
-        .bar:nth-of-type(3) {
-            -webkit-transform-origin: 20px 20px;
-            transform-origin: 20px 20px;
-        }
+.hamburger-menu-button{
+    justify-content: center;
+}
+
+.hamburger-menu-button-svg {
+    
+    pointer-events:all; //needs to be there so the hover works
+    
+    .bar {
+       
+        -webkit-transform:rotate(0) translateY(0) translateX(0);
+        transform:rotate(0) translateY(0) translateX(0);
+        opacity:1;
+        -webkit-transform-origin: 20px 10px;
+        transform-origin: 20px 10px;
+        -webkit-transition: -webkit-transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+        transition: transform 0.4s ease-in-out, opacity 0.2s ease-in-out;
+    }
+
+    .bar:nth-of-type(1) {
+        -webkit-transform-origin: 20px 10px;
+        transform-origin: 20px 10px;
     }
     
-    .hamburger-menu-button.active{
+    .bar:nth-of-type(3) {
+        -webkit-transform-origin: 20px 20px;
+        transform-origin: 20px 20px;
+    }
+}
 
-        .hamburger-menu-button-svg {
-       
-            .bar:nth-of-type(1) {
-                -webkit-transform:rotate(-45deg) translateY(0) translateX(0);
-                transform:rotate(-45deg) translateY(0) translateX(0);
-            }
-        
-            .bar:nth-of-type(2) {
-                opacity:0;
-            }
-        
-            .bar:nth-of-type(3) { 
-                -webkit-transform:rotate(45deg) translateY(0em) translateX(0em);
-                transform:rotate(45deg) translateY(0em) translateX(0em);
-            }  
+.hamburger-menu-button.active{
+
+    .hamburger-menu-button-svg {
+   
+        .bar:nth-of-type(1) {
+            -webkit-transform:rotate(-45deg) translateY(0) translateX(0);
+            transform:rotate(-45deg) translateY(0) translateX(0);
         }
+    
+        .bar:nth-of-type(2) {
+            opacity:0;
+        }
+    
+        .bar:nth-of-type(3) { 
+            -webkit-transform:rotate(45deg) translateY(0em) translateX(0em);
+            transform:rotate(45deg) translateY(0em) translateX(0em);
+        }  
     }
 }
