@@ -5,6 +5,10 @@ export let renderForm = () => {
     let createButton = document.querySelector('.create-button');
     let forms = document.querySelectorAll('.admin-form');
 
+    document.addEventListener("loadForm",( event =>{
+        formContainer.innerHTML = event.detail.form;
+    }), {once: true});
+
     document.addEventListener("renderFormModules",( event =>{
         renderForm();
     }), {once: true});
@@ -53,6 +57,7 @@ export let renderForm = () => {
                 .then(json => {
 
                     formContainer.innerHTML = json.form;
+                    
 
                     /*
                         Cuando hacemos un innerHTML se pierden todos los eventos de javascript, por lo que tenemos que
@@ -86,8 +91,16 @@ export let renderForm = () => {
                     y se captura la url que usaremos para enviar los datos al servidor.
                 */
                 
+                    
                 let data = new FormData(form);
                 let url = form.action;
+
+
+                for (var pair of data.entries()) {
+                    console.log(pair[0]+ ', ' + pair[1]); 
+                }
+
+
 
                 /*	
                     En el siguiente valor estamos capturando los datos del ckeditor y se los añadimos a los datos

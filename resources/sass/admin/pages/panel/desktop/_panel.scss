@@ -7,7 +7,7 @@
         background-color: white;
         border-radius: .6rem;
     
-        .table-item{
+        .table-container{
 
             display: flex;  
 
@@ -98,11 +98,11 @@
     
 
     .form-container-buttons{
-        color: #fff;
+        color: hsl(0, 0%, 100%);
 
         .svg-box{
             display: flex;
-            svg{  
+            svg{
                 cursor: pointer;
                 justify-content: space-between;
                 width: 2.9rem;

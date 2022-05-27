@@ -4,7 +4,7 @@ namespace App\Http\Requests\Admin;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class FaqRequest extends FormRequest
+class ProductRequest extends FormRequest
 {
     public function authorize()
     {
@@ -16,12 +16,18 @@ class FaqRequest extends FormRequest
         return [
             'name' => 'required',
         ];
+        return [
+            'title' => 'required',
+        ];
     }
 
     public function messages()
     {
         return [
             'name.required' => 'El nombre es obligatorio',
+        ];
+        return [
+            'title.required' => 'El título es obligatorio',
         ];
     }
 }
