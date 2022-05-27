@@ -137,7 +137,7 @@
                             <div class="column">
                                 <div class="form-element">
                                     <div class="form-element-label">
-                                        <label>características:</label>
+                                        <label>Características:</label>
                                     </div>
                                     <div class="form-element-input-ckeditor">
                                         <textarea class="ckeditor" name="caracterist">{{isset($product->caracterist) ? $product->caracterist : ''}}</textarea>
