@@ -20,6 +20,8 @@
         @include('admin.layout.partials.header')
 
         <main>
+            @include('admin.components.desktop.modal_delete')
+
             @yield('content')
         </main>
         

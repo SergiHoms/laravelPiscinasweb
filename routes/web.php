@@ -55,12 +55,26 @@ Route::group(['prefix' => 'admin'], function () {
         ]
     ]);
 
-    Route::resource('product', 'App\Http\Controllers\Admin\ProductController', [
+    Route::resource('productos/categorias', 'App\Http\Controllers\Admin\ProductCategoryController', [
         'parameters' => [
-            'products' => 'products', 
+            'categorias' => 'product_category', 
         ],
         'names' => [
-            'index' => 'product', 
+            'index' => 'product_categories', 
+            'create' => 'products_categories_create', 
+            'edit' => 'products_categories_edit',
+            'store' => 'products_categories_store', 
+            'destroy' => 'products_categories_destroy', 
+            'show' => 'products_categories_show', 
+        ]
+    ]);
+
+    Route::resource('productos', 'App\Http\Controllers\Admin\ProductController', [
+        'parameters' => [
+            'productos' => 'product', 
+        ],
+        'names' => [
+            'index' => 'products', 
             'create' => 'products_create', 
             'edit' => 'products_edit',
             'store' => 'products_store', 
@@ -68,6 +82,35 @@ Route::group(['prefix' => 'admin'], function () {
             'show' => 'products_show', 
         ]
     ]);
+
+    Route::resource('usuarios', 'App\Http\Controllers\Admin\UserController', [
+        'parameters' => [
+            'usuarios' => 'user', 
+        ],
+        'names' => [
+            'index' => 'users', 
+            'create' => 'users_create', 
+            'edit' => 'users_edit',
+            'store' => 'users_store', 
+            'destroy' => 'users_destroy', 
+            'show' => 'users_show', 
+        ]
+    ]);
+
+    Route::resource('contacto', 'App\Http\Controllers\Admin\ContactController', [
+        'parameters' => [
+            'contacto' => 'contact', 
+        ],
+        'names' => [
+            'index' => 'contact', 
+            'create' => 'contact_create', 
+            'edit' => 'contact_edit',
+            'store' => 'contact_store', 
+            'destroy' => 'contact_destroy', 
+            'show' => 'contact_show', 
+        ]
+    ]);
+
 });
 
 Route::get('/home', function () {

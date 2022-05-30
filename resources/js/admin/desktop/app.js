@@ -6,6 +6,7 @@ import {renderCkeditor } from "./ckeditor.js";
 import {renderFaqs } from "./faqs.js";
 import {renderForm } from "./form.js";
 import {renderTable } from "./table.js";
+import {renderModalDelete} from './modalDelete';
 
 renderMenuButton();
 renderTabs();
@@ -15,3 +16,4 @@ renderCkeditor();
 renderFaqs();
 renderForm();
 renderTable();
+renderModalDelete();
