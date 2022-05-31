@@ -102,12 +102,12 @@ Route::group(['prefix' => 'admin'], function () {
             'contacto' => 'contact', 
         ],
         'names' => [
-            'index' => 'contact', 
-            'create' => 'contact_create', 
-            'edit' => 'contact_edit',
-            'store' => 'contact_store', 
-            'destroy' => 'contact_destroy', 
-            'show' => 'contact_show', 
+            'index' => 'contacts', 
+            'create' => 'contacts_create', 
+            'edit' => 'contacts_edit',
+            'store' => 'contacts_store', 
+            'destroy' => 'contacts_destroy', 
+            'show' => 'contacts_show', 
         ]
     ]);
 
