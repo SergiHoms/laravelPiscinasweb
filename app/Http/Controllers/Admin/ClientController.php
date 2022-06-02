@@ -8,17 +8,17 @@ namespace App\Http\Controllers\Admin;
 // otros archivos que contienen código a este archivo
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
-use App\Models\Product;
-use App\Http\Requests\Admin\ProductRequest;
+use App\Models\Client;
+use App\Http\Requests\Admin\ClientRequest;
 use Debugbar;
 
 // Podemos identificar que estamos ante un objeto por la palabra "class"
-// el nombre objeto es "ProductController", el nombre del objeto tiene que
+// el nombre objeto es "ClientController", el nombre del objeto tiene que
 // coincidir con el nombre del archivo.
 
-// extends lo que está afirmando es que el objeto "ProductController" está
+// extends lo que está afirmando es que el objeto "ClientController" está
 // heredando todas las propiedades (variables) y métodos del objeto "Controller"
-class ProductController extends Controller
+class ClientController extends Controller
 {
     // Un objeto puede tener propiedades o/y métodos. 
 
@@ -28,7 +28,7 @@ class ProductController extends Controller
     // objeto. Protected en este caso significa que esta propiedad sólo puede ser 
     // usada desde dentro de una función. 
 
-    protected $product;
+    protected $client;
 
     /*
     Las siguientes líneas son métodos. Un método se identifica porque
@@ -64,11 +64,11 @@ class ProductController extends Controller
     
     */
 
-    public function __construct(Product $product)
+    public function __construct(Client $client)
     {
         // En este caso estamos instanciando el objeto $product
         // y asignándolo a la propiedad $this->product
-        $this->product = $product;
+        $this->client = $client;
     }
     
     
@@ -81,9 +81,9 @@ class ProductController extends Controller
             tiene como valor todos los registros de la tabla faqs. Para pedir todos los datos hemos escrito: $this->faq->get();
         */
 
-        $view = View::make('admin.pages.product.index')
-                ->with('product', $this->product)
-                ->with('products', $this->product);
+        $view = View::make('admin.pages.client.index')
+                ->with('client', $this->client)
+                ->with('clients', $this->client);
 
         if(request()->ajax()) {
             
@@ -109,8 +109,8 @@ class ProductController extends Controller
             con los datos procesados. 
         */
 
-       $view = View::make('admin.pages.product.index')
-        ->with('product', $this->product)
+       $view = View::make('admin.pages.client.index')
+        ->with('client', $this->client)
         ->renderSections();
 
         /*
@@ -125,10 +125,10 @@ class ProductController extends Controller
         ]);
     }
 
-    public function store(ProductRequest $request)
+    public function store(ClientRequest $request)
     {            
     
-        $product = $this->product->updateOrCreate([
+        $client = $this->client->updateOrCreate([
             'id' => request('id')],[
             'name' => request('name'),
             'title' => request('title'),
@@ -140,24 +140,24 @@ class ProductController extends Controller
             'caracterist' => request('caracterist'),
         ]);
             
-        $view = View::make('admin.pages.product.index')
-        ->with('products', $this->product->where('active', 1)->get())
-        ->with('product', $product)
+        $view = View::make('admin.pages.client.index')
+        ->with('clients', $this->client->where('active', 1)->get())
+        ->with('client', $client)
         ->renderSections();
             //    Product recorre la tabla y todos los registros qe tienen active 1 los muestra
 
         return response()->json([
             'table' => $view['table'],
             'form' => $view['form'],
-            'id' => $product->id,
+            'id' => $client->id,
         ]);
     }
 
-    public function edit(Product $product)
+    public function edit(Client $client)
     {
-        $view = View::make('admin.pages.product.index')
-        ->with('product', $product)
-        ->with('products', $this->product->where('active', 1)->get());   
+        $view = View::make('admin.pages.client.index')
+        ->with('client', $client)
+        ->with('clients', $this->client->where('active', 1)->get());   
         
         if(request()->ajax()) {
 
@@ -171,18 +171,18 @@ class ProductController extends Controller
         return $view;
     }
 
-    public function show(Product $product){
+    public function show(Client $client){
 
     }
 
-    public function destroy(Product $product)
-    {
-        $product->active = 0;
-        $product->save();
+    public function destroy(Client $client){
+    
+        $client->active = 0;
+        $client->save();
 
-        $view = View::make('admin.pages.product.index')
-            ->with('product', $this->product)
-            ->with('products', $this->product->where('active', 1)->get())
+        $view = View::make('admin.pages.client.index')
+            ->with('client', $this->client)
+            ->with('clients', $this->client->where('active', 1)->get())
             ->renderSections();
         
         return response()->json([

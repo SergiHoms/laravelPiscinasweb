@@ -125,6 +125,18 @@
                             <div class="column">
                                 <div class="form-element">
                                     <div class="form-element-label">
+                                        <label>Categorías:</label>
+                                    </div>
+                                    <div class="form-element-input">
+                                        <select type="text" name="categoria_id"></select>       
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desktop-one-column">
+                            <div class="column">
+                                <div class="form-element">
+                                    <div class="form-element-label">
                                         <label>Descripción:</label>
                                     </div>
                                     <div class="form-element-input-ckeditor">

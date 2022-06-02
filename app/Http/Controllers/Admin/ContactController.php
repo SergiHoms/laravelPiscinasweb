@@ -135,6 +135,7 @@ class ContactController extends Controller
                 'message' => request('message'),
                 'password' => request('password'),
                 'active' => 1,
+                'visible' => 1,
         ]);
             
         $view = View::make('admin.pages.contact.index')

@@ -111,6 +111,20 @@ Route::group(['prefix' => 'admin'], function () {
         ]
     ]);
 
+    Route::resource('client', 'App\Http\Controllers\Admin\ClientController', [
+        'parameters' => [
+            'client' => 'clients', 
+        ],
+        'names' => [
+            'index' => 'clients', 
+            'create' => 'clients_create', 
+            'edit' => 'clients_edit',
+            'store' => 'clients_store', 
+            'destroy' => 'clients_destroy', 
+            'show' => 'clients_show', 
+        ]
+    ]);
+
 });
 
 Route::get('/home', function () {

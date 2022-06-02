@@ -187,6 +187,13 @@
             
                    
         }
+
+        select{
+            border-radius: .5rem;
+            width: 46.8rem;
+            
+                   
+        }
         .form-element-input-ckeditor{
             label{
                 display: none;
@@ -195,7 +202,11 @@
 
         }
     }
+
+    
 }
+
+
 
 // .box-button{
 //     background-color: hsl(206, 48%, 57%);

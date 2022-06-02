@@ -859,6 +859,10 @@ header .header .header-title h1 {
   border-radius: 0.5rem;
   width: 46.8rem;
 }
+.form-content.active .form-element select {
+  border-radius: 0.5rem;
+  width: 46.8rem;
+}
 .form-content.active .form-element .form-element-input-ckeditor {
   width: 47.4rem;
 }
