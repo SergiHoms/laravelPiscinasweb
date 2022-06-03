@@ -2,21 +2,21 @@
 
 @section('table')
     <div class="table-items">
-        @if(isset($products))
-            @foreach($products as $product_element)
+        @if(isset($Product))
+            @foreach($Product as $products_element)
                 <div class="table-container">
                     <ul class="table-item-info">
-                        <li><span>Id:</span>{{$product_element->id}}</li>
-                        <li><span>Nombre:</span>{{$product_element->name}}</li>
-                        <li><span>Creado el:</span>{{$product_element->created_at}}</li>                                                                
+                        <li><span>Id:</span> {{$products_element->id}}</li>
+                        <li><span>Nombre:</span> {{$products_element->name}}</li>
+                        <li><span>Creado el:</span>{{$products_element->created_at}}</li>                                                                
                     </ul>
                     <div class="table-item-buttons">
-                        <div class="edit-button" data-url="{{route('products_edit', ['product' => $product_element->id])}}">
+                        <div class="edit-button" data-url="{{route('products_edit', ['products' => $products_element->id])}}">
                             <svg viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" />
                             </svg>
                         </div>
-                        <div class="delete-button" data-url="{{route('products_destroy', ['product' => $product_element->id])}}">
+                        <div class="delete-button" data-url="{{route('products_destroy', ['products' => $products_element->id])}}">
                             <svg viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
                             </svg>    
@@ -58,7 +58,7 @@
             </div>
             <div class="form-container-buttons">
                 <div class="svg-box">
-                    <div class="store-button" data-url="{{route('products_store')}}">
+                    <div class="store-button">
                         <svg viewBox="0 0 24 24">
                             <path fill="currentColor" d="M15,9H5V5H15M12,19A3,3 0 0,1 9,16A3,3 0 0,1 12,13A3,3 0 0,1 15,16A3,3 0 0,1 12,19M17,3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V7L17,3Z" />
                         </svg>
@@ -83,7 +83,7 @@
                 <div class="form-content active" data-display="content">
                     <form class='admin-form' action="{{route("products_store")}}">
 
-                        <input type="hidden" name="id">
+                        <input type="hidden" value="id" name="id">
 
                         <div class="desktop-one-column">
                             <div class="column">
@@ -116,7 +116,7 @@
                                         <label>Precio:</label>
                                     </div>
                                     <div class="form-element-input">
-                                        <input type="text" name="price" value="{{isset($product->price) ? $product->price : ''}} " placeholder="Escribe aquí el precio" aria-invalid="false">
+                                        <input type="number" name="price" value="{{isset($product->price) ? $product->price : ''}} " placeholder="Escribe aquí tu precio" aria-invalid="false">
                                     </div>
                                 </div>
                             </div>
@@ -125,10 +125,14 @@
                             <div class="column">
                                 <div class="form-element">
                                     <div class="form-element-label">
-                                        <label>Categorías:</label>
+                                        <label>Categoría:</label>
                                     </div>
-                                    <div class="form-element-input">
-                                        <select type="text" name="categoria_id"></select>       
+                                    <div class="form-element-select">
+                                        <select type="number" name="category" value="{{isset($product->category) ? $product->category : ''}} " placeholder="Escribe aquí tu precio" aria-invalid="false">
+                                            <option value="1">Categoría 1</option>
+                                            <option value="2">Categoría 2</option>
+                                            <option value="3">Categoría 3</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -156,11 +160,11 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>             
+                        </div>                                   
                     </form>            
                 </div>
             </div>
-            </div>             
+        
         </div>
     </div>                    
 

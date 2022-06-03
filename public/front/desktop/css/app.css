@@ -803,6 +803,10 @@ header {
 }
 .contact .contact-options ul li {
   margin-bottom: 1rem;
+  cursor: pointer;
+}
+.contact .contact-options ul li :hover {
+  color: hsl(207deg, 100%, 27%);
 }
 .contact .contact-options ul li span {
   color: white;
@@ -835,15 +839,24 @@ header {
   width: 96%;
   min-height: auto;
 }
-.contact .contact-form .form-send-button {
+.contact .contact-form .store-button {
+  margin-top: 1rem;
   margin-left: auto;
+  cursor: pointer;
 }
-.contact .contact-form .form-send-button button {
+.contact .contact-form .store-button :hover {
+  background-color: lightgreen;
+}
+.contact .contact-form .store-button button {
   border-radius: 0.6rem;
   background-color: hsl(207deg, 100%, 27%);
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   padding: 0.5rem 2rem;
+  cursor: pointer;
+}
+.contact .contact-form .store-button button :hover {
+  color: hsl(207deg, 100%, 27%);
 }
 .contact .ck.ck-editor__editable_inline {
   color: black;

@@ -45,7 +45,7 @@
 
             <div class="column">
                 <div class="contact-form">
-                    <form>
+                    <form class="front-form" data-url="route('front_contact_form')">
                         <div class="desktop-two-columns">
                             <div class="column">
                                 <div class="form-element">
@@ -63,7 +63,7 @@
                                         <label>Apellidos</label>
                                     </div>
                                     <div class="form-element-input">
-                                        <input type="text" name="surname" placeholder="Escribe aquí tu Nombre" aria-invalid="false">
+                                        <input type="text" name="surname" placeholder="Escribe aquí tu Apellido" aria-invalid="false">
                                     </div>
                                 </div> 
                             </div>
@@ -75,8 +75,7 @@
                                         <label>Teléfono</label>
                                     </div>
                                     <div class="form-element-input">
-                                        <input class="ckeditor" type="tel" name="box" placeholder="Escribe aquí tu Nombre" aria-invalid="false">
-                                    </div>
+                                        <input type="text" name="phone" placeholder="Escribe aquí tu teléfono" aria-invalid="false">                                    </div>
                                 </div>
                             </div>
                             <div class="column">
@@ -85,8 +84,7 @@
                                         <label>Email</label>
                                     </div>
                                     <div class="form-element-input">
-                                        <input class="ckeditor" type="email" name="box" placeholder="Escribe aquí tu Nombre" aria-invalid="false">
-                                    </div>
+                                        <input type="text" name="email" placeholder="Escribe aquí tu Email" aria-invalid="false">                                    </div>
                                 </div> 
                             </div>
                         </div>
@@ -97,14 +95,14 @@
                                         <label>Mensaje</label>
                                     </div>
                                     <div class="form-element-input">
-                                        <textarea class="ckeditor" ></textarea>
+                                        <textarea ></textarea>
                                     </div>
                                 </div>                      
                             </div> 
                         </div>
                         <div class="desktop-one-column">
                             <div class="column">
-                                <div class="form-send-button">
+                                <div class="store-button">
                                     <button>
                                         <span>Enviar</span>
                                     </button>

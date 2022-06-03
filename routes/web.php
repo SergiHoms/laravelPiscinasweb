@@ -151,7 +151,14 @@ Route::get('/faqs', function () {
 });
 
 
+
 Route::get('/contacto', function () {
+    
+    Route::get('/contacto', 'app\htppControllers\Front\ContactController@index')->name('front_contact');
+
+    Route::post('/contacto', 'app\htppControllers\Front\ContactController@store')->name('front_contact_form');
+
+
     return view('front.pages.contact.index');
 });
 
