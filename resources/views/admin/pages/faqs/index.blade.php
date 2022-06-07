@@ -84,7 +84,7 @@
                 <div class="form-content active" data-display="content">
                     <form class='admin-form' action="{{route("faqs_store")}}">
 
-                        <input type="hidden" name="id">
+                        <input type="hidden" name="id" value="{{isset($faq->id) ? $faq->id : ''}} ">
 
                         <div class="desktop-one-column">
                             <div class="column">

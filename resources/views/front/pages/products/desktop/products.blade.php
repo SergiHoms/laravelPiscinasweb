@@ -37,115 +37,43 @@
                 </div>                 
             </div>
             <div class="products-gallery">
-                <div class="desktop-three-columns">
-                    <div class="column">
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="images/exterior.jpg" alt="destacado">
-                            </div>
-                            <div class="product-title">
-                                <h3>
-                                    PROMOCIÓN: 80% DE DESCUENTO
-                                </h3>
-                            </div>
-                            <div class="product-offer">
-                                <button>
-                                    <p>HASTA FINAL DE MES</p>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="images/exterior.jpg" alt="destacado">
-                            </div>
-                            <div class="product-title">
-                                <h3>
-                                    PROMOCIÓN: 80% DE DESCUENTO
-                                </h3>
-                            </div>
-                            <div class="product-offer">
-                                <button>
-                                    <p>HASTA FINAL DE MES</p>
-                                </button>
+                <div class="desktop-three-columns">     
+                    <div class="product-gallery">
+                        <div class="products-list">
+                            <div class="products">
+                                @if(isset($products))
+                                    @foreach($products as $product)
+                                        <div class="product">
+                                            <div class="product-image">
+                                                <img src="images/exterior.jpg" alt="destacado">
+                                            </div>
+                                            <div class="list" data-list="{{$product->product}}">
+                                                <h3>{{$product->title}}</h3>
+                                            </div>
+                                            <div class="content" data-content="{{$product->product}}">
+                                                {!!$product->description!!}                       
+                                            </div>
+                                            <div class="product-disponibility">
+                                                <h3>
+                                                    EN STOCK
+                                                </h3>
+                                            </div>
+                                            <div class="view-product">
+                                                <button>
+                                                    <p>VER PRODUCTO</p>
+                                                </button>
+                                            </div>                        
+                                        </div>     
+                                    @endforeach      
+                                @endif        
                             </div>
                         </div>
-                    </div>
-                    <div class="column">
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="images/exterior.jpg" alt="destacado">
-                            </div>
-                            <div class="product-title">
-                                <h3>
-                                    PROMOCIÓN: 80% DE DESCUENTO
-                                </h3>
-                            </div>
-                            <div class="product-offer">
-                                <button>
-                                    <p>HASTA FINAL DE MES</p>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="desktop-three-columns">
-                    <div class="column">
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="images/exterior.jpg" alt="destacado">
-                            </div>
-                            <div class="product-title">
-                                <h3>
-                                    PROMOCIÓN: 80% DE DESCUENTO
-                                </h3>
-                            </div>
-                            <div class="product-offer">
-                                <button>
-                                    <p>HASTA FINAL DE MES</p>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="images/exterior.jpg" alt="destacado">
-                            </div>
-                            <div class="product-title">
-                                <h3>
-                                    PROMOCIÓN: 80% DE DESCUENTO
-                                </h3>
-                            </div>
-                            <div class="product-offer">
-                                <button>
-                                    <p>HASTA FINAL DE MES</p>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="column">
-                        <div class="product">
-                            <div class="product-image">
-                                <img src="images/exterior.jpg" alt="destacado">
-                            </div>
-                            <div class="product-title">
-                                <h3>
-                                    PROMOCIÓN: 80% DE DESCUENTO
-                                </h3>
-                            </div>
-                            <div class="product-offer">
-                                <button>
-                                    <p>HASTA FINAL DE MES</p>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
+                    </div> 
                 </div>  
             </div> 
         </div>
     </div>
 </div> 
  
+
+{{-- data-url="{{route'front_product,[product' =>$product ->id))}}; --}}

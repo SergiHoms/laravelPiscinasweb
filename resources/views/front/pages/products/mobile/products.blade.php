@@ -14,7 +14,6 @@
                         <option>Desbordantes y de espejo</option>
                         <option>Desmontables</option>
                         <option>Prefabricadas</option>
-
                     </select>
                 </div>
             </div>

@@ -19,8 +19,7 @@ return new class extends Migration
             $table->string('surname');
             $table->string('phone');
             $table->string('email');
-            $table->boolean('visible');
-            $table->boolean('active');
+            $table->text('message');
             $table->timestamps();
         });
     }

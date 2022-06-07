@@ -137,7 +137,7 @@ var renderForm = function renderForm() {
   var createButton = document.querySelector('.create-button');
   var forms = document.querySelectorAll('.admin-form');
   document.addEventListener("loadForm", function (event) {
-    formContainer.innerHTML = event.detail.form;
+  formContainer.innerHTML = event.detail.form;
   }, {
     once: true
   });

@@ -8,12 +8,12 @@
 
     @if($agent->isDesktop())
         @include('front.components.desktop.page_title', ['title' => "DEVOLUCIONES Y REEMBOLSOS DE PRODUCTOS"] )
-        @include('front.pages.faqs.desktop.faqs')
+        @include('front.pages.faqs.desktop.faqs', ['faqs' => $faqs])
     @endif
 
     @if($agent->isMobile())
-    @include('front.components.mobile.page_title', ['title' => "DEVOLUCIONES Y REEMBOLSOS DE PRODUCTOS"] )
-        @include('front.pages.faqs.mobile.faqs')
+        @include('front.components.mobile.page_title', ['title' => "DEVOLUCIONES Y REEMBOLSOS DE PRODUCTOS"] )
+        @include('front.pages.faqs.mobile.faqs', ['faqs' => $faqs])
     @endif
 
 @endsection 

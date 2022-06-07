@@ -83,7 +83,7 @@ class ProductController extends Controller
 
         $view = View::make('admin.pages.product.index')
                 ->with('product', $this->product)
-                ->with('products', $this->product);
+                ->with('products', $this->product->where('active',1)->get());
 
         if(request()->ajax()) {
             
@@ -127,22 +127,22 @@ class ProductController extends Controller
 
     public function store(ProductRequest $request)
     {            
-    
+        
         $product = $this->product->updateOrCreate([
             'id' => request('id')],[
             'name' => request('name'),
             'title' => request('title'),
             'description' => request('description'),
-            'visible' => 1,
-            'active' => 1,
             'price' => request('price'),
-            'categoria_id' => request('categoria_id'),
+            'category_id' => request('category_id'),
             'caracterist' => request('caracterist'),
+            'visible' => 1,
+            'active' => 1
         ]);
             
         $view = View::make('admin.pages.product.index')
         ->with('products', $this->product->where('active', 1)->get())
-        ->with('product', $product)
+        ->with('product', $this->product)
         ->renderSections();
             //    Product recorre la tabla y todos los registros qe tienen active 1 los muestra
 
@@ -172,6 +172,25 @@ class ProductController extends Controller
     }
 
     public function show(Product $product){
+
+    {
+        $view = View::make('admin.pages.product.index')
+        // ->with('product', $product)
+        ->with('products', $this->product->where('active', 1)->get());   
+        
+        if(request()->ajax()) {
+
+            $sections = $view->renderSections(); 
+
+            debugbar::info("yo soy una vista renderizada");
+    
+            return response()->json([
+                'form' => $sections['form'],
+            ]); 
+        }
+        debugbar::info("yo soy una vista sin renderizá");        
+        return $view;
+    }
 
     }
 

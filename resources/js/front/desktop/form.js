@@ -1,62 +1,14 @@
 export let renderForm = () => {
 
-    let formContainer = document.querySelector(".form");
+    let mainContainer = document.querySelector("main");
     let storeButton = document.querySelector('.store-button');
-    let createButton = document.querySelector('.create-button');
-    let forms = document.querySelectorAll('.admin-form');
-
-    document.addEventListener("loadForm",( event =>{
-        formContainer.innerHTML = event.detail.form;
-    }), {once: true});
+    let forms = document.querySelectorAll('.front-form');
 
     document.addEventListener("renderFormModules",( event =>{
         renderForm();
     }), {once: true});
 
     
-    if(createButton){
-
-        createButton.addEventListener("click", () => {
-
-            let url = createButton.dataset.url;
-
-            
-
-            let sendCreateRequest = async () => {
-
-                
-                let response = await fetch(url, {
-                    headers: {
-                        'X-Requested-With': 'XMLHttpRequest',
-                    },
-                    method: 'GET', 
-                })
-                .then(response => {
-                                
-                    if (!response.ok) throw response;
-
-                    return response.json();
-                })
-                .then(json => {
-
-                    formContainer.innerHTML = json.form;
-                    
-
-                    
-                    document.dispatchEvent(new CustomEvent('renderFormModules'));
-                })
-                .catch(error =>  {
-
-                    if(error.status == '500'){
-                        console.log(error);
-                    };
-                });
-            };
-    
-            sendCreateRequest();
-        });
-    }
-
     if(storeButton){
 
         storeButton.addEventListener("click", (event) => {
@@ -68,13 +20,9 @@ export let renderForm = () => {
                 let data = new FormData(form);
                 let url = form.action;
 
-
                 for (var pair of data.entries()) {
                     console.log(pair[0]+ ', ' + pair[1]); 
                 }
-
-
-
     
                 if( ckeditors != 'null'){
     
@@ -82,13 +30,9 @@ export let renderForm = () => {
                         data.append(key, value.getData());
                     });
                 }
-
                 
-    
                 let sendPostRequest = async () => {
     
-                    
-                    
                     let response = await fetch(url, {
                         headers: {
                             'Accept': 'application/json',
@@ -105,21 +49,15 @@ export let renderForm = () => {
                     })
                     .then(json => {
 
-                        formContainer.innerHTML = json.form;
+                        console.log(json.content);
 
-                        document.dispatchEvent(new CustomEvent('loadTable', {
-                            detail: {
-                                table: json.table,
-                            }
-                        }));
+                        mainContainer.innerHTML = json.content;
 
                         document.dispatchEvent(new CustomEvent('renderFormModules'));
-                        document.dispatchEvent(new CustomEvent('renderTableModules'));
                     })
                     .catch ( error =>  {
     
-                        
-    
+                    
                         if(error.status == '422'){
         
                             error.json().then(jsonError => {

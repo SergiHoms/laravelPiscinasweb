@@ -34,6 +34,9 @@
             display: flex;
 
             button{
+                input{
+                    border-radius: .6rem;
+                }
                 border-radius: .6rem;
             } 
 
@@ -41,6 +44,7 @@
                 label{
                     color:white;
                     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    
                 }
                 input{
                     border-radius: .6rem;
@@ -49,16 +53,21 @@
             }
         }
 
-        .product-button{
+        .store-button{
+            
 
             button{
                 background-color:hsl(207deg, 100%, 27%) ;
                 color:white;
                 border-radius: .6rem;
                 cursor: pointer;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 1.2rem;
+                margin-left: 6.5rem;
+                :hover{
+                    color:aqua;
+                }
             }
-
-        
         }
     }
         
@@ -73,7 +82,6 @@
                 text-align: center;
                 margin-bottom: 2rem;
             }
-
             }
 
         }
@@ -100,6 +108,8 @@
         right: 5%;
         transition: opacity 1s;
         .notification-message{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: aqua;
             
 
         }

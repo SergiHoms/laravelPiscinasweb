@@ -45,7 +45,7 @@
 
             <div class="column">
                 <div class="contact-form">
-                    <form class="front-form" data-url="route('front_contact_form')">
+                    <form class="front-form" action="{{route('front_contact_form')}}">
                         <div class="desktop-two-columns">
                             <div class="column">
                                 <div class="form-element">
@@ -95,7 +95,7 @@
                                         <label>Mensaje</label>
                                     </div>
                                     <div class="form-element-input">
-                                        <textarea ></textarea>
+                                        <textarea name="message"></textarea>
                                     </div>
                                 </div>                      
                             </div> 

@@ -584,7 +584,6 @@ header {
 }
 .content-list .list {
   background-color: hsl(207deg, 100%, 27%);
-  width: 49%;
   padding: 0.5rem;
   border-radius: 0.2rem;
   border: solid 1px white;
@@ -606,13 +605,12 @@ header {
 }
 .content-list .content {
   background-color: white;
-  width: 50%;
   border: solid 2px hsl(207deg, 100%, 27%);
   display: none;
   border-bottom-left-radius: 0.6rem;
   border-bottom-right-radius: 0.6rem;
 }
-.content-list .content span {
+.content-list .content p {
   display: block;
   color: hsl(207deg, 100%, 27%);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -624,16 +622,16 @@ header {
 }
 .content-list .content.active {
   background-color: white;
-  width: 50%;
   border: solid 2px hsl(207deg, 100%, 27%);
   transition: 0.75;
   display: block;
+  text-align: center;
 }
 .content-list .content.active svg {
   color: white;
   transform: rotate(90deg);
 }
-.content-list .content.active span {
+.content-list .content.active p {
   display: block;
   color: hsl(207deg, 100%, 27%);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -878,13 +876,22 @@ header {
 .products .products-category .products-category-menu {
   background-color: hsl(207deg, 100%, 27%);
   border-radius: 0.6rem;
+  padding: 1.4rem;
+}
+.products .products-category .products-category-menu ul {
+  color: white;
+  border-radius: 0.6rem;
   padding: 1rem 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 600;
+  justify-content: center;
+}
+.products .products-category .products-category-menu ul :hover {
+  color: aqua;
 }
 .products .products-category .products-category-menu ul li {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  color: white;
-  margin-bottom: 2rem;
-  text-align: center;
+  padding: 1rem;
+  cursor: pointer;
 }
 
 .products-menu {
@@ -902,29 +909,34 @@ header {
 
 .products-gallery .product {
   margin-bottom: 1rem;
+  display: flex;
 }
 .products-gallery .product .product-image img {
   border: solid 4px white;
 }
-.products-gallery .product .product-title {
+.products-gallery .product .product-disponibility {
   background-color: hsl(207deg, 100%, 27%);
   border-radius: 0.6rem;
-  margin: 1rem 0;
+  margin: 1rem;
 }
-.products-gallery .product .product-title h3 {
+.products-gallery .product .product-disponibility h3 {
   text-align: center;
   padding: 0.5rem;
 }
-.products-gallery .product .product-offer {
+.products-gallery .product .view-product {
   padding: 1rem;
   margin-bottom: 2rem;
 }
-.products-gallery .product .product-offer button {
+.products-gallery .product .view-product button {
   border-radius: 0.6rem;
   padding: 0.5rem;
   margin-left: 2rem;
+  cursor: pointer;
 }
-.products-gallery .product .product-offer button p {
+.products-gallery .product .view-product button :hover {
+  color: aqua;
+}
+.products-gallery .product .view-product button p {
   color: hsl(207deg, 100%, 27%);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 600;
@@ -960,6 +972,9 @@ header {
 .product .product-info-article .product-form button {
   border-radius: 0.6rem;
 }
+.product .product-info-article .product-form button input {
+  border-radius: 0.6rem;
+}
 .product .product-info-article .product-form form label {
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -967,11 +982,17 @@ header {
 .product .product-info-article .product-form form input {
   border-radius: 0.6rem;
 }
-.product .product-info-article .product-button button {
+.product .product-info-article .store-button button {
   background-color: hsl(207deg, 100%, 27%);
   color: white;
   border-radius: 0.6rem;
   cursor: pointer;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.2rem;
+  margin-left: 6.5rem;
+}
+.product .product-info-article .store-button button :hover {
+  color: aqua;
 }
 .product .product-price h3 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -1000,6 +1021,10 @@ header {
   bottom: 15vh;
   right: 5%;
   transition: opacity 1s;
+}
+.product .notification .notification-message {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: aqua;
 }
 .product .notification.active {
   opacity: 1;

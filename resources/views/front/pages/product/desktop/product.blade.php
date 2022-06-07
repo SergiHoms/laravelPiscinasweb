@@ -5,8 +5,7 @@
                 <div class="product-main-image">
                     <img src="images/exterior.jpg" alt="destacado">
                 </div>
-            </div>
-          
+            </div>     
             <div class="product-mini-images">
                 <div class="desktop-five-columns">
                     <div class="column">
@@ -47,62 +46,48 @@
                 </div>    
             </div>
         </div> 
-
         <div class="column">
             <div class="product-info-article">
                 <div class="product-info">
                     <div class="product-title">
                         <h2>
-                            Piscina Exterior de hormigón
+                            {{$product->title}}
                         </h2>
                     </div>
                 </div>
                 <div class="product-info-price">
                     <div class="product-price">
                         <h3>
-                            1.100 eu/u
-                        </h3>
+                            {{$product->price}}
+                        </h3>                                   
                     </div>
-                </div>
-            
+                </div>         
                 <div class="product-info-title">
                     <div class="product-article-title">
                         <h3>Información general:</h3>
                     </div>
-                </div>
-            
+                </div>           
                 <div class="product-info desktop-only">
                     <div class="product-article">
-                        <p>
-                            Piscina desmontable Ultra Frame XTR INTEX, medidas piscina: 488x122 cm y capacidad: 19.156 litros. Incluye depuradora de arena con capacidad de filtración de 4.500 litros/hora (arena no incluida), escalera de seguridad, tapiz y cobertor. Sistema de aireación Hydro Technology: mejora la calidad de la filtración, aumenta la pureza del agua y mejora la cantidad de iones negativos sobre la superficie del agua
-                        </p>
+                        {!!$product->description!!}              
                     </div>
                 </div>
-
                 <div class="tabs-container desktop-only">
                     <div class="tabs">
                         <div class="tab description-drop">
                             <button class="tab-button active" data-tab="description">Descripción</button>
                         </div>
                         <div class="tab caracterist-drop">
-                            <button class="tab-button" data-tab="specifications">Características</button>
-                            
-                        </div>
-                        <div class="tab opinion-drop">
-                            <button class="tab-button" data-tab="opinions">opinión</button>
-                        </div>
+                            <button class="tab-button" data-tab="specifications">Características</button>            
+                        </div>               
                     </div>
-
                     <div class="tab-displays desktop-only">
                         <div class="tab-display active" data-display="description">
-                            <p>Piscina desmontable Ultra Frame XTR INTEX</p>
+                            {!!$product->description!!}
                         </div>
                         <div class="tab-display" data-display="specifications">
-                            <p>medidas piscina: 488x122 cm y capacidad: 19.156 litros.</p>
-                        </div>
-                        <div class="tab-display" data-display="opinions">
-                            <p>Incluye depuradora de arena con capacidad de filtración de 4.500 litros/hora (arena no incluida), escalera de seguridad, tapiz y cobertor. Sistema de aireación Hydro Technology: mejora la calidad de la filtración, aumenta la pureza del agua y mejora la cantidad de iones negativos sobre la superficie del agua</p>
-                        </div>
+                            {!!$product->caracterist!!}
+                        </div>                
                     </div>
                 </div>
                 <div class="selects-container mobile-only">
@@ -113,43 +98,34 @@
                         </div>
                         <div class="tab caracterist-drop">
                             <option class="tab-button" data-display="specifications">Características</option>
-                        </div>
-                        <div class="tab opinion-drop">
-                            <option class="tab-button" data-display="opinions">opiniones</option>
-                        </div>       
+                        </div>                             
                     </select>
                     </div>
-
                     <div class="tab-displays mobile-only">
                         <div class="tab-display active" data-display="description">
                             <p>Piscina desmontable Ultra Frame XTR INTEX</p>
                         </div>
                         <div class="tab-display" data-display="specifications">
                             <p>medidas piscina: 488x122 cm y capacidad: 19.156 litros.</p>
-                        </div>
-                        <div class="tab-display" data-display="opinions">
-                            <p>Incluye depuradora de arena con capacidad de filtración de 4.500 litros/hora (arena no incluida), escalera de seguridad, tapiz y cobertor. Sistema de aireación Hydro Technology: mejora la calidad de la filtración, aumenta la pureza del agua y mejora la cantidad de iones negativos sobre la superficie del agua</p>
-                        </div>
+                        </div>                      
                     </div>
-                </div>
-                
-
-                <div class="product-form">
-                    
+                </div>              
+                <form class="product-form">
                     <button id="minus"> - </button>
-                    <form>
+                    
                         <input id="numbers" type="number"name="quantity" value="1" >
-                    </form>
+                    
                     <button id="plus"> + </button>
-                </div>
-                <div class="product-button">
+                
+                <div class="store-button" data-url="">
                     <button >
                         <p>Comprar</p>
                     </button>
                 </div>
                 <div class="notification">
                     <span id="notification-message"></span>
-                </div>
+                </div>                        
+                </form>
             </div>
         </div>
     </div>

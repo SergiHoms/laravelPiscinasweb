@@ -18,14 +18,28 @@
         .products-category-menu{
             background-color:hsl(207deg, 100%, 27%) ;
             border-radius: .6rem;
-            padding: 1rem 0;
-
-            ul li{
+            padding: 1.4rem;
+            ul{
+                :hover{
+                    color:aqua;
+                }
+                li{
+                    padding: 1rem;
+                    cursor: pointer;
+                    
+                    
+                }
+                color:white;
+                border-radius: .6rem;
+                padding: 1rem 0;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                color: white;
-                margin-bottom: 2rem;
-                text-align: center; 
+                font-weight: 600;
+                justify-content: center;
+                
+                
             }
+
+            
         }
     }
 }
@@ -47,26 +61,53 @@
 }
 
 .products-gallery{
+    
+    
+    
+
+    .product-gallery{
+        
+        
+    }
+
+    .content-list{
+        
+        
+
+        .lists-contents{
+
+            .list-content{
+
+                .list{
+                    
+                    
+                }
+
+                
+            }
+            
+        }
+    }
+    
     .product{
         margin-bottom: 1rem;
+        display: flex;
+        
 
         .product-image img{
             border: solid 4px white;
         }     
-        
-        .product-title{
+        .product-disponibility{
             background-color: hsl(207deg, 100%, 27%) ;
             border-radius: .6rem;
-
-            margin: 1rem 0;
-
+            margin: 1rem;
             h3{
                 text-align: center;
                 padding: .5rem;
             }
         }
 
-        .product-offer{
+        .view-product{
             padding: 1rem;
             margin-bottom:2rem;
 
@@ -74,6 +115,10 @@
                 border-radius: .6rem;
                 padding:.5rem;
                 margin-left: 2rem;
+                cursor: pointer;
+                :hover{
+                    color: aqua;
+                }
                  
                 
                 p{
