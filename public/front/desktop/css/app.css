@@ -918,6 +918,7 @@ header {
   background-color: hsl(207deg, 100%, 27%);
   border-radius: 0.6rem;
   margin: 1rem;
+  padding: 1rem;
 }
 .products-gallery .product .product-disponibility h3 {
   text-align: center;
