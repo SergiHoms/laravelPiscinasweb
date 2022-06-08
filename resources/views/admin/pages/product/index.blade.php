@@ -127,13 +127,17 @@
                                     <div class="form-element-label">
                                         <label>Categoría:</label>
                                     </div>
-                                    <div class="form-element-select">
-                                        <select type="number" name="category_id" value="{{isset($product->category) ? $product->category : ''}} " placeholder="Escribe aquí tu precio" aria-invalid="false">
-                                            <option value="1">Categoría 1</option>
-                                            <option value="2">Categoría 2</option>
-                                            <option value="3">Categoría 3</option>
-                                        </select>
-                                    </div>
+                                    @if(isset($product_categories))
+                                        <div class="form-element-select">
+                                            <select name="category_id ">
+                                                @foreach($product_categories as $category_element)
+                                                    <option value="{{$category_element->id}}">{{$category_element->name}}</option>
+                                                    <option value="{{$category_element->id}}">{{$category_element->name}}</option>
+                                                    <option value="{{$category_element->id}}">{{$category_element->name}}</option>
+                                                @endforeach
+                                            </select>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
                         </div>

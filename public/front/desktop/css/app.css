@@ -862,6 +862,7 @@ header {
 
 .products {
   margin: 2rem 0;
+  flex-wrap: wrap;
 }
 .products .products-category .products-category-title {
   background-color: hsl(207deg, 100%, 27%);
@@ -909,7 +910,16 @@ header {
 
 .products-gallery .product {
   margin-bottom: 1rem;
+  display: block;
+  border-radius: 0.6rem;
+}
+.products-gallery .product .list {
   display: flex;
+  justify-content: center;
+}
+.products-gallery .product .content {
+  display: flex;
+  justify-content: center;
 }
 .products-gallery .product .product-image img {
   border: solid 4px white;
@@ -919,6 +929,8 @@ header {
   border-radius: 0.6rem;
   margin: 1rem;
   padding: 1rem;
+  width: 5rem;
+  height: 5rem;
 }
 .products-gallery .product .product-disponibility h3 {
   text-align: center;

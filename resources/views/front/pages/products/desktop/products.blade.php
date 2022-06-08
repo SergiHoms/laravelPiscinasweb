@@ -5,7 +5,18 @@
                 <div class="products-category-title">
                     <h2>Categorias</h2>
                 </div>
-                <div class="products-category-menu desktop-only">
+            <div class="products-category-menu desktop-only" data-category="">
+                @if(isset($product))
+                    <div class="products-category-list">
+                        @foreach($product as $products_element)
+                            <div class="products-category-list-item">
+                                <li value="{{route("product_category", $products->id)}}">{{$products->name}}</li>
+                            </div>
+                        @endforeach
+                    </div>
+                @endif
+            </div>
+                {{-- <div class="products-category-menu desktop-only" data-category="">
                     <ul>
                         <li>Hormigón</li>
                         <li>Acero inoxidable</li>
@@ -15,7 +26,7 @@
                         <li>Desmontables</li>
                         <li>Prefabricadas</li>
                     </ul>
-                </div>
+                </div> --}}
             </div>
         </div>
 

@@ -1,5 +1,8 @@
 .products{
     margin: 2rem 0;
+    flex-wrap: wrap;
+    
+    
 
     .products-category{
 
@@ -91,8 +94,21 @@
     
     .product{
         margin-bottom: 1rem;
-        display: flex;
+        display:block;
         
+        border-radius: .6rem;
+
+        .list{
+            display: flex;
+            justify-content: center;
+            
+        }
+        
+        .content{
+            display: flex;
+            justify-content: center;
+            
+        }
 
         .product-image img{
             border: solid 4px white;
@@ -102,6 +118,8 @@
             border-radius: .6rem;
             margin: 1rem;
             padding: 1rem;
+            width: 5rem;
+            height: 5rem;
             h3{
                 text-align: center;
                 padding: .5rem;
