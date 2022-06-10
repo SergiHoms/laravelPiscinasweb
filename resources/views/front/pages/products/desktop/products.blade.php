@@ -4,32 +4,24 @@
             <div class="products-category">
                 <div class="products-category-title">
                     <h2>Categorias</h2>
-                </div>
-            <div class="products-category-menu desktop-only" data-category="">
-                @if(isset($product))
-                    <div class="products-category-list">
-                        @foreach($product as $products_element)
-                            <div class="products-category-list-item">
-                                <li value="{{route("product_category", $products->id)}}">{{$products->name}}</li>
-                            </div>
+                </div>               
+                <div class="products-category-menu desktop-only">
+                    @if(isset($product_categories))
+                        @foreach($product_categories as $category_element)
+                            <ul data-url="{{$category_element->product}}">
+                                <li value="{{$category_element->id}}">{{$category_element->name}}</li>
+                                <li value="id">Acero inoxidable</li>
+                                <li value="id">Forradas de Liner</li>
+                                <li value="id">Con casco de poliéster</li>
+                                <li value="id">Desbordantes y de espejo</li>
+                                <li value="id">Desmontables</li>
+                                <li value="id">Prefabricadas</li>
+                            </ul>                                                        
                         @endforeach
-                    </div>
-                @endif
-            </div>
-                {{-- <div class="products-category-menu desktop-only" data-category="">
-                    <ul>
-                        <li>Hormigón</li>
-                        <li>Acero inoxidable</li>
-                        <li>Forradas de Liner</li>
-                        <li>Con casco de poliéster</li>
-                        <li>Desbordantes y de espejo</li>
-                        <li>Desmontables</li>
-                        <li>Prefabricadas</li>
-                    </ul>
-                </div> --}}
-            </div>
+                   @endif                
+                </div>                           
+            </div>  
         </div>
-
         <div class="column-main">
             <div class="products-menu">
                 <div class="desktop-two-columns">
@@ -87,4 +79,23 @@
 </div> 
  
 
+
+
 {{-- data-url="{{route'front_product,[product' =>$product ->id))}}; --}}
+
+
+
+{{-- @if(isset($product))
+                    <div class="products-category-list">
+                        @foreach($product as $products_element)
+                            <div class="products-category-list-item">
+                                
+                            </div>
+                        @endforeach
+                    </div>
+                @endif --}}
+
+
+                
+
+                

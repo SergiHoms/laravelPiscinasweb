@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\View;
 use iluminate\http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
+use App\Models\ProductCategory;
 use Debugbar;
 
 class ProductsController extends Controller
@@ -35,7 +36,13 @@ class ProductsController extends Controller
 
         return $view;
     }
-    
 
+    // public function showByCategory(ProductCategory $category)
+    // {
+    //     $view = View::make('front.pages.products.index')
+    //     ->with('products', $category->products()->where('active', 1)->where('visible', 1)->get());
+
+    //     return $view;
+    // }
     
 }

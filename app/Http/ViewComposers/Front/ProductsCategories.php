@@ -5,7 +5,7 @@ namespace App\Http\ViewComposers\Front;
 use Illuminate\View\View;
 use App\Models\Product;
 
-class Products {
+class ProductsCategories {
 
     static $composed;
 
@@ -15,11 +15,12 @@ class Products {
 
     public function compose(View $view) {
 
-        if(static::$composed) {
+        if (static::$composed) {
             return $view->with('products', static::$composed);
         }
-        static::$composed = $this->product->where('active', 1)->orderBy('title', 'asc')->get();
-
-        $view->with('products', static::$composed);
+        static::$composed = $this->product->where('active', 1)->where('visible', 1)->get();
+        
+        $view->with('products', Product::where('active', 1)->where('visible', 1)->get());
     }
+
 }

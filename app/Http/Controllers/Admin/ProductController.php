@@ -3,7 +3,6 @@
 
 namespace App\Http\Controllers\Admin;
 
-
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
@@ -15,7 +14,7 @@ class ProductController extends Controller
 
     protected $product;
 
-    public function __construct(Product $product, )    {
+    public function __construct(Product $product )    {
 
         $this->product = $product;
     }

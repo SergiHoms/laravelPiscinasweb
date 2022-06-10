@@ -129,10 +129,8 @@
                                     </div>
                                     @if(isset($product_categories))
                                         <div class="form-element-select">
-                                            <select name="category_id ">
+                                            <select name="category_id">
                                                 @foreach($product_categories as $category_element)
-                                                    <option value="{{$category_element->id}}">{{$category_element->name}}</option>
-                                                    <option value="{{$category_element->id}}">{{$category_element->name}}</option>
                                                     <option value="{{$category_element->id}}">{{$category_element->name}}</option>
                                                 @endforeach
                                             </select>
@@ -167,8 +165,7 @@
                         </div>                                   
                     </form>            
                 </div>
-            </div>
-        
+            </div>     
         </div>
     </div>                    
 

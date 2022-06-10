@@ -20,7 +20,7 @@ return new class extends Migration
             $table->decimal('price', $precision = 8, $scale = 2);
             $table->text('description');
             $table->text('caracterist');
-            $table->string('category_id');
+            $table->integer('category_id');
             $table->boolean('visible');
             $table->boolean('active');
             $table->timestamps();
