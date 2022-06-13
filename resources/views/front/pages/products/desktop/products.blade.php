@@ -8,15 +8,9 @@
                 <div class="products-category-menu desktop-only">
                     @if(isset($product_categories))
                         @foreach($product_categories as $category_element)
-                            <ul data-url="{{$category_element->product}}">
-                                <li value="{{$category_element->id}}">{{$category_element->name}}</li>
-                                <li value="id">Acero inoxidable</li>
-                                <li value="id">Forradas de Liner</li>
-                                <li value="id">Con casco de poliéster</li>
-                                <li value="id">Desbordantes y de espejo</li>
-                                <li value="id">Desmontables</li>
-                                <li value="id">Prefabricadas</li>
-                            </ul>                                                        
+                        <div class="box-category"data-url="{{route('front_product')}}">
+                            <h3 class="category{{isset($category) && $category_element->id == $category_element->id ? 'active' : ''}}"data-url="{{route('front_products_show',['front_product'=>$category_element->id])}}">{{$category_element->name}}</h3>
+                        </div>                                                        
                         @endforeach
                    @endif                
                 </div>                           
@@ -32,9 +26,21 @@
                     </div>
                     <div class="column">
                         <div class="products-searcher">
-                            <form>
-                                 <input id="header_searcher_desktop_input" data-action="search" name="q" type="text" class="form-control auto_head_search_input" value="" placeholder="Buscar" aria-label="Buscar">
+                            <form action="{{route('front_products_show')}}" method="GET">
+                                <input type="text" name="search" placeholder="Buscar...">
+                                <button type="submit"><i class="fas fa-search"></i></button>
+                            @if(isset($products))
+                                @foreach($products as $product)
+                            
+                                <select name="price-list" class="form-control mr-sm-2">
+                                    <option >Todos los productos</option>
+                                    <option value="{{$product->product}}" >Precio más alto</option>
+                                    <option value="2">Precio más bajo</option>
+                                </select>       
+                                <button class="button-submit" type="submit">Buscar</button>
                             </form> 
+                                @endforeach
+                        @endif
                         </div>
                     </div>
                 </div>                 
@@ -61,7 +67,7 @@
                                                     EN STOCK
                                                 </h3>
                                             </div>
-                                            <div class="view-product">
+                                            <div class="view-button">
                                                 <button>
                                                     <p>VER PRODUCTO</p>
                                                 </button>
