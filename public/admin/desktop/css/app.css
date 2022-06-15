@@ -744,6 +744,9 @@ header .header .header-title h1 {
   display: flex;
   margin-left: 2rem;
 }
+.table .table-items .table-container .table-item-buttons :hover {
+  color: turquoise;
+}
 .table .table-items .table-container .table-item-buttons svg {
   margin-top: 1rem;
   width: 1.5rem;
@@ -796,9 +799,6 @@ header .header .header-title h1 {
   justify-content: space-between;
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;
-}
-.form-container-tabs .form-container-buttons {
-  color: hsl(0deg, 0%, 100%);
 }
 .form-container-tabs .form-container-buttons .svg-box {
   display: flex;
@@ -857,14 +857,14 @@ header .header .header-title h1 {
 }
 .form-content.active .form-element input {
   border-radius: 0.5rem;
-  width: 46.8rem;
+  width: 52.5rem;
 }
 .form-content.active .form-element select {
   border-radius: 0.5rem;
-  width: 46.8rem;
+  width: 52.5rem;
 }
 .form-content.active .form-element .form-element-input-ckeditor {
-  width: 47.4rem;
+  width: 52.5rem;
 }
 .form-content.active .form-element .form-element-input-ckeditor label {
   display: none;

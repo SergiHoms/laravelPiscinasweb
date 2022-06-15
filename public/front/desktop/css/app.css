@@ -879,22 +879,6 @@ header {
   border-radius: 0.6rem;
   padding: 1.4rem;
 }
-.products .products-category .products-category-menu ul {
-  color: white;
-  border-radius: 0.6rem;
-  padding: 1rem 0;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  font-weight: 600;
-  justify-content: center;
-}
-.products .products-category .products-category-menu ul :hover {
-  color: aqua;
-}
-.products .products-category .products-category-menu ul li {
-  padding: 1rem;
-  cursor: pointer;
-}
-
 .products-menu {
   margin-bottom: 1rem;
 }
@@ -904,8 +888,16 @@ header {
   width: -moz-max-content;
   width: max-content;
 }
-.products-menu .products-searcher form input {
+.products-menu .products-searcher form select {
   border-radius: 0.6rem;
+  padding: 0.5rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.2rem;
+  color: white;
+  background-color: hsl(207deg, 100%, 27%);
+}
+.products-menu .products-searcher form select ::shadow {
+  box-shadow: 0 0 0 0.2rem rgba(0, 0, 0, 0.1);
 }
 
 .products-gallery .product {

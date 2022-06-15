@@ -3,9 +3,13 @@ export let renderProducts = () => {
     let mainContainer = document.querySelector("main");
     let viewButtons = document.querySelectorAll(".view-button");
 
+    document.addEventListener("renderProductModules", (event => {
+        renderProducts();
+    }), {once: true});
+
     viewButtons.forEach(viewButton => {
 
-        viewButton.addEventListener("click"), () => {
+        viewButton.addEventListener("click", () => {
             
             let url = viewButton.dataset.url;
 
@@ -23,16 +27,24 @@ export let renderProducts = () => {
 
                     return response.json();
                 })
+                // .then(json => {
+
+                //     document.dispatchEvent(new CustomEvent('loadForm', {
+                //         detail: {
+                //             form: json.form,
+                //         }
+                //     }));
+
+                //     document.dispatchEvent(new CustomEvent('renderProductsModules'));
+                // })
+
                 .then(json => {
 
-                    document.dispatchEvent(new CustomEvent('loadForm', {
-                        detail: {
-                            form: json.form,
-                        }
-                    }));
+                    mainContainer.innerHTML = json.content;
 
-                    document.dispatchEvent(new CustomEvent('renderFormModules'));
+                    document.dispatchEvent(new CustomEvent("renderFormModules"));
                 })
+                
                 .catch(error =>  {
 
                     if(error.status == '500'){
@@ -44,20 +56,9 @@ export let renderProducts = () => {
             sendViewRequest();
 
 
-        }
-
-
-
-
-
+        });
     });
-
-
-
-
-
 }
-
 
 // deleteConfirm.addEventListener("click", () => {
 

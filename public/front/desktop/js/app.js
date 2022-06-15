@@ -45,6 +45,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _faqs_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./faqs.js */ "./resources/js/front/desktop/faqs.js");
 /* harmony import */ var _form_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./form.js */ "./resources/js/front/desktop/form.js");
 /* harmony import */ var _products_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./products.js */ "./resources/js/front/desktop/products.js");
+/* harmony import */ var _select_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./select.js */ "./resources/js/front/desktop/select.js");
+
 
 
 
@@ -61,6 +63,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_faqs_js__WEBPACK_IMPORTED_MODULE_5__.renderFaqs)();
 (0,_form_js__WEBPACK_IMPORTED_MODULE_6__.renderForm)();
 (0,_products_js__WEBPACK_IMPORTED_MODULE_7__.renderProducts)();
+(0,_select_js__WEBPACK_IMPORTED_MODULE_8__.renderSelect)();
 
 /***/ }),
 
@@ -405,8 +408,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var renderProducts = function renderProducts() {
   var mainContainer = document.querySelector("main");
   var viewButtons = document.querySelectorAll(".view-button");
+  document.addEventListener("renderProductModules", function (event) {
+    renderProducts();
+  }, {
+    once: true
+  });
   viewButtons.forEach(function (viewButton) {
-    viewButton.addEventListener("click"), function () {
+    viewButton.addEventListener("click", function () {
       var url = viewButton.dataset.url;
 
       var sendViewRequest = /*#__PURE__*/function () {
@@ -425,13 +433,17 @@ var renderProducts = function renderProducts() {
                   }).then(function (response) {
                     if (!response.ok) throw response;
                     return response.json();
-                  }).then(function (json) {
-                    document.dispatchEvent(new CustomEvent('loadForm', {
-                      detail: {
-                        form: json.form
-                      }
-                    }));
-                    document.dispatchEvent(new CustomEvent('renderFormModules'));
+                  }) // .then(json => {
+                  //     document.dispatchEvent(new CustomEvent('loadForm', {
+                  //         detail: {
+                  //             form: json.form,
+                  //         }
+                  //     }));
+                  //     document.dispatchEvent(new CustomEvent('renderProductsModules'));
+                  // })
+                  .then(function (json) {
+                    mainContainer.innerHTML = json.content;
+                    document.dispatchEvent(new CustomEvent("renderFormModules"));
                   })["catch"](function (error) {
                     if (error.status == '500') {
                       console.log(error);
@@ -457,7 +469,7 @@ var renderProducts = function renderProducts() {
       }();
 
       sendViewRequest();
-    };
+    });
   });
 }; // deleteConfirm.addEventListener("click", () => {
 //     let url = deleteConfirm.dataset.url;
@@ -521,6 +533,31 @@ var renderProducts = function renderProducts() {
 // document.addEventListener("DOMContentLoaded", function() {
 //   document.querySelector("form").addEventListener("submit", enviarFormulario);
 // });
+
+/***/ }),
+
+/***/ "./resources/js/front/desktop/select.js":
+/*!**********************************************!*\
+  !*** ./resources/js/front/desktop/select.js ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "renderSelect": () => (/* binding */ renderSelect)
+/* harmony export */ });
+var renderSelect = function renderSelect() {
+  var selects = document.querySelectorAll(".button-submit");
+  selects.forEach(function (select) {
+    select.addEventListener("change", function () {
+      selects.forEach(function (select) {
+        select.classList.remove("active");
+      });
+      select.classList.add("active");
+    });
+  });
+};
 
 /***/ }),
 

@@ -3,7 +3,7 @@
         <div class="column-aside">
             <div class="products-category">
                 <div class="products-category-title">
-                    <h2>Categorias</h2>
+                    <h2>Categorías</h2>
                 </div>               
                 <div class="products-category-menu desktop-only">
                     @if(isset($product_categories))
@@ -27,9 +27,8 @@
                     <div class="column">
                         <div class="products-searcher">
                             <form>
-                                 <select id="select-price" data-action="search" name="price" type="text" class="form-control auto_head_search_select" value="" placeholder="Buscar" aria-label="Buscar">
-                                    <option value="">Precio más alto</option>
-                                    <option value="">Precio más bajo</option>
+                                <input type="text" placeholder="Escribe aquí...">
+                                <button type="submit"><i class="fas fa-search"></i>Buscar</button>
                             </form> 
                         </div>
                     </div>
@@ -74,24 +73,6 @@
     </div>
 </div> 
  
-
-
-
-{{-- data-url="{{route'front_product,[product' =>$product ->id))}}; --}}
-
-
-
-{{-- @if(isset($product))
-                    <div class="products-category-list">
-                        @foreach($product as $products_element)
-                            <div class="products-category-list-item">
-                                
-                            </div>
-                        @endforeach
-                    </div>
-                @endif --}}
-
-
                 
 
                 

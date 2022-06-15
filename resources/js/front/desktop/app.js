@@ -6,6 +6,7 @@ import {renderCkeditor } from "./ckeditor.js";
 import {renderFaqs } from "./faqs.js";
 import {renderForm } from "./form.js";
 import {renderProducts } from "./products.js";
+import {renderSelect } from "./select.js";
 
 renderMenuButton();
 renderTabs();
@@ -15,3 +16,4 @@ renderCkeditor();
 renderFaqs();
 renderForm();
 renderProducts();
+renderSelect();

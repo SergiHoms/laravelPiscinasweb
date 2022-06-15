@@ -22,6 +22,7 @@ class ProductsController extends Controller
 
     public function index()
     {
+
         $view = View::make('front.pages.products.index')
         ->with('products', $this->product->where('active', 1)->where('visible', 1)->get());
 
@@ -37,12 +38,26 @@ class ProductsController extends Controller
         return $view;
     }
 
-    // public function showByCategory(ProductCategory $category)
+    public function scopePriceAscending($query)
+    {
+        return $query->orderBy('price', 'asc');
+    }
+    
+
+    public function scopePriceDescending($query)
+    {
+        return $query->orderBy('price', 'desc');
+    }
+
+    
+    
+}
+
+
+// public function showByCategory(ProductCategory $category)
     // {
     //     $view = View::make('front.pages.products.index')
     //     ->with('products', $category->products()->where('active', 1)->where('visible', 1)->get());
 
     //     return $view;
     // }
-    
-}

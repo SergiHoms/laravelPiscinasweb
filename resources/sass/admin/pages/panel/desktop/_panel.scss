@@ -24,6 +24,9 @@
             .table-item-buttons {
                 color:hsl(207, 100%, 27%);
                 cursor: pointer;
+                :hover{
+                    color:turquoise;
+                }
                 
                 display: flex;
                 margin-left: 2rem;       
@@ -98,10 +101,14 @@
     
 
     .form-container-buttons{
-        color: hsl(0, 0%, 100%);
 
+               
+             
         .svg-box{
             display: flex;
+
+            
+                
             svg{
                 cursor: pointer;
                 justify-content: space-between;
@@ -114,8 +121,11 @@
                     color: white;
                     
                 }
-            }   
+            }
+            
         }
+            
+            
 
     }
     
@@ -183,22 +193,24 @@
 
         input{
             border-radius: .5rem;
-            width: 46.8rem;
+            width: 52.5rem;
             
                    
         }
 
         select{
             border-radius: .5rem;
-            width: 46.8rem;
+            width: 52.5rem;
             
                    
         }
         .form-element-input-ckeditor{
+            
             label{
                 display: none;
             }
-            width: 47.4rem;
+            width: 52.5rem;
+            
 
         }
     }
@@ -206,56 +218,3 @@
     
 }
 
-
-
-// .box-button{
-//     background-color: hsl(206, 48%, 57%);
-//     margin-left:1rem;
-//     margin-right:1rem;
-//     button{
-//         background-color:hsl(207, 100%, 27%);
-//         color:white;
-//         padding:1rem;
-//         border:solid 1px white;
-//         cursor: pointer;
-
-//     }
-// }
-
-// .box-content-last{
-//     background-color: white;
-//     display: block;
-//     margin-left:1rem;
-//     margin-right:1rem;
-
-//     .lastbox{
-
-//         label{
-//             display: block;
-//             color:hsl(207, 100%, 27%);
-//             padding: .7rem;
-//             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-//         }
-//         input{
-//             border-radius: .5rem;
-//             margin: .5rem;
-            
-//         }
-
-//     }
-
-//     .lastbox-ckeditor{
-
-//         label{
-//             color:hsl(207, 100%, 27%);
-//             padding: .7rem;
-//             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;         
-//         }
-        
-//         input{
-//             width: 2rem;
-             
-//         }
-
-//     }
-// }

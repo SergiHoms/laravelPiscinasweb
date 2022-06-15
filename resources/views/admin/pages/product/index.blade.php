@@ -125,6 +125,26 @@
                             <div class="column">
                                 <div class="form-element">
                                     <div class="form-element-label">
+                                        <label>IVA:</label>
+                                    </div>
+                                    <div class="panel-input">                                 
+                                        <select name="tax_id">
+
+                                            <option value="" dissabled>·Selecione su IVA·</option>
+
+                                            @foreach($taxes as $tax)
+                                                <option value="{{$tax->id}}" {{ isset($product->prices->first()->tax->id)  && $product->prices->first()->tax->id == $tax->id ? 'selected' : ''}}>{{$tax->type}}</option>
+                                            @endforeach
+
+                                        </select>                               
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="desktop-one-column">
+                            <div class="column">
+                                <div class="form-element">
+                                    <div class="form-element-label">
                                         <label>Categoría:</label>
                                     </div>
                                     @if(isset($product_categories))

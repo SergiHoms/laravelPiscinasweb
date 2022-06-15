@@ -14,13 +14,12 @@ return new class extends Migration
     public function up()
     {
         Schema::create('product_categories', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('title');
-            $table->boolean('visible');
-            $table->boolean('active');
-            $table->timestamps();
-        });
+                $table->id();
+            	$table->string('name');
+            	$table->string('title');
+            	$table->boolean('active');
+            	$table->timestamps();
+            });
     }
 
     /**

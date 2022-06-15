@@ -13,16 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('table_tickets', function (Blueprint $table) {
+        Schema::create('taxes', function (Blueprint $table) {
             $table->id();
-            $table->string('cliente_id');
-            $table->string('producto_id');
-            $table->integer('cantidad');
-            $table->decimal('precio');     
-            $table->decimal('iva');
-            $table->decimal('total');
-            $table->boolean('visible');
-            $table->boolean('active');
+            $table->integer('type');
+            $table->decimal('multiplicator');
+            $table->boolean('valid');
             $table->timestamps();
         });
     }
@@ -34,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('table_ventas');
+        Schema::dropIfExists('taxes');
     }
 };
