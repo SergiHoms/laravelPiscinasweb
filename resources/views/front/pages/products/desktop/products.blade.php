@@ -25,12 +25,17 @@
                         </div>
                     </div>
                     <div class="column">
-                        <div class="products-searcher">
-                            <form>
-                                <input type="text" placeholder="Escribe aquí...">
-                                <button type="submit"><i class="fas fa-search"></i>Buscar</button>
-                            </form> 
-                        </div>
+                        <form class="container">
+                            <div class="searcher">
+                                <input type="text" placeholder="Escribe aquí.." class="searcher-input" id="searcher-input">             
+                            </div>
+                    
+                            <div class="searcher-button">
+                                <button type="submit" class="searcher-button" id="searcher-button">Buscar</button>
+                            </div>
+                            
+                            <div class="display" id="display"></div>
+                        </form>
                     </div>
                 </div>                 
             </div>

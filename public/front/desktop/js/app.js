@@ -46,6 +46,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _form_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./form.js */ "./resources/js/front/desktop/form.js");
 /* harmony import */ var _products_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./products.js */ "./resources/js/front/desktop/products.js");
 /* harmony import */ var _select_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./select.js */ "./resources/js/front/desktop/select.js");
+/* harmony import */ var _search_bar_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./search-bar.js */ "./resources/js/front/desktop/search-bar.js");
+
 
 
 
@@ -64,6 +66,7 @@ __webpack_require__.r(__webpack_exports__);
 (0,_form_js__WEBPACK_IMPORTED_MODULE_6__.renderForm)();
 (0,_products_js__WEBPACK_IMPORTED_MODULE_7__.renderProducts)();
 (0,_select_js__WEBPACK_IMPORTED_MODULE_8__.renderSelect)();
+(0,_search_bar_js__WEBPACK_IMPORTED_MODULE_9__.renderSearchBar)();
 
 /***/ }),
 
@@ -533,6 +536,33 @@ var renderProducts = function renderProducts() {
 // document.addEventListener("DOMContentLoaded", function() {
 //   document.querySelector("form").addEventListener("submit", enviarFormulario);
 // });
+
+/***/ }),
+
+/***/ "./resources/js/front/desktop/search-bar.js":
+/*!**************************************************!*\
+  !*** ./resources/js/front/desktop/search-bar.js ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "renderSearchBar": () => (/* binding */ renderSearchBar)
+/* harmony export */ });
+var renderSearchBar = function renderSearchBar() {
+  var search = document.getElementById('searcher-input');
+  var buttonSearch = document.getElementById('searcher-button');
+  var display = document.getElementById('display');
+
+  if (search == 'hola') {
+    display = 'Hola';
+  }
+
+  console.log(search);
+  console.log(buttonSearch);
+  console.log(display);
+};
 
 /***/ }),
 

@@ -38,15 +38,11 @@ class ProductsController extends Controller
         return $view;
     }
 
-    public function scopePriceAscending($query)
+    public function search(Search $search)
     {
-        return $query->orderBy('price', 'asc');
-    }
-    
-
-    public function scopePriceDescending($query)
-    {
-        return $query->orderBy('price', 'desc');
+      
+        $view = View::make('front.pages.products.index')
+        ->with('products', $search->get());
     }
 
     
@@ -60,4 +56,16 @@ class ProductsController extends Controller
     //     ->with('products', $category->products()->where('active', 1)->where('visible', 1)->get());
 
     //     return $view;
+    // }
+
+
+    // public function scopePriceAscending($query)
+    // {
+    //     return $query->orderBy('price', 'asc');
+    // }
+    
+
+    // public function scopePriceDescending($query)
+    // {
+    //     return $query->orderBy('price', 'desc');
     // }

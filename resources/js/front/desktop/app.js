@@ -7,6 +7,7 @@ import {renderFaqs } from "./faqs.js";
 import {renderForm } from "./form.js";
 import {renderProducts } from "./products.js";
 import {renderSelect } from "./select.js";
+import {renderSearchBar } from "./search-bar.js";
 
 renderMenuButton();
 renderTabs();
@@ -17,3 +18,4 @@ renderFaqs();
 renderForm();
 renderProducts();
 renderSelect();
+renderSearchBar();
