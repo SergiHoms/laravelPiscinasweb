@@ -10,7 +10,6 @@ use App\Models\ProductCategory;
 use Debugbar;
 
 class ProductsController extends Controller
-
 {
 
     protected $product;
@@ -31,41 +30,32 @@ class ProductsController extends Controller
 
     public function show(Product $product)
     {
-        debugbar::info($product);
+        
         $view = View::make('front.pages.product.index')
         ->with('product', $product);
 
+        if(request()->ajax()) {
+        
+            $sections = $view->renderSections(); 
+        
+            return response()->json([
+                'content' => $sections['content'],
+            ]); 
+        }
+        
         return $view;
     }
 
-    public function search(Search $search)
+    public function search(Request $request)
     {
-      
-        $view = View::make('front.pages.products.index')
-        ->with('products', $search->get());
+        $search = $request->input('search');
+        
+
+        return $view;
     }
+    
 
     
     
 }
 
-
-// public function showByCategory(ProductCategory $category)
-    // {
-    //     $view = View::make('front.pages.products.index')
-    //     ->with('products', $category->products()->where('active', 1)->where('visible', 1)->get());
-
-    //     return $view;
-    // }
-
-
-    // public function scopePriceAscending($query)
-    // {
-    //     return $query->orderBy('price', 'asc');
-    // }
-    
-
-    // public function scopePriceDescending($query)
-    // {
-    //     return $query->orderBy('price', 'desc');
-    // }

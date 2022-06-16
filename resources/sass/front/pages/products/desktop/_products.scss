@@ -26,10 +26,15 @@
                 
 
                 .category{
+                    display: inline-block;
+                    margin: 0 .5rem;
+                    h3{
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        color:white;
+                    }
                     
                 }
-            }
-            
+            }   
         }
     }
 }
@@ -37,10 +42,16 @@
 
 .products-menu{
     margin-bottom: 1rem;
+    display: flex;
+    padding-left: 14rem;
 
-    .container{
+    .column-form{
         display: flex;
-        padding-left: 14rem;
+        
+    }
+
+    .container-form{
+        
 
         .searcher{
             input{
@@ -49,19 +60,28 @@
             }
         }
 
-        .searcher-button{
-            background-color: hsl(207deg, 100%, 27%);
-            color:white;
-
-            button{
-                border-radius: .6rem;
-            }
+        
+    }
+    .searcher-button{
+        background-color: hsl(207deg, 100%, 27%);
+        color:white;
+        border-radius: .6rem;
+        :hover{
+            color:turquoise;
+        }
+        button{
+            
+            
         }
     }
-    
 }
 
 .products-gallery{
+    
+    .products-list{
+        display: flex;
+        flex-wrap: wrap;
+    }
     
     
     

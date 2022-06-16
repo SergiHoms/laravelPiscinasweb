@@ -879,25 +879,39 @@ header {
   border-radius: 0.6rem;
   padding: 1.4rem;
 }
+.products .products-category .products-category-menu .box-category .category {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+.products .products-category .products-category-menu .box-category .category h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+}
+
 .products-menu {
   margin-bottom: 1rem;
-}
-.products-menu .container {
   display: flex;
   padding-left: 14rem;
 }
-.products-menu .container .searcher input {
+.products-menu .column-form {
+  display: flex;
+}
+.products-menu .container-form .searcher input {
   border-radius: 0.6rem;
   border: 1px solid hsl(207deg, 100%, 27%);
 }
-.products-menu .container .searcher-button {
+.products-menu .searcher-button {
   background-color: hsl(207deg, 100%, 27%);
   color: white;
-}
-.products-menu .container .searcher-button button {
   border-radius: 0.6rem;
 }
-
+.products-menu .searcher-button :hover {
+  color: turquoise;
+}
+.products-gallery .products-list {
+  display: flex;
+  flex-wrap: wrap;
+}
 .products-gallery .product {
   margin-bottom: 1rem;
   display: block;

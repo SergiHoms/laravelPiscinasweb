@@ -5,7 +5,7 @@ namespace App\Http\ViewComposers\Front;
 use Illuminate\View\View;
 use App\Models\Product;
 
-class ProductsCategories {
+class CategoryProduct {
 
     static $composed;
 

@@ -3,6 +3,10 @@ export let renderTabs = () => {
     let tabs = document.querySelectorAll(".tab-button")
     let displays = document.querySelectorAll(".tab-display")
 
+    document.addEventListener("renderProductModules", (event => {
+        renderTabs();
+    }), {once: true});
+
     tabs.forEach(tab => { 
 
         tab.addEventListener("click", () => {

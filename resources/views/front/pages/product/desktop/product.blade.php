@@ -58,7 +58,7 @@
                 <div class="product-info-price">
                     <div class="product-price">
                         <h3>
-                            {{$product->price}}
+                            {{$product->prices->first()->base_price}}
                         </h3>                                   
                     </div>
                 </div>         
@@ -111,11 +111,11 @@
                     </div>
                 </div>              
                 <form class="product-form">
-                    <button id="minus"> - </button>
+                    <button class="minus"> - </button>
                     
                         <input id="numbers" type="number"name="quantity" value="1" >
                     
-                    <button id="plus"> + </button>
+                    <button class="plus"> + </button>
                 
                 <div class="store-button" data-url="">
                     <button >

@@ -17,7 +17,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('title');
-            $table->string('category_id');
+            $table->integer('category_id');
+            $table->decimal('price', 10, 2);
+            $table->integer('iva');
             $table->boolean('visible');
             $table->boolean('active');
             $table->boolean('valid');

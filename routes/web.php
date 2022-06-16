@@ -132,7 +132,7 @@ Route::get('/', 'App\Http\Controllers\Front\HomeController@index')->name('front_
 Route::get('/productos', 'App\Http\Controllers\Front\ProductsController@index')->name('front_products');
 Route::get('/productos/{product}', 'App\Http\Controllers\Front\ProductsController@show')->name('front_products_show');
 Route::get('/producto/categoria/{categoria}', 'App\Http\Controllers\Front\ProductsController@showByCategory')->name('front_products_show_by_category');
-route::get('/productos/buscar/{buscar}', 'App\Http\Controllers\Front\ProductsController@search')->name('front_products_search');
+route::post('/productos/buscar', 'App\Http\Controllers\Front\ProductsController@search')->name('front_products_search');
 
 
 Route::get('/faqs', 'App\Http\Controllers\Front\FaqController@index')->name('front_faqs');
@@ -145,12 +145,6 @@ Route::post('/contacto', 'App\Http\Controllers\Front\ContactController@store')->
 Route::get('/caja', 'App\Http\Controllers\Front\CartController@index')->name('front_box');
 
 Route::get('/carrito', 'App\Http\Controllers\Front\CheckoutController@index')->name('front_cart');
-
-// Route::get('/productos', function () {
-//     $products = 'App\Http\Controllers\Front\ProductsController@index'::all();
-    
-//     return view('products', ['products' => $products]);
-// });
 
 
 

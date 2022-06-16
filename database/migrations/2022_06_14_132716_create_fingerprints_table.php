@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('fingerprints', function (Blueprint $table) {
             $table->id();
             $table->string('fingerprint');
-            $table->string('customer_id');
+            $table->integer('customer_id');
             $table->timestamps();
         });
     }

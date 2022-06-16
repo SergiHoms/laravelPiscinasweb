@@ -116,7 +116,7 @@
                                         <label>Precio:</label>
                                     </div>
                                     <div class="form-element-input">
-                                        <input type="number" name="price" value="{{isset($product->price) ? $product->price : ''}} " placeholder="Escribe aquí tu precio" aria-invalid="false">
+                                        <input type="number" name="price" value="{{isset($product->prices->first()->base_price) ? $product->prices->first()->base_price : ''}}" placeholder="Escribe aquí tu precio" aria-invalid="false">
                                     </div>
                                 </div>
                             </div>
@@ -130,10 +130,10 @@
                                     <div class="panel-input">                                 
                                         <select name="tax_id">
 
-                                            <option value="" dissabled>·Selecione su IVA·</option>
+                                            <option dissabled>·Selecione su IVA·</option>
 
                                             @foreach($taxes as $tax)
-                                                <option value="{{$tax->id}}" {{ isset($product->prices->first()->tax->id)  && $product->prices->first()->tax->id == $tax->id ? 'selected' : ''}}>{{$tax->type}}</option>
+                                                <option value="{{$tax->id}}"{{isset($product->prices->first()->tax->id) && $product->prices->first()->tax->id == $tax->id ? 'selected' :''}}>{{$tax->type}}</option>
                                             @endforeach
 
                                         </select>                               

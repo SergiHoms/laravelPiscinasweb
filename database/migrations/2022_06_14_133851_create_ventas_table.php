@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('ventas', function (Blueprint $table) {
             $table->id();
             $table->integer('ticket_number');
-            $table->integer('date_emision');
-            $table->integer('time_emision');
+            $table->date('date_emision');
+            $table->time('time_emision');
             $table->string('payment_method');
             $table->decimal('total_base_price');
             $table->decimal('total_tax_price');
             $table->decimal('total_price');
-            $table->string('customer_id');
+            $table->integer('customer_id');
             $table->boolean('active');
             $table->timestamps();
         });
