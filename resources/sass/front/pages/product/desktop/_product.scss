@@ -29,9 +29,13 @@
         }
 
         .product-form{
-
-            margin-bottom: 2rem;
             display: flex;
+
+            .plus-minus-button{
+                display: flex;
+            }
+
+            
 
             button{
                 input{

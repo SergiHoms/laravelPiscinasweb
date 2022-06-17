@@ -110,22 +110,28 @@
                         </div>                      
                     </div>
                 </div>              
-                <form class="product-form">
-                    <button class="minus"> - </button>
+                <div class="product-form">
+
+                    <div class="plus-minus-button">
+                        <button class="minus"> - </button>
+                        <form action="{{route('front_add_to_cart')}}" class="form-cart">
+                            <input type="hidden" name="price_id" value="{{$product->prices->first()->id}}">
+                            <input id="quantity" class="plus-minus-input" type="number"name="quantity" value="1">
+                        </form>
+                        <button class="plus"> + </button>
+                    </div>
                     
-                        <input id="numbers" type="number"name="quantity" value="1" >
-                    
-                    <button class="plus"> + </button>
-                
-                <div class="store-button" data-url="">
-                    <button >
-                        <p>Comprar</p>
-                    </button>
-                </div>
-                <div class="notification">
-                    <span id="notification-message"></span>
-                </div>                        
-                </form>
+                    <div class="store-button">
+                        <button>
+                            <p>Comprar</p>
+                        </button>
+                    </div>
+
+                    <div class="notification">
+                        <span id="notification-message"></span>
+                    </div> 
+
+                </div>                                                            
             </div>
         </div>
     </div>

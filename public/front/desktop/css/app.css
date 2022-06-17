@@ -983,7 +983,9 @@ header {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 .product .product-info-article .product-form {
-  margin-bottom: 2rem;
+  display: flex;
+}
+.product .product-info-article .product-form .plus-minus-button {
   display: flex;
 }
 .product .product-info-article .product-form button {

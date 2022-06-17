@@ -142,9 +142,8 @@ Route::get('/checkout', 'App\Http\Controllers\Front\CheckoutController@index')->
 Route::get('/contacto', 'App\Http\Controllers\Front\ContactController@index')->name('front_contact');
 Route::post('/contacto', 'App\Http\Controllers\Front\ContactController@store')->name('front_contact_form');
 
-Route::get('/caja', 'App\Http\Controllers\Front\CartController@index')->name('front_box');
-
-Route::get('/carrito', 'App\Http\Controllers\Front\CheckoutController@index')->name('front_cart');
+Route::get('/carrito', 'App\Http\Controllers\Front\CartController@index')->name('front_cart');
+Route::post('/carrito', 'App\Http\Controllers\Front\CartController@store')->name('front_add_to_cart');
 
 
 

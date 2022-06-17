@@ -49,7 +49,7 @@
             <div class="plus-minus-button">
                 <button class="minus"> - </button>
                 <form>
-                    <input id="numbers" class="plus-minus-input" type="number"name="quantity" value="1" >
+                    <input id="numbers" class="plus-minus-input" type="number"name="quantity" value="1">
                 </form>
                 <button class="plus"> + </button>
             </div> 

@@ -494,32 +494,26 @@ var renderNotification = function renderNotification(message, type) {
 /*!*********************************************************!*\
   !*** ./resources/js/admin/desktop/plus-minus-button.js ***!
   \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (() => {
 
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "renderPlusMinusButton": () => (/* binding */ renderPlusMinusButton)
-/* harmony export */ });
-var renderPlusMinusButton = function renderPlusMinusButton() {
-  var minuses = document.querySelectorAll(".minus");
-  var pluses = document.querySelectorAll(".plus");
-  pluses.forEach(function (plus) {
-    plus.addEventListener("click", function () {
-      var number = plus.parentNode.querySelector('.plus-minus-input');
-      number.value = parseInt(number.value) + 1;
-    });
-  });
-  minuses.forEach(function (minus) {
-    minus.addEventListener("click", function () {
-      var number = minus.parentNode.querySelector('.plus-minus-input');
-
-      if (number.value > 1) {
-        number.value = parseInt(number.value) - 1;
-      }
-    });
-  });
-};
+// export let renderPlusMinusButton = () => {
+//     let minuses = document.querySelectorAll(".minus");
+//     let pluses = document.querySelectorAll(".plus");
+//     pluses.forEach(plus => { 
+//         plus.addEventListener("click", () => {
+//             let number = plus.parentNode.querySelector('.plus-minus-input');
+//             number.value = (parseInt(number.value) + 1);
+//         });
+//     });
+//     minuses.forEach(minus => { 
+//         minus.addEventListener("click", () => {
+//             let number = minus.parentNode.querySelector('.plus-minus-input');
+//              if(number.value > 1) {
+//                  number.value = (parseInt(number.value) - 1);
+//             }
+//         });
+//     });
+// }
 
 /***/ }),
 
@@ -1555,6 +1549,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _tabs_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./tabs.js */ "./resources/js/admin/desktop/tabs.js");
 /* harmony import */ var _menu_button_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./menu-button.js */ "./resources/js/admin/desktop/menu-button.js");
 /* harmony import */ var _plus_minus_button_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./plus-minus-button.js */ "./resources/js/admin/desktop/plus-minus-button.js");
+/* harmony import */ var _plus_minus_button_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_plus_minus_button_js__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _product_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./product.js */ "./resources/js/admin/desktop/product.js");
 /* harmony import */ var _ckeditor_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ckeditor.js */ "./resources/js/admin/desktop/ckeditor.js");
 /* harmony import */ var _faqs_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./faqs.js */ "./resources/js/admin/desktop/faqs.js");

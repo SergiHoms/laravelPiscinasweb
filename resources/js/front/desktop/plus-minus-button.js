@@ -11,7 +11,7 @@ export let renderPlusMinusButton = () => {
 
         plus.addEventListener("click", (event) => {
 
-            event,preventDefault();
+            event.preventDefault();
 
             let number = plus.parentNode.querySelector('.plus-minus-input');
 
@@ -24,7 +24,7 @@ export let renderPlusMinusButton = () => {
 
         minus.addEventListener("click", (event) => {
 
-            event,preventDefault();
+            event.preventDefault();
 
             let number = minus.parentNode.querySelector('.plus-minus-input');
 

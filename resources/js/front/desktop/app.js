@@ -8,6 +8,7 @@ import {renderForm } from "./form.js";
 import {renderProducts } from "./products.js";
 import {renderSelect } from "./select.js";
 import {renderSearchBar } from "./search-bar.js";
+import {renderCart} from './cart.js';
 
 renderMenuButton();
 renderTabs();
@@ -19,3 +20,4 @@ renderForm();
 renderProducts();
 renderSelect();
 renderSearchBar();
+renderCart();
