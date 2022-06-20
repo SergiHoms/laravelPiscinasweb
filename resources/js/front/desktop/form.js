@@ -15,7 +15,7 @@ export let renderForm = () => {
 
             event.preventDefault();
     
-            forms.forEach(form => { 
+            forms.forEach(form => {
                     
                 let data = new FormData(form);
                 let url = form.action;

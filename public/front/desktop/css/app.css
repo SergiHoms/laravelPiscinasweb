@@ -893,19 +893,12 @@ header {
   display: flex;
   padding-left: 14rem;
 }
-.products-menu .column-form {
-  display: flex;
-}
-.products-menu .container-form .searcher input {
-  border-radius: 0.6rem;
-  border: 1px solid hsl(207deg, 100%, 27%);
-}
-.products-menu .searcher-button {
+.products-menu .search-button {
   background-color: hsl(207deg, 100%, 27%);
   color: white;
   border-radius: 0.6rem;
 }
-.products-menu .searcher-button :hover {
+.products-menu .search-button :hover {
   color: turquoise;
 }
 .products-gallery .products-list {
@@ -940,20 +933,20 @@ header {
   text-align: center;
   padding: 0.5rem;
 }
-.products-gallery .product .view-product {
+.products-gallery .product .view-button {
   padding: 1rem;
   margin-bottom: 2rem;
 }
-.products-gallery .product .view-product button {
+.products-gallery .product .view-button button {
   border-radius: 0.6rem;
   padding: 0.5rem;
   margin-left: 2rem;
   cursor: pointer;
 }
-.products-gallery .product .view-product button :hover {
+.products-gallery .product .view-button button :hover {
   color: aqua;
 }
-.products-gallery .product .view-product button p {
+.products-gallery .product .view-button button p {
   color: hsl(207deg, 100%, 27%);
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 600;

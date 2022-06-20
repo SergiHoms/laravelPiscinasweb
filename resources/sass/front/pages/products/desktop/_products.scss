@@ -39,30 +39,18 @@
     }
 }
 
-
 .products-menu{
     margin-bottom: 1rem;
     display: flex;
     padding-left: 14rem;
 
     .column-form{
-        display: flex;
-        
-    }
-
-    .container-form{
-        
-
-        .searcher{
-            input{
-                border-radius: .6rem;
-                border: 1px solid hsl(207deg, 100%, 27%);
-            }
-        }
 
         
     }
-    .searcher-button{
+
+    
+    .search-button{
         background-color: hsl(207deg, 100%, 27%);
         color:white;
         border-radius: .6rem;
@@ -144,7 +132,7 @@
             }
         }
 
-        .view-product{
+        .view-button{
             padding: 1rem;
             margin-bottom:2rem;
 

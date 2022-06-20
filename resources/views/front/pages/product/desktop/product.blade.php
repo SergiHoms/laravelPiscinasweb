@@ -123,7 +123,7 @@
                     
                     <div class="store-button">
                         <button>
-                            <p>Comprar</p>
+                            <p>Añadir al carrito</p>
                         </button>
                     </div>
 

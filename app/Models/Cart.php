@@ -6,17 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cart extends Model
 {
-    protected $with = ['prices','fingerprints','clients','sales'];
     protected $guarded = [];
 
-    public function prices()
+    public function price()
     {
-        return $this->belongsTo(Price::class,)->where('active', 1)->where('valid',1);
-    }
-
-    public function fingerprints()
-    {
-        return $this->hasMany(Fingerprint::class);
+        return $this->belongsTo(Price::class);
     }
 
     public function clients()
@@ -26,6 +20,6 @@ class Cart extends Model
 
     public function sales()
     {
-        return $this->belongTo(Cart::class,)->where('active', 1);
+        return $this->belongTo(Cart::class)->where('active', 1);
     }
 }

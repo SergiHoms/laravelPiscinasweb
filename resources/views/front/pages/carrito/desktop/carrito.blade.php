@@ -8,52 +8,33 @@
         </ul>
     </div>
     <div class="items-menu">
-        <div class="item-image ">
-            <img src="images/prefabricada.jpg" alt="destacado">
-        </div>
-        <div class="item-name">
-            <span>
-                Piscina climatizada prefabricada
-            </span>
-        </div>
-        <div class="item-price">
-            <span>
-                1060 eu/und
-            </span>
-        </div>
-        <div class="product-form">
-            <div class="plus-minus-button">
-                <button class="minus"> - </button>
-                <form>
-                    <input id="numbers" class="plus-minus-input" type="number"name="quantity" value="1" >
-                </form>
-                <button class="plus"> + </button>
+        @if(isset($cart))
+
+        @foreach ($carts as $cart)
+            <div class="item-image ">
+                <img src="images/prefabricada.jpg" alt="destacado">
             </div>
-        </div>
-    </div>
-    <div class="items-menu">
-        <div class="item-image ">
-            <img src="images/prefabricada.jpg" alt="destacado">
-        </div>
-        <div class="item-name">
-            <span>
-                Piscina climatizada prefabricada
-            </span>
-        </div>
-        <div class="item-price">
-            <span>
-                1060 eu/und
-            </span>
-        </div>
-        <div class="product-form">
-            <div class="plus-minus-button">
-                <button class="minus"> - </button>
-                <form>
-                    <input id="numbers" class="plus-minus-input" type="number"name="quantity" value="1">
-                </form>
-                <button class="plus"> + </button>
-            </div> 
-        </div>
+            <div class="item-name">
+                <span>
+                    {{$cart->price->product->title}}
+                </span>
+            </div>
+            <div class="item-price">
+                <span>
+                    {{$cart->price->base_price}} eu/und
+                </span>
+            </div>
+            <div class="product-form">
+                <div class="plus-minus-button">
+                    <button class="minus" data-url="{{route('front_minus_cart', ['fingerprint' => $fingerprint->id], ['price_id' => $price_id->id])}}"> - </button>
+                    <form>
+                        <input id="numbers" class="plus-minus-input" type="number" name="quantity" value="{{$carts->quantity}}" >
+                    </form>
+                    <button class="plus" data-url="{{route('front_plus_cart', ['fingerprint' => $fingerprint->id], ['price_id' => $price_id->id])}}"> + </button>
+                </div>
+            </div>
+        @endforeach
+        @endif
     </div>
     <div class="desktop-one-column">
         <div class="column-box">

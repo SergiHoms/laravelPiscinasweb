@@ -25,14 +25,14 @@
                         </div>
                     </div>
                     <div class="column-form">
-                        <form class="container-form" action="{{route('front_products_search')}}">
-                            <div class="searcher">
-                                <input type="text" placeholder="Escribe aquí.." class="searcher-input" value="" id="searcher-input">             
-                            </div>
+                        <form  class="search-form" action="{{route('front_products_search')}}">
+                            <div id="wrapper">
+                                <div id="search">
+                                    <input name="search" type="text" placeholder="Buscar..." >
+                                </div>
+                            </div>    
                         </form>
-                        <div class="searcher-button">
-                            <button  class="searcher-button" id="searcher-button">Buscar</button>
-                        </div>               
+                        <button class="search-button">Enviar</button>
                     </div>
                 </div>                 
             </div>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use Illuminate\Support\Facades\View;
-use iluminate\http\Request;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
 use App\Models\ProductCategory;
@@ -48,14 +48,18 @@ class ProductsController extends Controller
 
     public function search(Request $request)
     {
-        $search = $request->input('search');
+        $search = request('search');
+
+        $products =  $this->product->where('title', 'like', '%'.$search.'%')->get();
+            
+        $view = View::make('front.pages.products.index')->with('products', $products);
+        $sections = $view->renderSections(); 
+    
+        return response()->json([
+            'content' => $sections['content'],
+        ]); 
+    
+    }    
         
-
-        return $view;
-    }
-    
-
-    
-    
 }
 

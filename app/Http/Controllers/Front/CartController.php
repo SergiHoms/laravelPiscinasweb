@@ -26,18 +26,24 @@ class CartController extends Controller
 
     public function store(Request $request)
     {
-        $cart = $this->cart->create([
-            'price' => request('price_id'),
-            'fingerprint' => request('fingerprint'),
-            'active' => 1,
-        ]);
-        
+
+        for($i = 0; $i < request('quantity'); $i++) {
+
+            $cart = $this->cart->create([
+                'price_id' => request('price_id'),
+                'fingerprint' => 1,
+                'active' => 1,
+            ]);
+        }
+
         $carts = $this->cart->select(DB::raw('count(price_id) as quantity'), 'price_id')
                 ->where('fingerprint', 1)
+                ->where('active', 1)
                 ->groupByRaw('price_id')->get(); 
 
         $view = View::make('front.pages.carrito.index')
-        ->with('carts', $carts)
+        ->with('carts', $carts->where('active', 1)->get())
+        ->with('fingerprint', $cart->fingerprint)
         ->renderSections();
 
         return response()->json([

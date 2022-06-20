@@ -1,39 +1,82 @@
 export let renderSearchBar = () => {
 
+    let mainContainer = document.querySelector("main");
+    let form = document.querySelector('.search-form');  
+    let searchButton = document.querySelector('.search-button');
 
-let search = document.getElementById('searcher-input');
-let buttonSearch = document.getElementById('searcher-button');
+    document.addEventListener("renderProductModules",( event =>{
+        renderSearchBar();
+    }), {once: true});
 
+    if(searchButton){
 
-    if(search){
+        searchButton.addEventListener("click", (event) => {
 
-        buttonSearch.addEventListener('click', () => {
-            // console.log(search.value);
+            event.preventDefault();
+    
+            let data = new FormData(form);
+            let url = form.action;
 
-            let url = search.value;
-            window.location.href = url;
             console.log(url);
 
-            
+            let sendPostRequest = async () => {
 
-        });
+                let response = await fetch(url, {
+                    headers: {
+                        'Accept': 'application/json',
+                        'X-CSRF-TOKEN': document.head.querySelector('meta[name="csrf-token"]').content
+                    },
+                    method: 'POST',
+                    body: data
+                })
+                .then(response => {
+                
+                    if (!response.ok) throw response;
 
+                    return response.json();
+                })
+                .then(json => {
+
+                    console.log(json.content);
+
+                    mainContainer.innerHTML = json.content;
+
+                    document.dispatchEvent(new CustomEvent('renderProductModules'));
+                })
+                .catch ( error =>  {
+
+                
+                    if(error.status == '422'){
+    
+                        error.json().then(jsonError => {
+
+                            let errors = jsonError.errors;      
+                            let errorMessage = '';
         
+                            Object.keys(errors).forEach(function(key) {
+                                errorMessage += '<li>' + errors[key] + '</li>';
+                            })
+            
+                            document.dispatchEvent(new CustomEvent('message', {
+                                detail: {
+                                    message: errorMessage,
+                                    type: 'error'
+                                }
+                            }));
+                        })   
+                    }
 
+                    if(error.status == '500'){
+                        console.log(error);
+                    };
+                });
+            };
+    
+            sendPostRequest();
+        });
     }
 
-
-        
-
-
-        
-        
-
-
-
 }
-    // if(search == 'hola'){
-        
-    //     console.log('hola');
-        
-    // }
+
+
+
