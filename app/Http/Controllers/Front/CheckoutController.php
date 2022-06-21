@@ -14,4 +14,12 @@ class CheckoutController extends Controller
 
         return $view;
     }
+
+    public function show()
+    {
+        $view = View::make('front.pages.checkout.index');
+
+        return $view;
+    }
+    
 }

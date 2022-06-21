@@ -1146,6 +1146,14 @@ header {
 }
 .cart .cart-buttons {
   margin-bottom: 1rem;
+  display: flex;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.cart .cart-buttons :hover {
+  background-color: white;
+  color: hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
 }
 .cart .cart-buttons button {
   border-radius: 0.6rem;

@@ -138,13 +138,22 @@
     }
     .cart-buttons{
         margin-bottom: 1rem;
-        button{
+        display: flex;
+        color:white;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        :hover{
+            background-color:white;
+            color:hsl(207deg, 100%, 27%);
             border-radius: .6rem;
+        } 
+        button{
+                border-radius: .6rem;
                 background-color:hsl(207deg, 100%, 27%);
                 color:white;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                padding: 0.5rem 2rem;      
-        }
+                padding: 0.5rem 2rem;
+                     
+            }
     }
     
 

@@ -42,7 +42,7 @@ class CartController extends Controller
                 ->groupByRaw('price_id')->get(); 
 
         $view = View::make('front.pages.carrito.index')
-        ->with('carts', $carts->where('active', 1)->get())
+        ->with('carts', $carts)
         ->with('fingerprint', $cart->fingerprint)
         ->renderSections();
 

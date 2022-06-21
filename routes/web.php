@@ -139,6 +139,7 @@ Route::get('/faqs', 'App\Http\Controllers\Front\FaqController@index')->name('fro
 
 Route::get('/checkout', 'App\Http\Controllers\Front\CheckoutController@index')->name('front_checkout');
 
+
 Route::get('/contacto', 'App\Http\Controllers\Front\ContactController@index')->name('front_contact');
 Route::post('/contacto', 'App\Http\Controllers\Front\ContactController@store')->name('front_contact_form');
 
@@ -146,6 +147,8 @@ Route::get('/carrito', 'App\Http\Controllers\Front\CartController@index')->name(
 Route::post('/carrito', 'App\Http\Controllers\Front\CartController@store')->name('front_add_to_cart');
 Route::get('/carrito/minus/{fingerprint}/{price_id}', 'App\Http\Controllers\Front\CartController@minus')->name('front_minus_cart');
 Route::get('/carrito/plus/{fingerprint}/{price_id}', 'App\Http\Controllers\Front\CartController@plus')->name('front_plus_cart');
+Route::get('/carrito/checkout', 'App\Http\Controllers\Front\CheckoutController@show')->name('front_show_checkout');
+
 
 
 

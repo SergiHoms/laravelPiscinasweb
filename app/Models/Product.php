@@ -17,7 +17,7 @@ class Product extends Model
 
     public function prices()
     {
-        return $this->hasMany(Price::class, 'product_id')->where('active', 1);-where('valid', 1);
+        return $this->hasMany(Price::class, 'product_id')->where('active', 1)->where('valid', 1);
     } 
 }   
     
