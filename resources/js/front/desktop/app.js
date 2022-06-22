@@ -9,6 +9,7 @@ import {renderProducts } from "./products.js";
 import {renderSelect } from "./select.js";
 import {renderSearchBar } from "./search-bar.js";
 import {renderCart} from './cart.js';
+import {renderCheckoutSuccessful} from './checkout-successful';
 
 renderMenuButton();
 renderTabs();
@@ -21,3 +22,4 @@ renderProducts();
 renderSelect();
 renderSearchBar();
 renderCart();
+renderCheckoutSuccessful();

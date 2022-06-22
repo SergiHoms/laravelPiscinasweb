@@ -52,14 +52,8 @@
                 </div>
                 <div class="column">
                     <div class="element-checkout-list-right">
-                        @if(isset($carts))
-
-                            @foreach ($carts as $cart)
-                                <li data-tax="{{$cart->cart}}">{{$cart->price->tax_id}}</li>
-                                <li data-price="{{$cart->cart}}">{{$cart->price->base_price}} eu</li>
-                            @endforeach
-                        
-                        @endisset
+                        <li>{{$tax_total}}</li>
+                        <li>{{$base_total}} eu</li>
                     </div> 
                 </div>
             </div>
@@ -70,13 +64,7 @@
                     </ul>
                 </div>
                 <div class="box-bottom">
-                    @if(isset($carts))
-                        @foreach ($carts as $cart)
-                            <li data-price="{{$cart->cart}}">{{$cart->price->base_price}} eu</li>
-                        @endforeach
-                    
-                    @endif
-                    
+                    <li>{{$total}} eu</li>
                 </div>
             </div>
         </div> 
@@ -85,7 +73,7 @@
         <button>
             Volver
         </button>
-        <div class="send-button" data-url="{{route('front_show_checkout')}}">
+        <div class="send-button" data-url="{{route('front_show_checkout', ['fingerprint' => $fingerprint])}}">
             
             <button>
                 Comprar

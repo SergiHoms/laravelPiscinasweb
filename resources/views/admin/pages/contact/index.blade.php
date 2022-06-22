@@ -2,8 +2,8 @@
 
 @section('table')
     <div class="table-items">
-        @if(isset($contacts))
-            @foreach($contacts as $contact_element)
+        @if(isset($contact))
+            @foreach($contact as $contact_element)
                 <div class="table-container">
                     <ul class="table-item-info">
                         <li><span>Id:</span>{{$contact_element->id}}</li>

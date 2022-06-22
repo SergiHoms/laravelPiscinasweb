@@ -3,7 +3,7 @@
     <div class="desktop-two-columns">
         <div class="column">
             <div class="checkout-form">
-                <form>
+                <form action="{{route('front_checkout_store')}}">
                     <div class="desktop-two-columns">
                         <div class="column">
                             <div class="form-element-checkout">
@@ -103,7 +103,6 @@
                                 <div class="element-checkout-list-left">
                                     <ul class="left">
                                         <li>IVA</li>
-                                        <li>Transporte</li>
                                         <li>Total</li>
                                     </ul> 
                                 </div>
@@ -111,9 +110,8 @@
                             <div class="column">
                                 <div class="element-checkout-list-right">
                                     <ul class="left">
-                                        <li>21%</li>
-                                        <li>Incluido</li>
-                                        <li>1125eu</li>
+                                        <li>{{$tax_total}} eu</li>
+                                        <li>{{$total}} eu</li>
                                     </ul> 
                                 </div> 
                             </div>
@@ -134,15 +132,11 @@
                     </div>
                 </div>
                 <div class="column-pay">
-                    <div class="input-button">
-                        <form>
-                            <div class="form-send-button">
-                                <button>
-                                    <span>Pagar</span>
-                                </button>
-                            </div>                     
-                        </form>
-                    </div>
+                    <div class="successful-button" data-url="{{route('front_checkout_store')}}">
+                        <button>
+                            <span>Pagar</span>
+                        </button>
+                    </div>                                                                                   
                 </div>
             </div>
         </div>

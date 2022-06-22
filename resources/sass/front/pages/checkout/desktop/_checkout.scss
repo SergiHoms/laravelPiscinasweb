@@ -84,16 +84,28 @@
             }           
         }
     }
-    .input-button{
+    
         margin-bottom: 1rem;
-        button{
-            border-radius: .6rem;
+        .successful-button{
+            :hover{
+                color:hsl(207deg, 100%, 27%);
+                background-color: white;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 1rem;
+            }
+            button{
+                border-radius: .6rem;
                 background-color:hsl(207deg, 100%, 27%);
                 color:white;
                 font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: 1rem;
                 padding: 0.5rem 2rem;
+                
+            } 
+
         }
-    }
+          
+   
 }
 
 

@@ -1163,6 +1163,9 @@ header {
   padding: 0.5rem 2rem;
 }
 
+.checkout {
+  margin-bottom: 1rem;
+}
 .checkout .title-checkout {
   padding: 1rem;
 }
@@ -1218,13 +1221,17 @@ header {
   font-weight: 600;
   font-size: 1.5rem;
 }
-.checkout .input-button {
-  margin-bottom: 1rem;
+.checkout .successful-button :hover {
+  color: hsl(207deg, 100%, 27%);
+  background-color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
 }
-.checkout .input-button button {
+.checkout .successful-button button {
   border-radius: 0.6rem;
   background-color: hsl(207deg, 100%, 27%);
   color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1rem;
   padding: 0.5rem 2rem;
 }

@@ -125,6 +125,20 @@ Route::group(['prefix' => 'admin'], function () {
         ]
     ]);
 
+    Route::resource('venta', 'App\Http\Controllers\Admin\VentaController', [
+        'parameters' => [
+            'venta' => 'ventas', 
+        ],
+        'names' => [
+            'index' => 'ventas', 
+            'create' => 'ventas_create', 
+            'edit' => 'ventas_edit',
+            'store' => 'ventas_store', 
+            'destroy' => 'ventas_destroy', 
+            'show' => 'ventas_show', 
+        ]
+    ]);
+
 });
 
 Route::get('/', 'App\Http\Controllers\Front\HomeController@index')->name('front_home');
@@ -147,7 +161,10 @@ Route::get('/carrito', 'App\Http\Controllers\Front\CartController@index')->name(
 Route::post('/carrito', 'App\Http\Controllers\Front\CartController@store')->name('front_add_to_cart');
 Route::get('/carrito/minus/{fingerprint}/{price_id}', 'App\Http\Controllers\Front\CartController@minus')->name('front_minus_cart');
 Route::get('/carrito/plus/{fingerprint}/{price_id}', 'App\Http\Controllers\Front\CartController@plus')->name('front_plus_cart');
-Route::get('/carrito/checkout', 'App\Http\Controllers\Front\CheckoutController@show')->name('front_show_checkout');
+Route::get('/checkout/{fingerprint}', 'App\Http\Controllers\Front\CheckoutController@index')->name('front_show_checkout');
+Route::post('/checkout', 'App\Http\Controllers\Front\CheckoutController@store')->name('front_checkout_store');
+
+
 
 
 
