@@ -46,7 +46,19 @@
 
     .column-form{
 
-        
+        .wrapper{
+
+            .search{
+                input{
+                    border-radius: .6rem;
+                    border: 1px solid hsl(207deg, 100%, 27%);
+    
+                }
+
+            }                           
+        }
+
+        display: flex;
     }
 
     
@@ -54,11 +66,9 @@
         background-color: hsl(207deg, 100%, 27%);
         color:white;
         border-radius: .6rem;
-        :hover{
-            color:turquoise;
-        }
+        cursor: pointer;
+        
         button{
-            
             
         }
     }
@@ -69,90 +79,75 @@
     .products-list{
         display: flex;
         flex-wrap: wrap;
-    }
-    
-    
-    
 
-    .product-gallery{
-        
-        
-    }
-
-    .content-list{
-        
-        
-
-        .lists-contents{
-
-            .list-content{
-
-                .list{
-                    
-                    
-                }
-
-                
-            }
-            
-        }
-    }
-    
-    .product{
-        margin-bottom: 1rem;
-        display:block;
-        
-        border-radius: .6rem;
-
-        .list{
+        .products-front{
+            flex-wrap: wrap;
             display: flex;
-            justify-content: center;
             
-        }
-        
-        .content{
-            display: flex;
-            justify-content: center;
-            
-        }
-
-        .product-image img{
-            border: solid 4px white;
-        }     
-        .product-disponibility{
-            background-color: hsl(207deg, 100%, 27%) ;
-            border-radius: .6rem;
-            margin: 1rem;
-            padding: 1rem;
-            width: 5rem;
-            height: 5rem;
-            h3{
-                text-align: center;
-                padding: .5rem;
-            }
-        }
-
-        .view-button{
-            padding: 1rem;
-            margin-bottom:2rem;
-
-            button{
+            .product{
+                display:block;
+                background-color: white;
                 border-radius: .6rem;
-                padding:.5rem;
-                margin-left: 2rem;
-                cursor: pointer;
-                :hover{
-                    color: aqua;
+                margin: 1rem;  
+                  .list{
+                    display: flex;
+                    justify-content: center;
+
+                    h3{
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        color:hsl(207deg, 100%, 27%);
+                    }
+                    
                 }
-                 
                 
-                p{
-                    color:hsl(207deg, 100%, 27%);
-                    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-                    font-weight: 600;
-                    text-align: center;
+                .content{
+                    display: flex;
+                    justify-content: center;
+                    
+                }
+        
+                .product-image img{
+                    border: solid 4px white;
+                }     
+                .product-disponibility{
+                    background-color: hsl(207deg, 100%, 27%) ;
+                    border-radius: .6rem;
+                    margin:.5rem;
+                    h3{
+                        text-align: center;
+                        padding: .3rem;
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                        color:white;
+                        font-size: 1rem;
+                    }
+                }
+        
+                .view-button{
+                    padding: 1rem;
+                    margin-bottom:.5rem;                               
+        
+                    button{
+                        border-radius: .6rem;
+                        padding:.5rem;
+                        background-color: hsl(207deg, 100%, 27%);
+                        cursor: pointer;
+                        :hover{
+                            color: aqua;
+                        }
+                         
+                        
+                        p{
+                            color: white;
+                            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                            font-weight: 600;
+                            text-align: center;
+                        }
+                    }
                 }
             }
         }
     }
+    
+    
+    
 }

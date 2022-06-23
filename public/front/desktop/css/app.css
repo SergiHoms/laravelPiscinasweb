@@ -893,61 +893,75 @@ header {
   display: flex;
   padding-left: 14rem;
 }
+.products-menu .column-form {
+  display: flex;
+}
+.products-menu .column-form .wrapper .search input {
+  border-radius: 0.6rem;
+  border: 1px solid hsl(207deg, 100%, 27%);
+}
 .products-menu .search-button {
   background-color: hsl(207deg, 100%, 27%);
   color: white;
   border-radius: 0.6rem;
-}
-.products-menu .search-button :hover {
-  color: turquoise;
+  cursor: pointer;
 }
 .products-gallery .products-list {
   display: flex;
   flex-wrap: wrap;
 }
-.products-gallery .product {
-  margin-bottom: 1rem;
+.products-gallery .products-list .products-front {
+  flex-wrap: wrap;
+  display: flex;
+}
+.products-gallery .products-list .products-front .product {
   display: block;
-  border-radius: 0.6rem;
-}
-.products-gallery .product .list {
-  display: flex;
-  justify-content: center;
-}
-.products-gallery .product .content {
-  display: flex;
-  justify-content: center;
-}
-.products-gallery .product .product-image img {
-  border: solid 4px white;
-}
-.products-gallery .product .product-disponibility {
-  background-color: hsl(207deg, 100%, 27%);
+  background-color: white;
   border-radius: 0.6rem;
   margin: 1rem;
-  padding: 1rem;
-  width: 5rem;
-  height: 5rem;
 }
-.products-gallery .product .product-disponibility h3 {
+.products-gallery .products-list .products-front .product .list {
+  display: flex;
+  justify-content: center;
+}
+.products-gallery .products-list .products-front .product .list h3 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: hsl(207deg, 100%, 27%);
+}
+.products-gallery .products-list .products-front .product .content {
+  display: flex;
+  justify-content: center;
+}
+.products-gallery .products-list .products-front .product .product-image img {
+  border: solid 4px white;
+}
+.products-gallery .products-list .products-front .product .product-disponibility {
+  background-color: hsl(207deg, 100%, 27%);
+  border-radius: 0.6rem;
+  margin: 0.5rem;
+}
+.products-gallery .products-list .products-front .product .product-disponibility h3 {
   text-align: center;
-  padding: 0.5rem;
+  padding: 0.3rem;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: white;
+  font-size: 1rem;
 }
-.products-gallery .product .view-button {
+.products-gallery .products-list .products-front .product .view-button {
   padding: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
 }
-.products-gallery .product .view-button button {
+.products-gallery .products-list .products-front .product .view-button button {
   border-radius: 0.6rem;
   padding: 0.5rem;
-  margin-left: 2rem;
+  background-color: hsl(207deg, 100%, 27%);
   cursor: pointer;
 }
-.products-gallery .product .view-button button :hover {
+.products-gallery .products-list .products-front .product .view-button button :hover {
   color: aqua;
 }
-.products-gallery .product .view-button button p {
-  color: hsl(207deg, 100%, 27%);
+.products-gallery .products-list .products-front .product .view-button button p {
+  color: white;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-weight: 600;
   text-align: center;
@@ -1063,9 +1077,13 @@ header {
   font-size: 2rem;
 }
 .cart .items-menu {
-  display: flex;
+  display: block;
   justify-content: space-between;
   width: 90%;
+}
+.cart .items-menu .items {
+  display: flex;
+  justify-content: space-between;
 }
 .cart .items-menu span {
   color: white;

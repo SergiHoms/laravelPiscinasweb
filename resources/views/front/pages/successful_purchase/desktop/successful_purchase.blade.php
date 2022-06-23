@@ -1,7 +1,7 @@
 <div class="successful">
 
     <h2>
-        TU COMPRA HA SIDO REALIZADA CON ÉXITO
+        ¡Compra realizada con éxito!
     </h2>
     
     

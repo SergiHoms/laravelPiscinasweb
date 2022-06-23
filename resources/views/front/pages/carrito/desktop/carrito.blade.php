@@ -10,7 +10,10 @@
     <div class="items-menu">
         
             
+
+            
         @foreach ($carts as $cart)
+        <div class="items">
             <div class="item-image ">
                 <img src="images/prefabricada.jpg" alt="destacado">
             </div>
@@ -33,6 +36,7 @@
                     <button class="plus" data-url="{{route('front_plus_cart', ['fingerprint' => $fingerprint, 'price_id' => $cart->price_id])}}"> + </button>
                 </div>
             </div>
+        </div>
         @endforeach
         
     </div>

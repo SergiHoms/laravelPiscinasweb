@@ -5,24 +5,25 @@ namespace App\Http\Controllers\Front;
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
 use App\Models\Venta;
-use Illuminate\http\Request;
+use Illuminate\Http\Request;
+use App\Http\Requests\Front\VentaRequest;
 use Debugbar;
 
 class VentaController extends Controller
 {
      
-    protected $venta;
+    protected $ventas;
 
     public function __construct(Venta $venta)
     {
     
-        $this->venta = $venta;
+        $this->venta = $ventas;
     }
     
     public function index()
     {
 
-        $view = View::make('front.pages.contact.index');
+        $view = View::make('front.pages.successful_purchase.index');
 
         if(request()->ajax()) {
             
@@ -36,10 +37,10 @@ class VentaController extends Controller
         return $view;
     }
 
-    public function store(Request $request)
+    public function store(VentaRequest $request)
     {            
     
-        $venta = $this->venta->updateOrCreate([
+        $ventas = $this->ventas->updateOrCreate([
                 'id' => request('id')],[
                 'name' => request('name'),
                 'surname' => request('surname'),

@@ -32,9 +32,14 @@
 
     }
     .items-menu{
-        display: flex;
+        display: block;
         justify-content: space-between;
         width: 90%;
+
+        .items{
+            display: flex;
+            justify-content: space-between;
+        }
 
         span{
             color:white;

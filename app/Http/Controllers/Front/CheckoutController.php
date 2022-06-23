@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Front;
 
 use Illuminate\Support\Facades\View;
-use iluminate\http\Request;
+use Illuminate\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
-use App\Http\Request\Front\VentaRequest;
+use App\Models\Client;
+use App\Models\Checkout;
+use App\Http\Requests\Front\VentaRequest;
 use Debugbar;
 use Illuminate\Support\Facades\DB;
 
@@ -14,17 +16,18 @@ use Illuminate\Support\Facades\DB;
 class CheckoutController extends Controller
 {
     protected $cart;
+    protected $client;
 
-    public function __construct(Cart $cart)
+    public function __construct(Cart $cart, Client $client)
     {
         $this->cart = $cart;
+        $this->client = $client;
     }
 
     public function index($fingerprint)
     {
-
         $totals = $this->cart
-        ->where('carts.fingerprint', 1)
+        ->where('carts.fingerprint', $fingerprint)
         ->where('carts.active', 1)
         ->where('carts.venta_id', null)
         ->join('prices', 'prices.id', '=', 'carts.price_id')
@@ -51,16 +54,19 @@ class CheckoutController extends Controller
     public function store(VentaRequest $request)
     {            
     
-        $contact = $this->contact->updateOrCreate([
-                'id' => request('id')],[
+        $client = $this->client->create([
                 'name' => request('name'),
                 'surname' => request('surname'),
                 'phone' => request('phone'),
                 'email' => request('email'),
-                'message' => request('message'),
-        ]);
+                'city' => request('city'),
+                'postal-code' => request('postal-code'),
+                'address' => request('address'),
+            ]);
+        
+        
             
-        $view = View::make('front.pages.checkout.index');
+        $view = View::make('front.pages.successful_purchase.index');
 
         $sections = $view->renderSections(); 
 

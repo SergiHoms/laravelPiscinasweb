@@ -3,7 +3,7 @@
     <div class="desktop-two-columns">
         <div class="column">
             <div class="checkout-form">
-                <form action="{{route('front_checkout_store')}}">
+                <form class="front-form" action="{{route('front_checkout_store')}}">
                     <div class="desktop-two-columns">
                         <div class="column">
                             <div class="form-element-checkout">
@@ -33,7 +33,7 @@
                                     <label>Teléfono</label>
                                 </div>
                                 <div class="form-element-input">
-                                    <input type="tel" name="box" placeholder="Escribe aquí " aria-invalid="false">
+                                    <input type="tel" name="phone" placeholder="Escribe aquí " aria-invalid="false">
                                 </div>
                             </div>
                         </div>
@@ -43,7 +43,7 @@
                                     <label>Email</label>
                                 </div>
                                 <div class="form-element-input">
-                                    <input type="email" name="box" placeholder="Escribe aquí" aria-invalid="false">
+                                    <input type="email" name="email" placeholder="Escribe aquí" aria-invalid="false">
                                 </div>
                             </div> 
                         </div>
@@ -72,7 +72,7 @@
                                     <label>Código postal</label>
                                 </div>
                                 <div class="form-element-input">
-                                    <input type="email" name="box" placeholder="Escribe aquí " aria-invalid="false">
+                                    <input type="email" name="postal-code" placeholder="Escribe aquí " aria-invalid="false">
                                 </div>
                             </div> 
                         </div>           
@@ -83,10 +83,16 @@
                             <label>Dirección</label>
                         </div>
                         <div class="form-element-input">
-                            <input type="email" name="box" placeholder="Escribe aquí " size="0" aria-invalid="false">
+                            <input type="email" name="address" placeholder="Escribe aquí " size="0" aria-invalid="false">
                         </div>
                     </div> 
-                </div>           
+                </div>
+                
+                    <input type="hidden" id="tax_total" value="{{'tax_total',$tax_total}}" name="tax_total">
+                    <input type="hidden" id="total" value="{{'total'}}" name="total">
+                    <input type="hidden" id="total_base_price" value="{{'base_total'}}" name="total_base_price">
+                    <input type="hidden" id="fingerprint" value="{{$fingerprint}}" name="fingerprint">
+
                 </form>
             </div>  
         </div>

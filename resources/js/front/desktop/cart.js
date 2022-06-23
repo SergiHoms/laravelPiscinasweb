@@ -40,7 +40,7 @@ export let renderCart = () => {
                     })
                     .then(json => {
 
-                        // console.log(json.content);
+                        console.log(json.content);
 
                         mainContainer.innerHTML = json.content;
 
@@ -88,6 +88,7 @@ export let renderCart = () => {
                 let response = await fetch(url, {
                     headers: {
                         'X-Requested-With': 'XMLHttpRequest',
+                        
                     },
                     method: 'GET', 
                 })

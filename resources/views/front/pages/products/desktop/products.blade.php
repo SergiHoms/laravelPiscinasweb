@@ -8,7 +8,7 @@
                 <div class="products-category-menu desktop-only">
                     @if(isset($product_categories))
                         @foreach($product_categories as $category_element)
-                        <div class="box-category"data-url="{{route('front_products_show_by_category', ['category' => $category->id])}}">
+                        <div class="box-category"data-url="{{route('front_products_show_by_category', ['categorias' => $category->id])}}">
                             <h3 class="category{{isset($category) && $category->id == $category_element->id ? 'active' : ''}}"data-url="{{route('front_products_show',['front_product'=>$category_element->id])}}">{{$category_element->name}}</h3>
                         </div>                                                        
                         @endforeach
@@ -26,8 +26,8 @@
                     </div>
                     <div class="column-form">
                         <form  class="search-form" action="{{route('front_products_search')}}">
-                            <div id="wrapper">
-                                <div id="search">
+                            <div class="wrapper" id="wrapper">
+                                <div class="search" id="search">
                                     <input name="search" type="text" placeholder="Buscar..." >
                                 </div>
                             </div>    
@@ -38,7 +38,7 @@
             </div>
             <div class="products-gallery">
                 <div class="products-list">
-                    <div class="products">
+                    <div class="products-front">
                         @if(isset($products))
                             @foreach($products as $product)
                                 <div class="product">
