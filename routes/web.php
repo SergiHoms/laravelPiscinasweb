@@ -145,9 +145,9 @@ Route::get('/', 'App\Http\Controllers\Front\HomeController@index')->name('front_
 
 Route::get('/productos', 'App\Http\Controllers\Front\ProductsController@index')->name('front_products');
 Route::get('/productos/{product}', 'App\Http\Controllers\Front\ProductsController@show')->name('front_products_show');
-Route::get('/producto/categoria/{categoria}', 'App\Http\Controllers\Front\ProductsController@showByCategory')->name('front_products_show_by_category');
+Route::get('/producto/categoria/{category}', 'App\Http\Controllers\Front\CategoryController@show')->name('front_products_category');
 route::post('/productos/buscar', 'App\Http\Controllers\Front\ProductsController@search')->name('front_products_search');
-
+route::get('productos/filtrar/{order}', 'App\Http\Controllers\Front\ProductsController@filter')->name('front_products_filter');
 
 Route::get('/faqs', 'App\Http\Controllers\Front\FaqController@index')->name('front_faqs');
 

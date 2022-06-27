@@ -62,7 +62,7 @@
                                         <option value="Inca">
                                         <option value="Alcudia">
                                         <option value="Lloseta">
-                                      </datalist>
+                                    </datalist>
                                 </div>
                             </div>
                         </div>
@@ -88,7 +88,7 @@
                     </div> 
                 </div>
                 
-                    <input type="hidden" id="tax_total" value="{{'tax_total',$tax_total}}" name="tax_total">
+                    <input type="hidden" id="tax_total" value="{{$tax_total}}" name="tax_total">
                     <input type="hidden" id="total" value="{{'total'}}" name="total">
                     <input type="hidden" id="total_base_price" value="{{'base_total'}}" name="total_base_price">
                     <input type="hidden" id="fingerprint" value="{{$fingerprint}}" name="fingerprint">

@@ -8,8 +8,10 @@ import {renderForm } from "./form.js";
 import {renderProducts } from "./products.js";
 import {renderSelect } from "./select.js";
 import {renderSearchBar } from "./search-bar.js";
+import {renderMenu} from './menu.js';
 import {renderCart} from './cart.js';
 import {renderCheckoutSuccessful} from './checkout-successful';
+import {renderOrderPrice} from './order-price';
 
 renderMenuButton();
 renderTabs();
@@ -22,4 +24,6 @@ renderProducts();
 renderSelect();
 renderSearchBar();
 renderCart();
+renderMenu();
 renderCheckoutSuccessful();
+renderOrderPrice();

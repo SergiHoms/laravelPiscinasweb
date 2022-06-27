@@ -47,8 +47,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _products_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./products.js */ "./resources/js/front/desktop/products.js");
 /* harmony import */ var _select_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./select.js */ "./resources/js/front/desktop/select.js");
 /* harmony import */ var _search_bar_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./search-bar.js */ "./resources/js/front/desktop/search-bar.js");
-/* harmony import */ var _cart_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./cart.js */ "./resources/js/front/desktop/cart.js");
-/* harmony import */ var _checkout_successful__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./checkout-successful */ "./resources/js/front/desktop/checkout-successful.js");
+/* harmony import */ var _menu_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./menu.js */ "./resources/js/front/desktop/menu.js");
+/* harmony import */ var _cart_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./cart.js */ "./resources/js/front/desktop/cart.js");
+/* harmony import */ var _checkout_successful__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./checkout-successful */ "./resources/js/front/desktop/checkout-successful.js");
+/* harmony import */ var _order_price__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./order-price */ "./resources/js/front/desktop/order-price.js");
+
+
 
 
 
@@ -71,8 +75,10 @@ __webpack_require__.r(__webpack_exports__);
 (0,_products_js__WEBPACK_IMPORTED_MODULE_7__.renderProducts)();
 (0,_select_js__WEBPACK_IMPORTED_MODULE_8__.renderSelect)();
 (0,_search_bar_js__WEBPACK_IMPORTED_MODULE_9__.renderSearchBar)();
-(0,_cart_js__WEBPACK_IMPORTED_MODULE_10__.renderCart)();
-(0,_checkout_successful__WEBPACK_IMPORTED_MODULE_11__.renderCheckoutSuccessful)();
+(0,_cart_js__WEBPACK_IMPORTED_MODULE_11__.renderCart)();
+(0,_menu_js__WEBPACK_IMPORTED_MODULE_10__.renderMenu)();
+(0,_checkout_successful__WEBPACK_IMPORTED_MODULE_12__.renderCheckoutSuccessful)();
+(0,_order_price__WEBPACK_IMPORTED_MODULE_13__.renderOrderPrice)();
 
 /***/ }),
 
@@ -100,6 +106,7 @@ var renderCart = function renderCart() {
   var storeButton = document.querySelector(".store-button");
   var forms = document.querySelectorAll(".form-cart");
   var sendButton = document.querySelector(".send-button");
+  var plusMinusButtons = document.querySelectorAll(".plus-minus-button");
   document.addEventListener("renderProductModules", function (event) {
     renderCart();
   }, {
@@ -224,6 +231,57 @@ var renderCart = function renderCart() {
       sendViewRequest();
     });
   }
+
+  plusMinusButtons.forEach(function (plusMinusButton) {
+    plusMinusButton.addEventListener("click", function () {
+      var url = plusMinusButton.dataset.url;
+
+      var sendViewRequest = /*#__PURE__*/function () {
+        var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3() {
+          var response;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+            while (1) {
+              switch (_context3.prev = _context3.next) {
+                case 0:
+                  _context3.next = 2;
+                  return fetch(url, {
+                    headers: {
+                      'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    method: 'GET'
+                  }).then(function (response) {
+                    if (!response.ok) throw response;
+                    return response.json();
+                  }).then(function (json) {
+                    mainContainer.innerHTML = json.content;
+                    document.dispatchEvent(new CustomEvent("renderProductModules"));
+                  })["catch"](function (error) {
+                    if (error.status == '500') {
+                      console.log(error);
+                    }
+
+                    ;
+                  });
+
+                case 2:
+                  response = _context3.sent;
+
+                case 3:
+                case "end":
+                  return _context3.stop();
+              }
+            }
+          }, _callee3);
+        }));
+
+        return function sendViewRequest() {
+          return _ref3.apply(this, arguments);
+        };
+      }();
+
+      sendViewRequest();
+    });
+  });
 };
 
 /***/ }),
@@ -406,6 +464,11 @@ __webpack_require__.r(__webpack_exports__);
 var renderFaqs = function renderFaqs() {
   var lists = document.querySelectorAll(".list");
   var contents = document.querySelectorAll(".content");
+  document.addEventListener("mainModules", function (event) {
+    renderFaqs();
+  }, {
+    once: true
+  });
   lists.forEach(function (list) {
     list.addEventListener("click", function () {
       lists.forEach(function (tab) {
@@ -462,6 +525,11 @@ var renderForm = function renderForm() {
   var mainContainer = document.querySelector("main");
   var storeButton = document.querySelector('.store-button');
   var forms = document.querySelectorAll('.front-form');
+  document.addEventListener("mainModules", function (event) {
+    renderForm();
+  }, {
+    once: true
+  });
   document.addEventListener("renderFormModules", function (event) {
     renderForm();
   }, {
@@ -594,6 +662,82 @@ var renderMenuButton = function renderMenuButton() {
 
 /***/ }),
 
+/***/ "./resources/js/front/desktop/menu.js":
+/*!********************************************!*\
+  !*** ./resources/js/front/desktop/menu.js ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "renderMenu": () => (/* binding */ renderMenu)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var renderMenu = function renderMenu() {
+  var mainContainer = document.querySelector("main");
+  var menuButtons = document.querySelectorAll(".menu-button");
+  menuButtons.forEach(function (menuButton) {
+    menuButton.addEventListener("click", function () {
+      var url = menuButton.dataset.url;
+
+      var sendViewRequest = /*#__PURE__*/function () {
+        var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+          var response;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+            while (1) {
+              switch (_context.prev = _context.next) {
+                case 0:
+                  _context.next = 2;
+                  return fetch(url, {
+                    headers: {
+                      'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    method: 'GET'
+                  }).then(function (response) {
+                    if (!response.ok) throw response;
+                    return response.json();
+                  }).then(function (json) {
+                    mainContainer.innerHTML = json.content;
+                    document.dispatchEvent(new CustomEvent("mainModules"));
+                  })["catch"](function (error) {
+                    if (error.status == '500') {
+                      console.log(error);
+                    }
+
+                    ;
+                  });
+
+                case 2:
+                  response = _context.sent;
+
+                case 3:
+                case "end":
+                  return _context.stop();
+              }
+            }
+          }, _callee);
+        }));
+
+        return function sendViewRequest() {
+          return _ref.apply(this, arguments);
+        };
+      }();
+
+      sendViewRequest();
+    });
+  });
+};
+
+/***/ }),
+
 /***/ "./resources/js/front/desktop/notification.js":
 /*!****************************************************!*\
   !*** ./resources/js/front/desktop/notification.js ***!
@@ -613,6 +757,92 @@ var renderNotification = function renderNotification(message, type) {
     notification.classList.remove("active");
   }, 5000);
   popup.innerHTML = message;
+};
+
+/***/ }),
+
+/***/ "./resources/js/front/desktop/order-price.js":
+/*!***************************************************!*\
+  !*** ./resources/js/front/desktop/order-price.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "renderOrderPrice": () => (/* binding */ renderOrderPrice)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+var renderOrderPrice = function renderOrderPrice() {
+  var mainContainer = document.querySelector("main");
+  var orderSelect = document.querySelector(".order-select");
+  document.addEventListener("renderProductModules", function (event) {
+    renderProducts();
+  }, {
+    once: true
+  });
+  document.addEventListener("renderOrderPriceModules", function (event) {
+    renderOrderPrice();
+  }, {
+    once: true
+  });
+  orderSelect.addEventListener("change", function () {
+    var url = orderSelect.value;
+    console.log(url);
+
+    var sendViewRequest = /*#__PURE__*/function () {
+      var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        var response;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _context.next = 2;
+                return fetch(url, {
+                  headers: {
+                    'X-Requested-With': 'XMLHttpRequest'
+                  },
+                  method: 'GET'
+                }).then(function (response) {
+                  if (!response.ok) throw response;
+                  return response.json();
+                }).then(function (json) {
+                  mainContainer.innerHTML = json.content;
+                  document.dispatchEvent(new CustomEvent("renderOrderPriceModules"));
+                  document.dispatchEvent(new CustomEvent("renderProductModules"));
+                })["catch"](function (error) {
+                  if (error.status == '500') {
+                    console.log(error);
+                  }
+
+                  ;
+                });
+
+              case 2:
+                response = _context.sent;
+
+              case 3:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }));
+
+      return function sendViewRequest() {
+        return _ref.apply(this, arguments);
+      };
+    }();
+
+    sendViewRequest();
+  });
 };
 
 /***/ }),
@@ -704,6 +934,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 var renderProducts = function renderProducts() {
   var mainContainer = document.querySelector("main");
   var viewButtons = document.querySelectorAll(".view-button");
+  var categoryButtons = document.querySelectorAll(".category");
+  document.addEventListener("mainModules", function (event) {
+    renderProducts();
+  }, {
+    once: true
+  });
   document.addEventListener("renderProductModules", function (event) {
     renderProducts();
   }, {
@@ -759,6 +995,56 @@ var renderProducts = function renderProducts() {
       sendViewRequest();
     });
   });
+  categoryButtons.forEach(function (categoryButton) {
+    categoryButton.addEventListener("click", function () {
+      var url = categoryButton.dataset.url;
+
+      var sendViewRequest = /*#__PURE__*/function () {
+        var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+          var response;
+          return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+            while (1) {
+              switch (_context2.prev = _context2.next) {
+                case 0:
+                  _context2.next = 2;
+                  return fetch(url, {
+                    headers: {
+                      'X-Requested-With': 'XMLHttpRequest'
+                    },
+                    method: 'GET'
+                  }).then(function (response) {
+                    if (!response.ok) throw response;
+                    return response.json();
+                  }).then(function (json) {
+                    mainContainer.innerHTML = json.content;
+                    document.dispatchEvent(new CustomEvent("renderProductModules"));
+                  })["catch"](function (error) {
+                    if (error.status == '500') {
+                      console.log(error);
+                    }
+
+                    ;
+                  });
+
+                case 2:
+                  response = _context2.sent;
+
+                case 3:
+                case "end":
+                  return _context2.stop();
+              }
+            }
+          }, _callee2);
+        }));
+
+        return function sendViewRequest() {
+          return _ref2.apply(this, arguments);
+        };
+      }();
+
+      sendViewRequest();
+    });
+  });
 };
 
 /***/ }),
@@ -787,6 +1073,11 @@ var renderSearchBar = function renderSearchBar() {
   var form = document.querySelector('.search-form');
   var searchButton = document.querySelector('.search-button');
   document.addEventListener("renderProductModules", function (event) {
+    renderSearchBar();
+  }, {
+    once: true
+  });
+  document.addEventListener("mainModules", function (event) {
     renderSearchBar();
   }, {
     once: true

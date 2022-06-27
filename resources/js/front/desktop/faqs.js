@@ -1,7 +1,11 @@
 export let renderFaqs = () => {
 
-    let lists = document.querySelectorAll(".list")
-    let contents = document.querySelectorAll(".content")
+    let lists = document.querySelectorAll(".list");
+    let contents = document.querySelectorAll(".content");
+
+    document.addEventListener("mainModules", (event => {
+        renderFaqs();
+    }), {once: true});
 
     lists.forEach(list => { 
 

@@ -4,6 +4,10 @@ export let renderForm = () => {
     let storeButton = document.querySelector('.store-button');
     let forms = document.querySelectorAll('.front-form');
 
+    document.addEventListener("mainModules", (event => {
+        renderForm();
+    }), {once: true});
+
     document.addEventListener("renderFormModules",( event =>{
         renderForm();
     }), {once: true});

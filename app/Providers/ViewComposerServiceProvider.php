@@ -29,7 +29,7 @@ class ViewComposerServiceProvider extends ServiceProvider
         view()->composer(['admin.pages.product.index'],
         'App\Http\ViewComposers\Admin\Taxes');
 
-        view()->composer(['front.pages.product.index'],
+        view()->composer(['front.pages.products.index'],
         'App\Http\ViewComposers\Front\CategoryProduct');
 
     }

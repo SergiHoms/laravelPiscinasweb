@@ -1,12 +1,5 @@
 <header>
     <div class="header">
-        <div class="header-navigation-mobile mobile-only" id="menu">
-            <ul>
-                <li>INICIO</li>
-                <li>PRODUCTOS</li>
-                <li>CONTACTO</li>
-            </ul>
-        </div>
         <div class="desktop-three-columns mobile-two-columns">
             <div class="column">
                 <div class="header-title">
@@ -34,9 +27,10 @@
             <div class="column desktop-only">
                 <div class="header-navigation">
                     <ul>
-                        <li>INICIO</li>
-                        <li>PRODUCTOS</li>
-                        <li>CONTACTO</li>
+                        <li class="menu-button" data-url="{{route('front_home')}}">INICIO</li>
+                        <li class="menu-button" data-url="{{route('front_products')}}">PRODUCTOS</li>
+                        <li class="menu-button" data-url="{{route('front_faqs')}}">FAQS</li>
+                        <li class="menu-button" data-url="{{route('front_contact')}}">CONTACTO</li>
                     </ul>
                 </div>
             </div>

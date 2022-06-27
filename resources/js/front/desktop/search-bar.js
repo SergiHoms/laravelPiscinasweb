@@ -8,6 +8,10 @@ export let renderSearchBar = () => {
         renderSearchBar();
     }), {once: true});
 
+    document.addEventListener("mainModules", (event => {
+        renderSearchBar();
+    }), {once: true});
+
     if(searchButton){
 
         searchButton.addEventListener("click", (event) => {

@@ -6,24 +6,34 @@ use Illuminate\Support\Facades\View;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Product;
-use App\Models\ProductCategory;
 use Debugbar;
 
 class ProductsController extends Controller
 {
 
     protected $product;
+    
 
     public function __construct(Product $product)
     {
         $this->product = $product;
+        
     }
 
     public function index()
     {
 
         $view = View::make('front.pages.products.index')
-        ->with('products', $this->product->where('active', 1)->where('visible', 1)->get());
+        ->with('products', $this->product->where('active', 1)->where('visible', 1)->get());     
+
+        if(request()->ajax()) {
+            
+            $sections = $view->renderSections(); 
+    
+            return response()->json([
+                'content' => $sections['content'],
+            ]); 
+        }
 
         return $view;
     }
@@ -59,7 +69,36 @@ class ProductsController extends Controller
             'content' => $sections['content'],
         ]); 
     
-    }    
-        
+    }
+    
+    public function filter($order)
+    {
+        $products =  $this->product
+        ->where('active', 1)
+        ->where('visible', 1)
+        ->orderBy('price', $order)->get();
+
+
+        Debugbar::info($order);
+            
+        $view = View::make('front.pages.products.index')
+        ->with('products', $products);
+
+        if(request()->ajax()) {
+            
+            $sections = $view->renderSections();
+
+            return response()->json([
+                'content' => $sections['content'],
+            ]);
+        }
+
+        return $view; 
+    
+    }
+    
+    
+   
+    
 }
 

@@ -8,35 +8,32 @@
         </ul>
     </div>
     <div class="items-menu">
-        
-            
-
-            
+    
         @foreach ($carts as $cart)
-        <div class="items">
-            <div class="item-image ">
-                <img src="images/prefabricada.jpg" alt="destacado">
-            </div>
-            <div class="item-name">
-                <span>
-                    {{$cart->price->product->title}}
-                </span>
-            </div>
-            <div class="item-price">
-                <span>
-                    {{$cart->price->base_price}} eu/und
-                </span>
-            </div>
-            <div class="product-form">
-                <div class="plus-minus-button">
-                    <button class="minus" data-url="{{route('front_minus_cart', ['fingerprint' => $fingerprint, 'price_id' => $cart->price_id])}}"> - </button>
-                    <form>
-                        <input id="numbers" class="plus-minus-input" type="number" name="quantity" value="{{$cart->quantity}}" >
-                    </form>
-                    <button class="plus" data-url="{{route('front_plus_cart', ['fingerprint' => $fingerprint, 'price_id' => $cart->price_id])}}"> + </button>
+            <div class="items">
+                <div class="item-image ">
+                    <img src="images/prefabricada.jpg" alt="destacado">
+                </div>
+                <div class="item-name">
+                    <span>
+                        {{$cart->price->product->title}}
+                    </span>
+                </div>
+                <div class="item-price">
+                    <span>
+                        {{$cart->price->base_price}} eu/und
+                    </span>
+                </div>
+                <div class="product-form">
+                    <div class="plus-minus-button">
+                        <button class="plus-minus-button" data-url="{{route('front_minus_cart', ['fingerprint' => $fingerprint, 'price_id' => $cart->price_id])}}"> - </button>
+                        <form>
+                            <input id="numbers" class="plus-minus-input" type="number" name="quantity" value="{{$cart->quantity}}" >
+                        </form>
+                        <button class="plus-minus-button" data-url="{{route('front_plus_cart', ['fingerprint' => $fingerprint, 'price_id' => $cart->price_id])}}"> + </button>
+                    </div>
                 </div>
             </div>
-        </div>
         @endforeach
         
     </div>

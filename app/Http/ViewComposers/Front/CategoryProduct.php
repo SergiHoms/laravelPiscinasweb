@@ -3,24 +3,24 @@
 namespace App\Http\ViewComposers\Front;
 
 use Illuminate\View\View;
-use App\Models\Product;
+use App\Models\ProductCategory;
 
 class CategoryProduct {
 
     static $composed;
 
-    public function __construct(Product $product) {
-        $this->product = $product;
+    public function __construct(ProductCategory $product_category) {
+        $this->product_category = $product_category;
     }
 
     public function compose(View $view) {
-
-        if (static::$composed) {
-            return $view->with('products', static::$composed);
+    
+        if(static::$composed) {   
+            return $view->with('product_categories', static::$composed);
         }
-        static::$composed = $this->product->where('active', 1)->where('visible', 1)->get();
         
-        $view->with('products', Product::where('active', 1)->where('visible', 1)->get());
-    }
+        static::$composed = $this->product_category->where('active', 1)->orderBy('title', 'asc')->get();
 
+        $view->with('product_categories', static::$composed);
+    }
 }

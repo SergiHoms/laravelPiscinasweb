@@ -1,25 +1,31 @@
-export let renderMenu = () => {
+export let renderOrderPrice = () => {
 
     let mainContainer = document.querySelector("main");
-    let menuButtons = document.querySelectorAll(".menu-button");
+    let orderSelect = document.querySelector(".order-select");
 
-    menuButtons.forEach(menuButton => { 
+    document.addEventListener("renderProductModules", (event => {
+        renderProducts();
+    }), {once: true});
 
-        menuButton.addEventListener("click", () => {
-            
-            let url = menuButton.dataset.url;
+    document.addEventListener("renderOrderPriceModules", (event => {
+        renderOrderPrice();
+    }), {once: true});
+  
+    orderSelect.addEventListener("change", () => {
+            let url = orderSelect.value;
+
+            console.log(url);
 
             let sendViewRequest = async () => {
 
                 let response = await fetch(url, {
                     headers: {
                         'X-Requested-With': 'XMLHttpRequest',
-                        
                     },
                     method: 'GET', 
                 })
                 .then(response => {
-                            
+
                     if (!response.ok) throw response;
 
                     return response.json();
@@ -28,7 +34,8 @@ export let renderMenu = () => {
 
                     mainContainer.innerHTML = json.content;
 
-                    document.dispatchEvent(new CustomEvent("mainModules"));
+                    document.dispatchEvent(new CustomEvent("renderOrderPriceModules"));
+                    document.dispatchEvent(new CustomEvent("renderProductModules"));
                 })
                 
                 .catch(error =>  {
@@ -40,11 +47,6 @@ export let renderMenu = () => {
             };
 
             sendViewRequest();
-
-
+        
         });
-
-    });
-
-}
-
+} 

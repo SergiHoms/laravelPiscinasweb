@@ -1,11 +1,7 @@
 <?php
 
-// donde se encuentra este archivo en la carpeta /app/http/controllers/admin/FaqController.php
-// sirve para identificar el archivo,es necesario que se llame igual que el archivo que se esta creando
 namespace App\Http\Controllers\Admin;
 
-// Los use equivalen a los import de javascript, es una forma de traer
-// otros archivos que contienen código a este archivo
 use Illuminate\Support\Facades\View;
 use App\Http\Controllers\Controller;
 use App\Models\Contact;
@@ -29,7 +25,7 @@ class ContactController extends Controller
     {
 
         $view = View::make('admin.pages.contact.index')
-                ->with('contact', $this->contact)
+                ->with('contact', $this->contact->get())
                 ->with('contacts', $this->contact);
 
         if(request()->ajax()) {

@@ -3,7 +3,6 @@
 namespace App\Http\Controllers\Front;
 
 use Illuminate\Support\Facades\View;
-use iluminate\http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\ProductCategory;
 use Debugbar;
@@ -18,11 +17,18 @@ class CategoryController extends Controller
         $this->product_category = $product_category;
     }
 
-    public function show(ProductCategory $product_category){
+
+    public function show(ProductCategory $product_category)
+    {
 
         $view = View::make('front.pages.products.index')
+   
         ->with('category', $product_category)
-        ->with('products', $product_category->products->where('visible', 1));
+        ->with('products', $product_category->products
+        ->where('active', 1));
+        
+        
+
         
         if(request()->ajax()) {
         
@@ -35,4 +41,5 @@ class CategoryController extends Controller
         
         return $view;
     }
+
 }
