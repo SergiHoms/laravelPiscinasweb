@@ -85,20 +85,221 @@
                     <form class='admin-form' action="{{route("ventas_store")}}">
 
                         <input type="hidden" name="id" value="{{isset($venta->id) ? $venta->id : ''}} ">
+                        
+                        <div class="venta">
+                            <div class="form-element">
+                                <div class="venta-title">
+                                    <label>VENTA</label>
+                                </div>
+                                
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Número de ticket:</label>
+                                            </div>
+                                            <div class="ticket-input">
+                                                <input type="text" name="name" placeholder="Escribe aquí tu Ticket" aria-invalid="false">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Método de pago:</label>
+                                            </div>
+                                            <div class="method-input">
+                                                <input type="text" name="payment_method" placeholder="Método de pago" aria-invalid="false">
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
 
-                        <div class="desktop-one-column">
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Fecha:</label>
+                                            </div>
+                                            <div class="date-input">
+                                                <input type="text" name="date" placeholder="Escribe aquí la fecha" aria-invalid="false">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Hora:</label>
+                                            </div>
+                                            <div class="time-input">
+                                                <input type="text" name="time" placeholder="Escribe aquí la hora" aria-invalid="false">
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+
+                                <div class="precios">
+
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Precio base total:</label>
+                                            </div>
+                                            <div class="base-price">
+                                                <h3>
+                                                    $100.00
+
+                                                </h3>
+                                            </div>
+                              
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Total del impuesto añadido al precio:</label>
+                                            </div>
+
+                                            <div class="taxe-price">
+                                                <h3>
+                                                   $100.00
+                                                    
+                                                </h3>
+                                            </div>
+                                            
+                                        </div> 
+                                    </div>
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Precio total:</label>
+                                            </div>
+                                            
+                                            <div class="total-price">
+                                                <h3>
+                                                    $100.00
+                                                    
+                                                </h3>
+                                            </div>
+
+                                        </div> 
+                                    </div>
+                                </div>                         
+                            </div>                           
+                        </div>
+
+                        <div class="cliente">
                             <div class="column">
                                 <div class="form-element">
-                                    <div class="form-element-label">
-                                        <label>Número de ticket:</label>
+                                    <div class="client-title">
+                                        <label>CLIENTE</label>
                                     </div>
-                                    <div class="form-element-input">
-                                        <input type="text" name="name" value="{{isset($venta->ticket_number) ? $venta->ticket_number : ''}} " placeholder="Escribe aquí tu Número de ticket. . ." aria-invalid="false">
+                                </div>
+
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Nombre:</label>
+                                            </div>
+                                            <div class="name-input">
+                                                <input type="text" name="name" placeholder="Escribe aquí tu Nombre" aria-invalid="false">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Apellidos:</label>
+                                            </div>
+                                            <div class="surname-input">
+                                                <input type="text" name="surname" placeholder="Escribe aquí tu Apellido" aria-invalid="false">
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Teléfono:</label>
+                                            </div>
+                                            <div class="name-input">
+                                                <input type="text" name="phone" placeholder="Escribe aquí tu teléfono" aria-invalid="false">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Email:</label>
+                                            </div>
+                                            <div class="surname-input">
+                                                <input type="text" name="Email" placeholder="Escribe aquí tu Email" aria-invalid="false">
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="producto">
+                            <div class="column">
+                                <div class="form-element">
+                                    <div class="product-title">
+                                        <label>PRODUCTO</label>
+                                    </div>
+                                </div>
+
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Id del producto:</label>
+                                            </div>
+                                            <div class="id-input">
+                                                <input type="text" name="id-product" placeholder="Escribe aquí tu Id " aria-invalid="false">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Nombre del producto:</label>
+                                            </div>
+                                            <div class="title-input">
+                                                <input type="text" name="title" placeholder="Escribe aquí tu nombre" aria-invalid="false">
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Categoría del producto:</label>
+                                            </div>
+                                            <div class="category-input">
+                                                <input type="text" name="category" placeholder="Escribe aquí tu categoría" aria-invalid="false">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Precio:</label>
+                                            </div>
+                                            <div class="price-product-input">
+                                                <input type="text" name="price" placeholder="Escribe aquí tu precio " aria-invalid="false">
+                                            </div>
+                                        </div> 
                                     </div>
                                 </div>
                             </div>
-                        </div>       
-
+                        </div> 
                     </form>            
                 </div>
             </div>

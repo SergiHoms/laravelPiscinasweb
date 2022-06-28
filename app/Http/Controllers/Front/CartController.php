@@ -122,24 +122,21 @@ class CartController extends Controller
                 ->where('venta_id', null)
                 ->groupBy('price_id',)
                 ->get(); 
-
         $totals = $this->cart
-            ->where('carts.fingerprint', 1)
-            ->where('carts.active', 1)
-            ->where('carts.venta_id', null)
-            ->join('prices', 'prices.id', '=', 'carts.price_id')
-            ->join('taxes', 'taxes.id', '=', 'prices.tax_id')
-            ->select(DB::raw('sum(prices.base_price) as base_total'), DB::raw('round(sum(prices.base_price * taxes.multiplicator),2) as total') )
-            ->first();
-        
+                ->where('carts.fingerprint', 1)
+                ->where('carts.active', 1)
+                ->where('carts.venta_id', null)
+                ->join('prices', 'prices.id', '=', 'carts.price_id')
+                ->join('taxes', 'taxes.id', '=', 'prices.tax_id')
+                ->select(DB::raw('sum(prices.base_price) as base_total'), DB::raw('round(sum(prices.base_price * taxes.multiplicator),2) as total') )
+                ->first();   
         $sections = View::make('front.pages.carrito.index')
-            ->with('carts', $carts)
-            ->with('fingerprint', $fingerprint)
-            ->with('base_total', $totals->base_total)
-            ->with('tax_total', ($totals->total - $totals->base_total))
-            ->with('total', $totals->total)
-            ->renderSections();
-        
+                ->with('carts', $carts)
+                ->with('fingerprint', $fingerprint)
+                ->with('base_total', $totals->base_total)
+                ->with('tax_total', ($totals->total - $totals->base_total))
+                ->with('total', $totals->total)
+                ->renderSections();  
         return response()->json([
             'content' => $sections['content'],
         ]);

@@ -1,9 +1,11 @@
 <div class="checkout">
+
+<form class="front-form" action="{{route('front_checkout_store')}}">
     
     <div class="desktop-two-columns">
         <div class="column">
             <div class="checkout-form">
-                <form class="front-form" action="{{route('front_checkout_store')}}">
+                
                     <div class="desktop-two-columns">
                         <div class="column">
                             <div class="form-element-checkout">
@@ -86,14 +88,12 @@
                             <input type="email" name="address" placeholder="Escribe aquí " size="0" aria-invalid="false">
                         </div>
                     </div> 
-                </div>
-                
+                </div>              
                     <input type="hidden" id="tax_total" value="{{$tax_total}}" name="tax_total">
-                    <input type="hidden" id="total" value="{{'total'}}" name="total">
-                    <input type="hidden" id="total_base_price" value="{{'base_total'}}" name="total_base_price">
+                    <input type="hidden" id="total" value="{{$total}}" name="total">
+                    <input type="hidden" id="base_price" value="{{$base_total}}" name="base_price">
                     <input type="hidden" id="fingerprint" value="{{$fingerprint}}" name="fingerprint">
-
-                </form>
+                    <input type="hidden" id="ticket_number" value="" name="ticket_number">
             </div>  
         </div>
         <div class="column">
@@ -123,18 +123,18 @@
                             </div>
                         </div> 
                     </div> 
-                    </form>
+                    
                 </div>              
                 <div class="column-how">
                     <div class="input-form">
-                        <form>
-                            <input type="radio" id="html" name="fav_language" value="HTML">
+                        
+                            <input type="radio" id="html" name="payment_method" value="1">
                             <label for="html">Transferencia bancaria</label><br>
-                            <input type="radio" id="css" name="fav_language" value="CSS">
+                            <input type="radio" id="css" name="payment_method" value="2">
                             <label for="css">Paypal</label><br>
-                            <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                            <input type="radio" id="javascript" name="payment_method" value="3">
                             <label for="javascript">Tarjeta de crédito</label>
-                        </form>
+                        
                     </div>
                 </div>
                 <div class="column-pay">
@@ -147,6 +147,7 @@
             </div>
         </div>
     </div>
+</form>
 </div>
 
             

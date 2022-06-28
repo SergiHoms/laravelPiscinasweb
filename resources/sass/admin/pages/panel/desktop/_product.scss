@@ -1,0 +1,240 @@
+.form-content{
+    
+    
+
+    .venta{
+        border: 1px solid hsl(207, 100%, 27%);
+        margin: .5rem;
+        border-radius: .4rem;
+        
+
+        .venta-title{
+
+            background-color: hsl(207, 100%, 27%);
+            width: 14%;
+            border-radius: .3rem;
+            margin-left: 40%;
+            
+            label{
+                font-size: 2rem;
+                font-weight: bold;
+                color:white;
+                justify-content: center;
+            }
+        }
+
+        .ticket-input{
+            
+
+            input{
+                width: auto;
+                border: 1px solid hsl(207, 100%, 27%);
+                border-radius: .4rem;
+                border: none;
+
+            }
+
+        }
+
+        .method-input{
+            
+
+            input{
+                width: 20rem;
+                border: 1px solid hsl(207, 100%, 27%);
+                border-radius: .4rem;
+                border: none;
+
+            }
+
+        }
+
+        .date-input{
+            display: flex;
+
+            input{
+                width: auto;
+                border: 1px solid hsl(207, 100%, 27%);
+                border-radius: .4rem;
+                border: none;
+
+            }
+
+        }
+
+        .time-input{
+            display: flex;
+
+            input{
+                width: 20rem;
+                border: 1px solid hsl(207, 100%, 27%);
+                border-radius: .4rem;
+                border: none;
+
+            }
+
+        }
+
+        .precios{
+            display: flex;
+            justify-content: space-between;
+            padding:2rem;
+            border:1px solid hsl(207, 100%, 27%);
+
+            border-radius: .4rem;
+
+            .base-price{      
+                h3{
+                    color:hsl(207, 100%, 27%);
+                }
+               
+            }
+            .taxe-price{
+                h3{
+                    color:hsl(207, 100%, 27%);
+                }
+            }
+
+            .total-price{           
+                h3{
+                    color:hsl(207, 100%, 27%);
+                }  
+            }
+        }
+
+    }
+
+    .cliente{
+        border: 1px solid hsl(207, 100%, 27%);
+        margin: .5rem;
+        border-radius: .4rem;
+
+        .client-title{
+            background-color: hsl(207, 100%, 27%);
+            width: 17%;
+            border-radius: .3rem;
+            margin-left: 38%;
+            
+            label{
+                font-size: 2rem;
+                font-weight: bold;
+                color:white;
+                justify-content: center;
+            }
+        }
+
+        .name-input{
+
+            
+            
+
+            input{
+                width: auto;
+                border: 1px solid hsl(207, 100%, 27%);
+                border-radius: .4rem;
+                border: none;
+                
+            }
+
+        }
+
+        .surname-input{
+
+            
+
+            input{
+                width: 20rem;
+                border: 1px solid hsl(207, 100%, 27%);
+                border-radius: .4rem;
+                border: none;
+                
+            }
+
+        }
+
+
+
+    }
+
+    .producto{
+        border: 1px solid hsl(207, 100%, 27%);
+        margin: .5rem;
+        border-radius: .4rem;
+        justify-content: space-between;
+        width: 52rem;
+
+
+        .product-title{
+            background-color: hsl(207, 100%, 27%);
+            width: 23%;
+            border-radius: .3rem;
+            margin-left: 36%;
+            
+            
+            label{
+                font-size: 2rem;
+                font-weight: bold;
+                color:white;
+                border: none;
+                justify-content: center;
+            }
+        }
+
+
+        .id-input{
+                
+                input{
+                    width: auto;
+                    border: 1px solid hsl(207, 100%, 27%);
+                    border-radius: .4rem;
+                    border: none;
+                    
+                    
+                }
+        }
+
+        .category-input{
+                
+                input{
+                    width: auto;
+                    border: 1px solid hsl(207, 100%, 27%);
+                    border-radius: .4rem;
+                    border: none;
+                    
+                    
+                }
+        }
+
+        .title-input{
+                
+                input{
+                    width: 20rem;
+                    border: 1px solid hsl(207, 100%, 27%);
+                    border-radius: .4rem;
+                    border: none;
+                    
+                    
+                }
+        }
+        
+            
+
+            .price-product-input{
+                
+                input{
+                    width: 20rem;
+                    border: 1px solid hsl(207, 100%, 27%);
+                    border-radius: .4rem;
+                    border: none;
+                    
+                    
+                }
+        
+            }
+
+        
+    }
+
+
+
+}

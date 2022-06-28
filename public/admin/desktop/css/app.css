@@ -869,3 +869,140 @@ header .header .header-title h1 {
 .form-content.active .form-element .form-element-input-ckeditor label {
   display: none;
 }
+
+.form-content .venta {
+  border: 1px solid hsl(207deg, 100%, 27%);
+  margin: 0.5rem;
+  border-radius: 0.4rem;
+}
+.form-content .venta .venta-title {
+  background-color: hsl(207deg, 100%, 27%);
+  width: 14%;
+  border-radius: 0.3rem;
+  margin-left: 40%;
+}
+.form-content .venta .venta-title label {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  justify-content: center;
+}
+.form-content .venta .ticket-input input {
+  width: auto;
+  border: 1px solid hsl(207deg, 100%, 27%);
+  border-radius: 0.4rem;
+  border: none;
+}
+.form-content .venta .method-input input {
+  width: 20rem;
+  border: 1px solid hsl(207deg, 100%, 27%);
+  border-radius: 0.4rem;
+  border: none;
+}
+.form-content .venta .date-input {
+  display: flex;
+}
+.form-content .venta .date-input input {
+  width: auto;
+  border: 1px solid hsl(207deg, 100%, 27%);
+  border-radius: 0.4rem;
+  border: none;
+}
+.form-content .venta .time-input {
+  display: flex;
+}
+.form-content .venta .time-input input {
+  width: 20rem;
+  border: 1px solid hsl(207deg, 100%, 27%);
+  border-radius: 0.4rem;
+  border: none;
+}
+.form-content .venta .precios {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border: 1px solid hsl(207deg, 100%, 27%);
+  border-radius: 0.4rem;
+}
+.form-content .venta .precios .base-price h3 {
+  color: hsl(207deg, 100%, 27%);
+}
+.form-content .venta .precios .taxe-price h3 {
+  color: hsl(207deg, 100%, 27%);
+}
+.form-content .venta .precios .total-price h3 {
+  color: hsl(207deg, 100%, 27%);
+}
+.form-content .cliente {
+  border: 1px solid hsl(207deg, 100%, 27%);
+  margin: 0.5rem;
+  border-radius: 0.4rem;
+}
+.form-content .cliente .client-title {
+  background-color: hsl(207deg, 100%, 27%);
+  width: 17%;
+  border-radius: 0.3rem;
+  margin-left: 38%;
+}
+.form-content .cliente .client-title label {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  justify-content: center;
+}
+.form-content .cliente .name-input input {
+  width: auto;
+  border: 1px solid hsl(207deg, 100%, 27%);
+  border-radius: 0.4rem;
+  border: none;
+}
+.form-content .cliente .surname-input input {
+  width: 20rem;
+  border: 1px solid hsl(207deg, 100%, 27%);
+  border-radius: 0.4rem;
+  border: none;
+}
+.form-content .producto {
+  border: 1px solid hsl(207deg, 100%, 27%);
+  margin: 0.5rem;
+  border-radius: 0.4rem;
+  justify-content: space-between;
+  width: 52rem;
+}
+.form-content .producto .product-title {
+  background-color: hsl(207deg, 100%, 27%);
+  width: 23%;
+  border-radius: 0.3rem;
+  margin-left: 36%;
+}
+.form-content .producto .product-title label {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  border: none;
+  justify-content: center;
+}
+.form-content .producto .id-input input {
+  width: auto;
+  border: 1px solid hsl(207deg, 100%, 27%);
+  border-radius: 0.4rem;
+  border: none;
+}
+.form-content .producto .category-input input {
+  width: auto;
+  border: 1px solid hsl(207deg, 100%, 27%);
+  border-radius: 0.4rem;
+  border: none;
+}
+.form-content .producto .title-input input {
+  width: 20rem;
+  border: 1px solid hsl(207deg, 100%, 27%);
+  border-radius: 0.4rem;
+  border: none;
+}
+.form-content .producto .price-product-input input {
+  width: 20rem;
+  border: 1px solid hsl(207deg, 100%, 27%);
+  border-radius: 0.4rem;
+  border: none;
+}

@@ -9,6 +9,7 @@ use App\Models\Cart;
 use App\Models\Client;
 use App\Models\Checkout;
 use App\Http\Requests\Front\VentaRequest;
+use App\Models\Venta;
 use Debugbar;
 use Illuminate\Support\Facades\DB;
 
@@ -17,11 +18,13 @@ class CheckoutController extends Controller
 {
     protected $cart;
     protected $client;
+    protected $venta;
 
-    public function __construct(Cart $cart, Client $client)
+    public function __construct(Cart $cart, Client $client, Venta $venta)
     {
         $this->cart = $cart;
         $this->client = $client;
+        $this->venta = $venta;
     }
 
     public function index($fingerprint)
@@ -49,10 +52,11 @@ class CheckoutController extends Controller
         ]);       
 
         return $view;
+
     }
 
     public function store(VentaRequest $request)
-    {            
+    {   
     
         $client = $this->client->create([
                 'name' => request('name'),
@@ -63,16 +67,47 @@ class CheckoutController extends Controller
                 'postal-code' => request('postal-code'),
                 'address' => request('address'),
             ]);
-        
-        
+
+        $ticket_number = $this->venta->latest()->first()->ticket_number;
+
+        if(str_contains($ticket_number,date('Y-m-d'))) {
+            $ticket_number =+ 1;
+        } else {
+            $ticket_number = date('Y-m-d') + '0001';
+        }
+
+        $venta = $this->venta->create([
+                'client_id' => $client->id,
+                'ticket_number' => $ticket_number,
+                'time_emision' => date('H:i:s'),
+                'date_emision' => date('Y-m-d'),
+                'payment_method' => request('payment_method'),
+                'total_base_price' => request('base_total'),
+                'total_tax_price' => request('tax_total'),
+                'total_price' => $totals->total,
+                'customer_id' => request(''),
+                'active' => 1,
+                'visible' => 1,
+            ]);
+
+
+        $cart = $this->cart
+        ->where('fingerprint', request('fingerprint'))
+        ->where('venta_id', null)
+        ->where('active', 1)
+        ->update(['venta_id' => $venta->id]);
             
+        
         $view = View::make('front.pages.successful_purchase.index');
 
         $sections = $view->renderSections(); 
 
         return response()->json([
             'content' => $sections['content'],
-        ]); 
+        ]);
+        
+        
+
     }
 
 
