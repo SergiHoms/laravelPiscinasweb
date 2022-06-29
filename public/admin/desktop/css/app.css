@@ -950,11 +950,8 @@ header .header .header-title h1 {
   color: white;
   justify-content: center;
 }
-.form-content .cliente .name-input input {
+.form-content .cliente .name-input label {
   width: auto;
-  border: 1px solid hsl(207deg, 100%, 27%);
-  border-radius: 0.4rem;
-  border: none;
 }
 .form-content .cliente .surname-input input {
   width: 20rem;

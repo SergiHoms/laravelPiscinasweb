@@ -6,13 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class Venta extends Model
 {
-    // protected $table = 'ventas';
-    protected $with = ['clients', 'payment_methods','carts'];
     protected $guarded = [];
 
-    public function clients()
+    public function client()
     {
-        return $this->belongsTo(Client::class, )->where('active', 1);
+        return $this->belongsTo(Client::class, 'customer_id');
     }
 
     public function payment_methods()
@@ -22,6 +20,6 @@ class Venta extends Model
 
     public function carts()
     {
-        return $this->hasMany(Cart::class,)->where('active', 1);
+        return $this->hasMany(Cart::class, 'venta_id');
     }
 }

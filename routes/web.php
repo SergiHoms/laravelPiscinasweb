@@ -111,9 +111,9 @@ Route::group(['prefix' => 'admin'], function () {
         ]
     ]);
 
-    Route::resource('client', 'App\Http\Controllers\Admin\ClientController', [
+    Route::resource('clientes', 'App\Http\Controllers\Admin\ClientController', [
         'parameters' => [
-            'client' => 'clients', 
+            'clientes' => 'client', 
         ],
         'names' => [
             'index' => 'clients', 
@@ -125,9 +125,9 @@ Route::group(['prefix' => 'admin'], function () {
         ]
     ]);
 
-    Route::resource('venta', 'App\Http\Controllers\Admin\VentaController', [
+    Route::resource('ventas', 'App\Http\Controllers\Admin\VentaController', [
         'parameters' => [
-            'venta' => 'ventas', 
+            'ventas' => 'venta', 
         ],
         'names' => [
             'index' => 'ventas', 
@@ -159,10 +159,15 @@ Route::post('/contacto', 'App\Http\Controllers\Front\ContactController@store')->
 
 Route::get('/carrito', 'App\Http\Controllers\Front\CartController@index')->name('front_cart');
 Route::post('/carrito', 'App\Http\Controllers\Front\CartController@store')->name('front_add_to_cart');
-Route::get('/carrito/minus/{fingerprint}/{price_id}', 'App\Http\Controllers\Front\CartController@minus')->name('front_minus_cart');
-Route::get('/carrito/plus/{fingerprint}/{price_id}', 'App\Http\Controllers\Front\CartController@plus')->name('front_plus_cart');
-Route::get('/checkout/{fingerprint}', 'App\Http\Controllers\Front\CheckoutController@index')->name('front_show_checkout');
+Route::get('/carrito/minus/{price_id}', 'App\Http\Controllers\Front\CartController@minus')->name('front_minus_cart');
+Route::get('/carrito/plus/{price_id}', 'App\Http\Controllers\Front\CartController@plus')->name('front_plus_cart');
+Route::get('/checkout', 'App\Http\Controllers\Front\CheckoutController@index')->name('front_show_checkout');
 Route::post('/checkout', 'App\Http\Controllers\Front\CheckoutController@store')->name('front_checkout_store');
+
+Route::post('/fingerprint', 'App\Http\Controllers\Front\FingerprintController@store');
+
+
+
 
 
 

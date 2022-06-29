@@ -12,12 +12,12 @@
                         <li><span>Creado el:</span>{{$venta_element->created_at}}</li>                                                                
                     </ul>
                     <div class="table-item-buttons">
-                        <div class="edit-button" data-url="{{route('ventas_edit', ['ventas' => $venta_element->id])}}">
+                        <div class="edit-button" data-url="{{route('ventas_edit', ['venta' => $venta_element->id])}}">
                             <svg viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" />
                             </svg>
                         </div>
-                        <div class="delete-button" data-url="{{route('ventas_destroy', ['ventas' => $venta_element->id])}}">
+                        <div class="delete-button" data-url="{{route('ventas_destroy', ['venta' => $venta_element->id])}}">
                             <svg viewBox="0 0 24 24">
                                 <path fill="currentColor" d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
                             </svg>    
@@ -99,7 +99,7 @@
                                                 <label>Número de ticket:</label>
                                             </div>
                                             <div class="ticket-input">
-                                                <input type="text" name="name" placeholder="Escribe aquí tu Ticket" aria-invalid="false">
+                                                <label type="text" name="ticket_number" aria-invalid="false"></label>
                                             </div>
                                         </div>
                                     </div>
@@ -109,7 +109,7 @@
                                                 <label>Método de pago:</label>
                                             </div>
                                             <div class="method-input">
-                                                <input type="text" name="payment_method" placeholder="Método de pago" aria-invalid="false">
+                                                <label type="text" name="method"> </label>
                                             </div>
                                         </div> 
                                     </div>
@@ -122,7 +122,7 @@
                                                 <label>Fecha:</label>
                                             </div>
                                             <div class="date-input">
-                                                <input type="text" name="date" placeholder="Escribe aquí la fecha" aria-invalid="false">
+                                                <label type="text" name="date"> </label>
                                             </div>
                                         </div>
                                     </div>
@@ -132,7 +132,7 @@
                                                 <label>Hora:</label>
                                             </div>
                                             <div class="time-input">
-                                                <input type="text" name="time" placeholder="Escribe aquí la hora" aria-invalid="false">
+                                                <label type="text" name="time"> </label>
                                             </div>
                                         </div> 
                                     </div>
@@ -146,10 +146,7 @@
                                                 <label>Precio base total:</label>
                                             </div>
                                             <div class="base-price">
-                                                <h3>
-                                                    $100.00
-
-                                                </h3>
+                                                <label type="text" name="base_price"> </label>
                                             </div>
                               
                                         </div>
@@ -161,10 +158,7 @@
                                             </div>
 
                                             <div class="taxe-price">
-                                                <h3>
-                                                   $100.00
-                                                    
-                                                </h3>
+                                                <label type="text" name="tax_total"> </label>
                                             </div>
                                             
                                         </div> 
@@ -176,10 +170,7 @@
                                             </div>
                                             
                                             <div class="total-price">
-                                                <h3>
-                                                    $100.00
-                                                    
-                                                </h3>
+                                                <label type="text" name="total_price"> </label>
                                             </div>
 
                                         </div> 
@@ -195,6 +186,7 @@
                                         <label>CLIENTE</label>
                                     </div>
                                 </div>
+                                @if(isset($venta))
 
                                 <div class="desktop-two-columns">
                                     <div class="column">
@@ -203,7 +195,7 @@
                                                 <label>Nombre:</label>
                                             </div>
                                             <div class="name-input">
-                                                <input type="text" name="name" placeholder="Escribe aquí tu Nombre" aria-invalid="false">
+                                                <label type="text" name="name" value="{{isset($venta->client->name) ? $venta->client->name : ''}}"> </label>
                                             </div>
                                         </div>
                                     </div>
@@ -213,7 +205,7 @@
                                                 <label>Apellidos:</label>
                                             </div>
                                             <div class="surname-input">
-                                                <input type="text" name="surname" placeholder="Escribe aquí tu Apellido" aria-invalid="false">
+                                                <label type="text" name="surname" value="{{isset($venta->client->surname) ? $venta->client->surname : ''}}"> </label>
                                             </div>
                                         </div> 
                                     </div>
@@ -226,7 +218,7 @@
                                                 <label>Teléfono:</label>
                                             </div>
                                             <div class="name-input">
-                                                <input type="text" name="phone" placeholder="Escribe aquí tu teléfono" aria-invalid="false">
+                                                <label type="text" name="phone" value="{{isset($venta->client->phone) ? $venta->client->phone : ''}}"> </label>
                                             </div>
                                         </div>
                                     </div>
@@ -236,11 +228,36 @@
                                                 <label>Email:</label>
                                             </div>
                                             <div class="surname-input">
-                                                <input type="text" name="Email" placeholder="Escribe aquí tu Email" aria-invalid="false">
+                                                <label type="text" name="email" value="{{isset($venta->client->email) ? $venta->client->email : ''}}"> </label>
                                             </div>
                                         </div> 
                                     </div>
                                 </div>
+
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Ciudad:</label>
+                                            </div>
+                                            <div class="name-input">
+                                                <label type="text" name="city" value="{{isset($venta->client->city) ? $venta->client->city : ''}} "> </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Dirección:</label>
+                                            </div>
+                                            <div class="surname-input">
+                                                <label type="text" name="address">{{$venta->address}}</label>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>      
+
+                                @endif
 
                             </div>
                         </div>
@@ -260,7 +277,7 @@
                                                 <label>Id del producto:</label>
                                             </div>
                                             <div class="id-input">
-                                                <input type="text" name="id-product" placeholder="Escribe aquí tu Id " aria-invalid="false">
+                                                <label type="text" name="name"> </label>
                                             </div>
                                         </div>
                                     </div>
@@ -270,7 +287,7 @@
                                                 <label>Nombre del producto:</label>
                                             </div>
                                             <div class="title-input">
-                                                <input type="text" name="title" placeholder="Escribe aquí tu nombre" aria-invalid="false">
+                                                <label type="text" name="name"> </label>
                                             </div>
                                         </div> 
                                     </div>
@@ -283,21 +300,45 @@
                                                 <label>Categoría del producto:</label>
                                             </div>
                                             <div class="category-input">
-                                                <input type="text" name="category" placeholder="Escribe aquí tu categoría" aria-invalid="false">
+                                                <label type="text" name="name"> </label>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="column">
                                         <div class="form-element">
                                             <div class="form-element-label">
-                                                <label>Precio:</label>
+                                                <label>Precio del producto:</label>
                                             </div>
                                             <div class="price-product-input">
-                                                <input type="text" name="price" placeholder="Escribe aquí tu precio " aria-invalid="false">
+                                                <label type="text" name="name"> </label>
                                             </div>
                                         </div> 
                                     </div>
                                 </div>
+
+                                <div class="desktop-two-columns">
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Cantidad del producto:</label>
+                                            </div>
+                                            <div class="category-input">
+                                                <label type="text" name="name"> </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="column">
+                                        <div class="form-element">
+                                            <div class="form-element-label">
+                                                <label>Disponibilidad en stock:</label>
+                                            </div>
+                                            <div class="price-product-input">
+                                                <label type="text" name="name"> </label>
+                                            </div>
+                                        </div> 
+                                    </div>
+                                </div>
+
                             </div>
                         </div> 
                     </form>            

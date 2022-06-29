@@ -6,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Client extends Model
 {
-    protected $with = ['ventas', 'fingerprints'];
     protected $guarded = [];
     
     public function ventas()
@@ -21,4 +20,3 @@ class Client extends Model
 }
 
 
-// ->where('active', 1)

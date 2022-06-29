@@ -12,6 +12,7 @@ import {renderMenu} from './menu.js';
 import {renderCart} from './cart.js';
 import {renderCheckoutSuccessful} from './checkout-successful';
 import {renderOrderPrice} from './order-price';
+import {renderFingerprint} from './fingerprint.js';
 
 renderMenuButton();
 renderTabs();
@@ -27,3 +28,4 @@ renderCart();
 renderMenu();
 renderCheckoutSuccessful();
 renderOrderPrice();
+renderFingerprint();
