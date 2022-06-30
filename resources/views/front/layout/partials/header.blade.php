@@ -27,10 +27,10 @@
             <div class="column desktop-only">
                 <div class="header-navigation">
                     <ul>
-                        <li class="menu-button" data-url="{{route('front_home')}}">INICIO</li>
-                        <li class="menu-button" data-url="{{route('front_products')}}">PRODUCTOS</li>
-                        <li class="menu-button" data-url="{{route('front_faqs')}}">FAQS</li>
-                        <li class="menu-button" data-url="{{route('front_contact')}}">CONTACTO</li>
+                        <li class="menu-button"data-section="home" data-url="{{route('front_home')}}">INICIO</li>
+                        <li class="menu-button"data-section="products" data-url="{{route('front_products')}}">PRODUCTOS</li>
+                        <li class="menu-button"data-section="faqs" data-url="{{route('front_faqs')}}">FAQS</li>
+                        <li class="menu-button"data-section="contact" data-url="{{route('front_contact')}}">CONTACTO</li>
                     </ul>
                 </div>
             </div>

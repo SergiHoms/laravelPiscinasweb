@@ -979,27 +979,15 @@ header .header .header-title h1 {
   border: none;
   justify-content: center;
 }
-.form-content .producto .id-input input {
-  width: auto;
-  border: 1px solid hsl(207deg, 100%, 27%);
-  border-radius: 0.4rem;
-  border: none;
+.form-content .producto .product-list {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 4px solid hsl(207deg, 100%, 27%);
+  margin: 1rem;
 }
-.form-content .producto .category-input input {
-  width: auto;
-  border: 1px solid hsl(207deg, 100%, 27%);
-  border-radius: 0.4rem;
-  border: none;
-}
-.form-content .producto .title-input input {
-  width: 20rem;
-  border: 1px solid hsl(207deg, 100%, 27%);
-  border-radius: 0.4rem;
-  border: none;
-}
-.form-content .producto .price-product-input input {
-  width: 20rem;
-  border: 1px solid hsl(207deg, 100%, 27%);
-  border-radius: 0.4rem;
-  border: none;
+.form-content .producto .product-list label {
+  color: hsl(207deg, 100%, 27%);
+  font-size: 1.3rem;
+  font-weight: bold;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }

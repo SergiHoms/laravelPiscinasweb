@@ -3,9 +3,11 @@ export let renderFaqs = () => {
     let lists = document.querySelectorAll(".list");
     let contents = document.querySelectorAll(".content");
 
-    document.addEventListener("mainModules", (event => {
+    document.addEventListener("products",( event =>{
+        
         renderFaqs();
-    }), {once: true});
+
+    })), {once: true};
 
     lists.forEach(list => { 
 

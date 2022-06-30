@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Front;
 
 use Illuminate\Support\Facades\View;
-use Illuminate\http\Request;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use Illuminate\Support\Facades\DB;
@@ -121,6 +121,7 @@ class CartController extends Controller
                 ->where('venta_id', null)
                 ->groupBy('price_id',)
                 ->get(); 
+
         $totals = $this->cart
                 ->where('carts.fingerprint', $request->cookie('fp'))
                 ->where('carts.active', 1)
@@ -129,6 +130,7 @@ class CartController extends Controller
                 ->join('taxes', 'taxes.id', '=', 'prices.tax_id')
                 ->select(DB::raw('sum(prices.base_price) as base_total'), DB::raw('round(sum(prices.base_price * taxes.multiplicator),2) as total') )
                 ->first();   
+
         $sections = View::make('front.pages.carrito.index')
                 ->with('carts', $carts)
                 ->with('fingerprint', $request->cookie('fp'))
@@ -136,6 +138,7 @@ class CartController extends Controller
                 ->with('tax_total', ($totals->total - $totals->base_total))
                 ->with('total', $totals->total)
                 ->renderSections();  
+
         return response()->json([
             'content' => $sections['content'],
         ]);

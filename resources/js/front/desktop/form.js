@@ -4,14 +4,11 @@ export let renderForm = () => {
     let storeButton = document.querySelector('.store-button');
     let forms = document.querySelectorAll('.front-form');
 
-    document.addEventListener("mainModules", (event => {
-        renderForm();
-    }), {once: true});
+    document.addEventListener("contact",( event =>{
+        
+        renderCart();
 
-    document.addEventListener("renderFormModules",( event =>{
-        renderForm();
-    }), {once: true});
-
+    })), {once: true};
     
     if(storeButton){
 
@@ -53,11 +50,10 @@ export let renderForm = () => {
                     })
                     .then(json => {
 
-                        console.log(json.content);
-
                         mainContainer.innerHTML = json.content;
 
-                        document.dispatchEvent(new CustomEvent('renderFormModules'));
+                        document.dispatchEvent(new CustomEvent('contact'));
+
                     })
                     .catch ( error =>  {
     

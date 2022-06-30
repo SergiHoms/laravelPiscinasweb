@@ -178,57 +178,20 @@
             }
         }
 
+        .product-list{
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 4px solid hsl(207, 100%, 27%);
+            margin: 1rem;
 
-        .id-input{
-                
-                input{
-                    width: auto;
-                    border: 1px solid hsl(207, 100%, 27%);
-                    border-radius: .4rem;
-                    border: none;
-                    
-                    
-                }
-        }
-
-        .category-input{
-                
-                input{
-                    width: auto;
-                    border: 1px solid hsl(207, 100%, 27%);
-                    border-radius: .4rem;
-                    border: none;
-                    
-                    
-                }
-        }
-
-        .title-input{
-                
-                input{
-                    width: 20rem;
-                    border: 1px solid hsl(207, 100%, 27%);
-                    border-radius: .4rem;
-                    border: none;
-                    
-                    
-                }
-        }
-        
-            
-
-            .price-product-input{
-                
-                input{
-                    width: 20rem;
-                    border: 1px solid hsl(207, 100%, 27%);
-                    border-radius: .4rem;
-                    border: none;
-                    
-                    
-                }
-        
+            label{
+                color:hsl(207, 100%, 27%);
+                font-size: 1.3rem;
+                font-weight: bold;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             }
+           
+        }
 
         
     }

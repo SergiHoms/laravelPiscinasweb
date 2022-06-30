@@ -1,12 +1,14 @@
-export let renderCheckoutSuccessful = () => {
+export let renderCheckout = () => {
 
     let forms = document.querySelectorAll('.front-form');
     let mainContainer = document.querySelector("main");
     let successfulButton = document.querySelector(".successful-button");
 
-    document.addEventListener("renderProductModules", (event => {
-        renderCheckoutSuccessful();
-    }), {once: true});
+    document.addEventListener("checkout",( event =>{
+        
+        renderCheckout();
+
+    })), {once: true};
 
 
     if(successfulButton){
@@ -48,11 +50,7 @@ export let renderCheckoutSuccessful = () => {
                     })
                     .then(json => {
 
-                        console.log(json.content);
-
                         mainContainer.innerHTML = json.content;
-
-                        document.dispatchEvent(new CustomEvent('renderFormModules'));
                     })
                     .catch ( error =>  {
     

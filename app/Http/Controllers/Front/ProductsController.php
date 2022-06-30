@@ -73,13 +73,12 @@ class ProductsController extends Controller
     
     public function filter($order)
     {
-        $products =  $this->product
-        ->where('active', 1)
-        ->where('visible', 1)
-        ->orderBy('price', $order)->get();
+        $products =  $this->product->where('visible', 1)
+        ->join('prices', 'prices.product_id', '=', 'products.id')
+        ->select('products.*', 'prices.base_price')
+        ->orderBy('base_price', $order)
+        ->get();
 
-
-        Debugbar::info($order);
             
         $view = View::make('front.pages.products.index')
         ->with('products', $products);

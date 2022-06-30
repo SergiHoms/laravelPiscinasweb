@@ -3,14 +3,14 @@
 namespace App\Http\Controllers\Front;
 
 use Illuminate\Support\Facades\View;
-use Illuminate\Http\Requests;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Cart;
 use App\Models\Client;
 use App\Models\Checkout;
+use App\Models\Fingerprint;
 use App\Http\Requests\Front\VentaRequest;
 use App\Models\Venta;
-use Debugbar;
 use Illuminate\Support\Facades\DB;
 
 
@@ -19,15 +19,17 @@ class CheckoutController extends Controller
     protected $cart;
     protected $client;
     protected $venta;
+    protected $fingerprint;
 
-    public function __construct(Cart $cart, Client $client, Venta $venta)
+    public function __construct(Cart $cart, Client $client, Venta $venta, Fingerprint $fingerprint)
     {
         $this->cart = $cart;
         $this->client = $client;
         $this->venta = $venta;
+        $this->fingerprint = $fingerprint;
     }
 
-    public function index()
+    public function index(Request $request)
     {
         $totals = $this->cart
         ->where('carts.fingerprint', $request->cookie('fp'))
@@ -67,6 +69,14 @@ class CheckoutController extends Controller
         ->select(DB::raw('sum(prices.base_price) as base_total'), DB::raw('sum(prices.base_price * taxes.multiplicator) as total') )
         ->first();
 
+        $venta = $this->venta->latest()->first();
+
+        if(isset($venta->ticket_number) && str_contains($venta->ticket_number, date('Ymd'))) {
+            $ticket_number = $venta->ticket_number + 1;
+        } else {
+            $ticket_number = date('Ymd') . '0001';
+        }
+
         $client = $this->client->create([
                 'name' => request('name'),
                 'surname' => request('surname'),
@@ -78,13 +88,9 @@ class CheckoutController extends Controller
                 'active' => 1,
             ]);
 
-        $venta = $this->venta->latest()->first();
-
-        if(isset($venta->ticket_number) && str_contains($venta->ticket_number, date('Ymd'))) {
-            $ticket_number = $venta->ticket_number + 1;
-        } else {
-            $ticket_number = date('Ymd') . '0001';
-        }
+        $fingerprint = $this->fingerprint->where('fingerprint', $request->cookie('fp'))->update([
+            'client_id' => $client->id,
+        ]);
 
         $venta = $this->venta->create([
                 'ticket_number' => $ticket_number,
@@ -97,7 +103,6 @@ class CheckoutController extends Controller
                 'customer_id' => $client->id,
                 'active' => 1,
             ]);
-
 
         $cart = $this->cart
         ->where('fingerprint', $request->cookie('fp'))
@@ -116,8 +121,6 @@ class CheckoutController extends Controller
         return response()->json([
             'content' => $sections['content'],
         ]);
-        
-        
 
     }
 

@@ -162,7 +162,7 @@ Route::post('/carrito', 'App\Http\Controllers\Front\CartController@store')->name
 Route::get('/carrito/minus/{price_id}', 'App\Http\Controllers\Front\CartController@minus')->name('front_minus_cart');
 Route::get('/carrito/plus/{price_id}', 'App\Http\Controllers\Front\CartController@plus')->name('front_plus_cart');
 Route::get('/checkout', 'App\Http\Controllers\Front\CheckoutController@index')->name('front_show_checkout');
-Route::post('/checkout', 'App\Http\Controllers\Front\CheckoutController@store')->name('front_checkout_store');
+Route::post('/checkout/successful', 'App\Http\Controllers\Front\CheckoutController@store')->name('front_checkout_store');
 
 Route::post('/fingerprint', 'App\Http\Controllers\Front\FingerprintController@store');
 

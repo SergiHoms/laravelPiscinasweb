@@ -3,9 +3,11 @@ export let renderPlusMinusButton = () => {
     let minuses = document.querySelectorAll(".minus");
     let pluses = document.querySelectorAll(".plus");
 
-    document.addEventListener("renderProductModules", (event => {
+    document.addEventListener("product",( event =>{
+        
         renderPlusMinusButton();
-    }), {once: true});
+        
+    })), {once: true};
 
     pluses.forEach(plus => { 
 
@@ -13,7 +15,7 @@ export let renderPlusMinusButton = () => {
 
             event.preventDefault();
 
-            let number = plus.parentNode.querySelector('.plus-minus-input');
+            let number = plus.parentNode.querySelector('.plus');
 
             number.value = (parseInt(number.value) + 1);
 
@@ -26,7 +28,7 @@ export let renderPlusMinusButton = () => {
 
             event.preventDefault();
 
-            let number = minus.parentNode.querySelector('.plus-minus-input');
+            let number = minus.parentNode.querySelector('.minus');
 
              if(number.value > 1) {
                  number.value = (parseInt(number.value) - 1);

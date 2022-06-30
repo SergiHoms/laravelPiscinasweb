@@ -99,7 +99,7 @@
                                                 <label>Número de ticket:</label>
                                             </div>
                                             <div class="ticket-input">
-                                                <label type="text" name="ticket_number" aria-invalid="false"></label>
+                                                <label type="text" name="ticket_number" aria-invalid="false">{{$venta->ticket_number}}</label>
                                             </div>
                                         </div>
                                     </div>
@@ -109,7 +109,7 @@
                                                 <label>Método de pago:</label>
                                             </div>
                                             <div class="method-input">
-                                                <label type="text" name="method"> </label>
+                                                <label type="text" name="method">{{$venta->payment_method}}</label>
                                             </div>
                                         </div> 
                                     </div>
@@ -122,7 +122,7 @@
                                                 <label>Fecha:</label>
                                             </div>
                                             <div class="date-input">
-                                                <label type="text" name="date"> </label>
+                                                <label type="text" name="date">{{$venta->date_emision}}</label>
                                             </div>
                                         </div>
                                     </div>
@@ -132,7 +132,7 @@
                                                 <label>Hora:</label>
                                             </div>
                                             <div class="time-input">
-                                                <label type="text" name="time"> </label>
+                                                <label type="text" name="time">{{$venta->time_emision}}</label>
                                             </div>
                                         </div> 
                                     </div>
@@ -146,7 +146,7 @@
                                                 <label>Precio base total:</label>
                                             </div>
                                             <div class="base-price">
-                                                <label type="text" name="base_price"> </label>
+                                                <label type="text" name="base_price">{{$venta->total_base_price}}</label>
                                             </div>
                               
                                         </div>
@@ -158,7 +158,7 @@
                                             </div>
 
                                             <div class="taxe-price">
-                                                <label type="text" name="tax_total"> </label>
+                                                <label type="text" name="tax_total">{{$venta->total_tax_price}} </label>
                                             </div>
                                             
                                         </div> 
@@ -170,7 +170,7 @@
                                             </div>
                                             
                                             <div class="total-price">
-                                                <label type="text" name="total_price"> </label>
+                                                <label type="text" name="total_price">{{$venta->total_price}} </label>
                                             </div>
 
                                         </div> 
@@ -186,7 +186,6 @@
                                         <label>CLIENTE</label>
                                     </div>
                                 </div>
-                                @if(isset($venta))
 
                                 <div class="desktop-two-columns">
                                     <div class="column">
@@ -195,7 +194,7 @@
                                                 <label>Nombre:</label>
                                             </div>
                                             <div class="name-input">
-                                                <label type="text" name="name" value="{{isset($venta->client->name) ? $venta->client->name : ''}}"> </label>
+                                                <label type="text" name="name">{{isset($venta->client->name) ? $venta->client->name : ''}}</label>
                                             </div>
                                         </div>
                                     </div>
@@ -205,7 +204,7 @@
                                                 <label>Apellidos:</label>
                                             </div>
                                             <div class="surname-input">
-                                                <label type="text" name="surname" value="{{isset($venta->client->surname) ? $venta->client->surname : ''}}"> </label>
+                                                <label type="text" name="surname">{{isset($venta->client->surname) ? $venta->client->surname : ''}}</label>
                                             </div>
                                         </div> 
                                     </div>
@@ -218,7 +217,7 @@
                                                 <label>Teléfono:</label>
                                             </div>
                                             <div class="name-input">
-                                                <label type="text" name="phone" value="{{isset($venta->client->phone) ? $venta->client->phone : ''}}"> </label>
+                                                <label type="text" name="phone">{{isset($venta->client->phone) ? $venta->client->phone : ''}}</label>
                                             </div>
                                         </div>
                                     </div>
@@ -228,7 +227,7 @@
                                                 <label>Email:</label>
                                             </div>
                                             <div class="surname-input">
-                                                <label type="text" name="email" value="{{isset($venta->client->email) ? $venta->client->email : ''}}"> </label>
+                                                <label type="text" name="email">{{isset($venta->client->email) ? $venta->client->email : ''}}</label>
                                             </div>
                                         </div> 
                                     </div>
@@ -241,7 +240,7 @@
                                                 <label>Ciudad:</label>
                                             </div>
                                             <div class="name-input">
-                                                <label type="text" name="city" value="{{isset($venta->client->city) ? $venta->client->city : ''}} "> </label>
+                                                <label type="text" name="city">{{isset($venta->client->city) ? $venta->client->city : ''}}</label>
                                             </div>
                                         </div>
                                     </div>
@@ -251,18 +250,19 @@
                                                 <label>Dirección:</label>
                                             </div>
                                             <div class="surname-input">
-                                                <label type="text" name="address">{{$venta->address}}</label>
+                                                <label type="text" name="address">{{isset($venta->client->address) ? $venta->client->address : ''}}</label>
                                             </div>
                                         </div> 
                                     </div>
-                                </div>      
+                                </div>  
 
-                                @endif
+                                
 
                             </div>
                         </div>
 
                         <div class="producto">
+
                             <div class="column">
                                 <div class="form-element">
                                     <div class="product-title">
@@ -270,73 +270,36 @@
                                     </div>
                                 </div>
 
-                                <div class="desktop-two-columns">
-                                    <div class="column">
-                                        <div class="form-element">
-                                            <div class="form-element-label">
-                                                <label>Id del producto:</label>
-                                            </div>
-                                            <div class="id-input">
-                                                <label type="text" name="name"> </label>
-                                            </div>
-                                        </div>
+                                <div class="product-list">
+                                    <div class="product-name">
+                                        <label>Nombre:</label>
                                     </div>
-                                    <div class="column">
-                                        <div class="form-element">
-                                            <div class="form-element-label">
-                                                <label>Nombre del producto:</label>
-                                            </div>
-                                            <div class="title-input">
-                                                <label type="text" name="name"> </label>
-                                            </div>
-                                        </div> 
+
+                                    <div class="product-price">
+                                        <label>Precio:</label>
+                                    </div>
+
+                                    <div class="product-quantity">
+                                        <label>Cantidad:</label>
                                     </div>
                                 </div>
 
-                                <div class="desktop-two-columns">
-                                    <div class="column">
-                                        <div class="form-element">
-                                            <div class="form-element-label">
-                                                <label>Categoría del producto:</label>
-                                            </div>
-                                            <div class="category-input">
-                                                <label type="text" name="name"> </label>
-                                            </div>
+                                <div class="product-display">
+                                    
+                                    <div class="product-list">
+                                        <div class="product-name">
+                                            <label type=text name="name">{{$venta->title}}</label>
                                         </div>
-                                    </div>
-                                    <div class="column">
-                                        <div class="form-element">
-                                            <div class="form-element-label">
-                                                <label>Precio del producto:</label>
-                                            </div>
-                                            <div class="price-product-input">
-                                                <label type="text" name="name"> </label>
-                                            </div>
-                                        </div> 
-                                    </div>
-                                </div>
 
-                                <div class="desktop-two-columns">
-                                    <div class="column">
-                                        <div class="form-element">
-                                            <div class="form-element-label">
-                                                <label>Cantidad del producto:</label>
-                                            </div>
-                                            <div class="category-input">
-                                                <label type="text" name="name"> </label>
-                                            </div>
+                                        <div class="product-price">
+                                            <label>{{$venta->total_base_price}}</label>
+                                        </div>
+
+                                        <div class="product-quantity">
+                                            <label></label>
                                         </div>
                                     </div>
-                                    <div class="column">
-                                        <div class="form-element">
-                                            <div class="form-element-label">
-                                                <label>Disponibilidad en stock:</label>
-                                            </div>
-                                            <div class="price-product-input">
-                                                <label type="text" name="name"> </label>
-                                            </div>
-                                        </div> 
-                                    </div>
+                                    
                                 </div>
 
                             </div>

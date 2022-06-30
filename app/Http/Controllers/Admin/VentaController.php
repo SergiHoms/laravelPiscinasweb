@@ -5,9 +5,11 @@ namespace App\Http\Controllers\Admin;
 
 
 use Illuminate\Support\Facades\View;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Venta;
 use App\Models\Client;
+use App\Models\Product;
 use App\Http\Requests\Admin\VentaRequest;
 use Debugbar;
 
@@ -17,15 +19,18 @@ class VentaController extends Controller
 
     protected $venta;
     protected $client;
+    protected $product;
 
 
     
 
-    public function __construct(Venta $venta, Client $client)
+    public function __construct(Venta $venta, Client $client, Product $product)
+    
     {
     
         $this->venta = $venta;
         $this->client = $client;
+        $this->product = $product;
     }
     
     public function index()
@@ -35,7 +40,9 @@ class VentaController extends Controller
                 ->with('venta', $this->venta)
                 ->with('ventas', $this->venta->where('active', 1)->get())
                 ->with('client', $this->client)
-                ->with('clients', $this->client->where('active', 1)->get());
+                ->with('clients', $this->client->where('active', 1)->get())
+                ->with('product', $this->product)
+                ->with('products', $this->product->where('active', 1)->get());
 
 
         if(request()->ajax()) {
@@ -80,6 +87,8 @@ class VentaController extends Controller
                 'visible' => 1,
                 'active' => 1,
         ]);
+
+        
             
         $view = View::make('admin.pages.venta.index')
         ->with('ventas', $this->venta->where('active', 1)->get())
@@ -94,7 +103,7 @@ class VentaController extends Controller
         ]);
     }
 
-    public function edit(Venta $venta, )
+    public function edit(Venta $venta)
     {
 
         Debugbar::info($venta->client->name);
@@ -103,6 +112,7 @@ class VentaController extends Controller
         debugbar::info($venta->client->phone);
         debugbar::info($venta->client->address);
         debugbar::info($venta->client->city);
+        
 
 
         $view = View::make('admin.pages.venta.index')
